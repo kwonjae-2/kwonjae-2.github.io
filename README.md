@@ -1,67 +1,58 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a></h2>
-</p>
+# Kwonjae Lee - Personal Portfolio
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+A minimalist personal portfolio website built with Jekyll.
 
-***
+## About
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside</a></b>
-    |
-    <b><a href="README.md#setup">Setup</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-</p>
+This is a simple and clean personal portfolio website for Kwonjae Lee, SRE & Observability Engineer.
 
-<p align="center">
-    Light and Dark themes.
-</p>
+## Features
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
-</p>
+- **Clean Design**: Minimalist and professional layout
+- **Responsive**: Works on all devices
+- **Fast Loading**: Optimized for speed
+- **SEO Optimized**: Search engine friendly
+- **Social Links**: Connect through LinkedIn, GitHub, and Email
 
-## What has inside
+## Technical Stack
 
-- [Jekyll](https://jekyllrb.com/), [Sass](https://sass-lang.com/) ~[RSCSS](https://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/);
-- Page Speed: [99~Desktop](https://pagespeed.web.dev/analysis/https-sergiokopplin-github-io-indigo/41axptm3as?utm_source=psi&utm_medium=redirect&form_factor=desktop);
+- [Jekyll](https://jekyllrb.com/) - Static site generator
+- [Sass](https://sass-lang.com/) - CSS preprocessor
+- [SVG](https://www.w3.org/Graphics/SVG/) - Vector graphics
+- GitHub Pages - Hosting
 
-## Setup
+## Local Development
 
-0. :star: to the project. :metal:
-1. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-2. Edit `_config.yml` with your data
-3. Write some posts :bowtie:
+To run this site locally:
 
-To run locally do the following:
+1. Install [Jekyll](https://jekyllrb.com) and [Bundler](https://bundler.io/)
+2. Clone this repository
+3. Run the following commands:
 
-1. Install [Jekyll](https://jekyllrb.com) and [Bundler](https://bundler.io/).
-2. Clone the forked repo on your machine
-3. Enter the cloned folder via terminal and run:
-```sh
+```bash
 bundle install
 bundle exec jekyll serve
 ```
-4. Open it in your browser: [http://localhost:4000](http://localhost:4000)
 
-Or run with [docker](https://github.com/BretFisher/jekyll-serve).
+4. Open [http://localhost:4000](http://localhost:4000) in your browser
 
-## Settings
+## Configuration
 
-You can customize your site on `_config.yml` file.
+Site configuration can be customized in `_config.yml` file.
 
-## How To?
+## Deployment
 
-Check the [FAQ](./FAQ.md).
+This site is automatically deployed to GitHub Pages when changes are pushed to the `gh-pages` branch.
+
+## Contact
+
+- **LinkedIn**: [kwonjae-lee-213ba3157](https://linkedin.com/in/kwonjae-lee-213ba3157)
+- **GitHub**: [kwonjae-2](https://github.com/kwonjae-2)
+- **Email**: kwonjae13@gmail.com
 
 ---
+
 ## License
 
-[MIT](https://kopplin.mit-license.org/) License © Sérgio Kopplin
-
----
-
-[![Star History Chart](https://api.star-history.com/svg?repos=sergiokopplin/indigo&type=Date)](https://star-history.com/#sergiokopplin/indigo&Date)
+Based on [Indigo](https://github.com/sergiokopplin/indigo) theme by Sérgio Kopplin.
+[MIT](https://kopplin.mit-license.org/) License
