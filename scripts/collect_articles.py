@@ -52,7 +52,6 @@ class ArticleCollector:
                 with open(post_file, 'r', encoding='utf-8') as f:
                     content = f.read()
                     # Extract URLs using regex
-                    import re
                     urls = re.findall(r'https?://[^\s\)]+', content)
                     published_urls.update(urls)
             except Exception as e:
@@ -209,7 +208,6 @@ Select exactly {top_n} articles and order them by importance (most important fir
             response_text = message.content[0].text
 
             # Parse JSON response
-            import json
             selection = json.loads(response_text)
 
             # Extract selected articles
@@ -270,7 +268,6 @@ Respond in JSON format:
             )
 
             response_text = message.content[0].text
-            import json
             return json.loads(response_text)
 
         except Exception as e:
