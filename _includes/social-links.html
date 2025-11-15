@@ -1,6 +1,12 @@
 <!-- To add more icons, duplicate a section and find yout icon here -> https://fontawesome.com/v6.0/icons -->
 
 <div class="social-links">
+    {% if site.weekly %}
+        <a class="link" data-title="Weekly" href="{{ site.url }}/weekly" rel="noopener" alt="anchor link for weekly posts" aria-label="anchor link for weekly posts">
+            <i class="fa-solid fa-book-open"></i>
+        </a>
+    {% endif %}
+
     {% if site.facebook %}
         <a class="link" data-title="facebook.com/{{ site.facebook }}" href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener" alt="anchor link for social media facebook" aria-label="anchor link for social media facebook">
             <i class="fa-brands fa-facebook"></i>
@@ -34,12 +40,6 @@
     {% if site.email %}
         <a class="link" data-title="{{ site.email }}" href="mailto:{{ site.email }}"  rel="noopener" alt="anchor link for email" aria-label="anchor link for email">
             <i class="fa-regular fa-envelope"></i>
-        </a>
-    {% endif %}
-
-    {% if site.weekly %}
-        <a class="link" data-title="Weekly" href="{{ site.url }}/weekly" rel="noopener" alt="anchor link for weekly posts" aria-label="anchor link for weekly posts">
-            <span style="font-size: 1.5em;">📚</span>
         </a>
     {% endif %}
 </div>
