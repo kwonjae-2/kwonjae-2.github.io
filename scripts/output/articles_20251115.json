@@ -35,6 +35,41 @@
     "description": "View on sreweekly.com A message from our sponsor, CodeRabbit: CodeRabbit is your AI co-pilot for code reviews. Get instant code review feedback, one-click fix suggestions and define custom rules with ..."
   },
   {
+    "title": "Evolving OpenTelemetry's Stabilization and Release Practices",
+    "link": "https://opentelemetry.io/blog/2025/stability-proposal-announcement/",
+    "source": "opentelemetry",
+    "published": "2025-11-08",
+    "description": "Summary\nOpenTelemetry is, by any metric, one of the largest and most exciting projects\nin the cloud native space. Over the past five years, this community has come\ntogether to build one of the most es..."
+  },
+  {
+    "title": "Contributing the Unroll Processor to the OpenTelemetry Collector Contrib",
+    "link": "https://opentelemetry.io/blog/2025/contrib-unroll-processor/",
+    "source": "opentelemetry",
+    "published": "2025-11-07",
+    "description": "The idea for unrolling bundled logs inside the OpenTelemetry Collector didn&rsquo;t\nstart with a processor.\nBy &ldquo;unrolling,&rdquo; I mean taking a single log record that contains multiple logical..."
+  },
+  {
+    "title": "Announcing the 2025 OpenTelemetry Governance Committee Election",
+    "link": "https://opentelemetry.io/blog/2025/gc-elections/",
+    "source": "opentelemetry",
+    "published": "2025-11-06",
+    "description": "The OpenTelemetry project is excited to announce the 2025 OpenTelemetry\nGovernance Committee (GC) election. Nominations are due by 17 October 2025 23:59\nUTC. The list of eligible candidates will be sh..."
+  },
+  {
+    "title": "Announcing Support for Complex Attribute Types in OTel",
+    "link": "https://opentelemetry.io/blog/2025/complex-attribute-types/",
+    "source": "opentelemetry",
+    "published": "2025-11-05",
+    "description": "It’s common to use simple key-value properties as attributes in telemetry. Most\ntelemetry backends are optimized for this pattern, making it efficient to store,\nindex, and query data.\nOpenTelemetry is..."
+  },
+  {
+    "title": "OpenTelemetry eBPF Instrumentation Marks the First Release",
+    "link": "https://opentelemetry.io/blog/2025/obi-announcing-first-release/",
+    "source": "opentelemetry",
+    "published": "2025-11-03",
+    "description": "Following a significant collaboration between Grafana Labs, Splunk, Coralogix,\nOdigos and many other community members, we are thrilled to announce the first\nalpha release of OpenTelemetry eBPF\nInstru..."
+  },
+  {
     "title": "SRE Weekly Issue #495",
     "link": "https://sreweekly.com/sre-weekly-issue-495/",
     "source": "sreweekly",
