@@ -191,18 +191,29 @@ class ArticleCollector:
             for i, article in enumerate(articles[:30])  # Limit to 30 to avoid token limits
         ])
 
-        prompt = f"""You are an expert in SRE (Site Reliability Engineering) and Observability.
-Your task is to analyze the following articles and select between {min_n} to {max_n} most valuable articles for developers working in SRE and Observability.
+        prompt = f"""You are a tech lead helping developers grow their skills and stay updated with industry trends.
+Your task is to analyze the following articles and select between {min_n} to {max_n} most valuable articles for software developers and engineers.
+
+**Topics to Consider** (broad developer interests):
+- SRE, Observability, Monitoring, Infrastructure
+- AI/ML, LLM, Machine Learning applications
+- Software Engineering practices, Architecture, Design patterns
+- Team culture, Developer productivity, Engineering leadership
+- Backend/Frontend development, Databases, Performance
+- DevOps, CI/CD, Automation, Cloud platforms
+- Security, Scalability, Distributed systems
+- Developer tools, Programming languages, Frameworks
 
 **Selection Criteria** (in order of priority):
-1. **Practical Value**: Actionable insights, real-world solutions, hands-on techniques
-2. **Technical Relevance**: Direct relevance to SRE/Observability practitioners and developers
-3. **Innovation**: New tools, techniques, best practices, or fresh perspectives
-4. **Technical Depth**: Goes beyond surface-level content with meaningful technical detail
-5. **Impact**: Helps improve system reliability, monitoring, incident response, or developer productivity
+1. **Developer Growth**: Helps developers learn, improve skills, or advance their career
+2. **Practical Value**: Actionable insights, real-world solutions, hands-on techniques
+3. **Relevance**: Applicable to modern software development practices
+4. **Innovation**: New tools, techniques, best practices, or fresh perspectives
+5. **Impact**: Improves productivity, code quality, system reliability, or team effectiveness
 
 **Important**:
-- Select ONLY articles that provide real value to developers
+- Select articles that developers would find genuinely useful or interesting
+- Include diverse topics - not just SRE/Observability, but AI, development practices, team culture, etc.
 - Minimum {min_n} articles, maximum {max_n} articles
 - Choose the exact number based on how many articles truly meet the quality bar
 - Quality over quantity - don't include mediocre articles just to reach a number
@@ -285,17 +296,19 @@ Order articles by importance (most important first)."""
                 ]
             }
 
-        prompt = f"""Analyze this article about SRE/Observability and provide bilingual summaries (Korean and English):
+        prompt = f"""Analyze this article for software developers and provide bilingual summaries (Korean and English):
 
 Article:
 Title: {article['title']}
 Source: {article['source']}
 Description: {article['description']}
 
+This article could be about: SRE, Observability, AI/ML, software engineering, team culture, developer productivity, or any tech topic relevant to developers.
+
 Provide:
-1. A concise 2-3 sentence summary in KOREAN focusing on the main value proposition
+1. A concise 2-3 sentence summary in KOREAN focusing on what developers will learn or gain
 2. The same summary in ENGLISH
-3. Three specific, actionable key points in KOREAN
+3. Three specific, actionable key points in KOREAN that developers can apply
 4. The same three key points in ENGLISH
 
 Respond in JSON format:
@@ -404,14 +417,14 @@ title: "Weekly - {today.strftime('%B %d, %Y')}"
 layout: post
 date: {today.strftime('%Y-%m-%d')} 10:00:00 +0900
 category: weekly
-tags: [SRE, Observability, Weekly]
+tags: [Development, Tech, Weekly]
 author: kwonjaelee
-description: "이번 주 SRE와 Observability 관련 상위 {len(selected)}개 아티클 | Top {len(selected)} articles on SRE and Observability"
+description: "이번 주 개발자를 위한 {len(selected)}개의 아티클 | {len(selected)} curated articles for developers"
 ---
 
 ## 한국어 (Korean)
 
-이번 주에도 찾아주셔서 감사합니다! SRE, Observability, 그리고 Infrastructure Engineering 분야의 가장 가치있는 아티클들을 소개합니다.
+이번 주에도 찾아주셔서 감사합니다! 개발자 성장과 실무에 도움이 되는 다양한 주제의 아티클들을 소개합니다.
 
 ### 📚 이번 주 추천 아티클
 
@@ -442,7 +455,7 @@ description: "이번 주 SRE와 Observability 관련 상위 {len(selected)}개 �
 
 ## English
 
-Welcome to this week's edition! Here are the most valuable articles on SRE, Observability, and Infrastructure Engineering.
+Welcome to this week's edition! Here are curated articles covering diverse topics to help developers grow and excel in their work.
 
 ### 📚 This Week's Picks
 
@@ -471,11 +484,9 @@ Welcome to this week's edition! Here are the most valuable articles on SRE, Obse
 
         markdown += """---
 
-## 🔗 Resources
+## 🔗 Sources
 
-- [SRE Weekly](https://sreweekly.com/) - Your weekly dose of SRE news
-- [GeekNews](https://news.hada.io/) - Korean tech news aggregator
-- [OpenTelemetry Blog](https://opentelemetry.io/blog/)
+Articles curated from various tech blogs and communities including SRE Weekly, GeekNews, OpenTelemetry, Grafana, and more.
 
 ---
 
