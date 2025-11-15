@@ -528,13 +528,18 @@ def main():
         print("\n⚠️  No articles found. Check your RSS feeds or date range.")
         return
 
-    # Filter by relevant keywords
+    # Filter by relevant keywords (English + Korean for GeekNews)
     keywords = [
         'SRE', 'observability', 'monitoring', 'alerting',
         'kubernetes', 'prometheus', 'grafana', 'opentelemetry',
         'incident', 'postmortem', 'reliability', 'performance',
         'tracing', 'metrics', 'logging', 'eBPF', 'distributed',
-        'microservices', 'cloud native', 'telemetry'
+        'microservices', 'cloud native', 'telemetry',
+        # Korean keywords for GeekNews
+        '모니터링', '관찰', '관찰가능성', '쿠버네티스', '프로메테우스',
+        '장애', '성능', '분산', '마이크로서비스', '클라우드',
+        '로깅', '메트릭', '트레이싱', '인프라', '데브옵스', 'DevOps',
+        '백엔드', 'backend', '시스템', 'system', '아키텍처', 'architecture'
     ]
 
     print("\n🔍 Filtering by SRE/Observability keywords...")
