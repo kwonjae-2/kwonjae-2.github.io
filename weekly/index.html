@@ -9,21 +9,52 @@ title: Weekly
     {% if site.posts.size == 0 %}
         <p class="description">No posts yet. Stay tuned for the first edition!</p>
     {% else %}
-        {% for post in site.posts %}
-            {% if post.category == 'weekly' %}
-                <div class="item {% if post.star %}star{% endif %}">
-                    <a class="url" href="{{ site.url }}{{ post.url }}">
-                        <aside class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
-                        {% if post.image %}
-                            <div class="featured-image">
-                                <img src="{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ site.url }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
-                            </div>
+        {% assign weekly_posts = site.posts | where: "category", "weekly" %}
+        {% assign post_count = weekly_posts.size %}
+        {% for post in weekly_posts %}
+            <div class="item {% if post.star %}star{% endif %}" style="margin-bottom: 2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 1.5rem;">
+                <a class="url" href="{{ site.url }}{{ post.url }}" style="text-decoration: none; color: inherit;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+                        <h3 class="title" style="margin: 0; font-size: 1.3rem; color: #333;">
+                            Week #{{ post_count | minus: forloop.index0 }} - {{ post.date | date: "%b %d, %Y" }}
+                        </h3>
+                        <aside class="date" style="color: #999; font-size: 0.9rem;">
+                            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%b %d" }}</time>
+                        </aside>
+                    </div>
+
+                    <div style="margin-top: 1rem; padding-left: 0.5rem; border-left: 3px solid #4CAF50;">
+                        <!-- Extract article titles from content -->
+                        {% assign content_lines = post.content | newline_to_br | split: '<br />' %}
+                        {% assign article_count = 0 %}
+                        <ul style="margin: 0.5rem 0; padding-left: 1.5rem; list-style: none;">
+                        {% for line in content_lines %}
+                            {% if line contains '### ' and line contains '[' and article_count < 5 %}
+                                {% assign article_count = article_count | plus: 1 %}
+                                {% assign title_start = line | split: '[' | last %}
+                                {% assign article_title = title_start | split: ']' | first %}
+                                {% assign link_start = line | split: '(' | last %}
+                                {% assign article_link = link_start | split: ')' | first %}
+                                <li style="margin-bottom: 0.6rem; color: #555;">
+                                    <span style="color: #4CAF50; font-weight: bold; margin-right: 0.5rem;">{{ article_count }}.</span>
+                                    <a href="{{ article_link }}" target="_blank" style="color: #2196F3; text-decoration: none; font-weight: 500;"
+                                       onclick="event.stopPropagation();">{{ article_title }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                        {% if article_count == 0 %}
+                            <p style="color: #666; font-style: italic; margin: 0.5rem 0;">{{ post.description }}</p>
                         {% endif %}
-                        <h3 class="title">{{ post.title }}</h3>
-                        <p class="description">{{ post.description }}</p>
-                    </a>
-                </div>
-            {% endif %}
+                    </div>
+
+                    <div style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
+                        <span style="background: #f5f5f5; padding: 0.2rem 0.6rem; border-radius: 3px;">
+                            📚 {{ article_count }} articles
+                        </span>
+                    </div>
+                </a>
+            </div>
         {% endfor %}
     {% endif %}
 </section>
