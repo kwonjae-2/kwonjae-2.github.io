@@ -20,7 +20,9 @@ class ArticleCollector:
         self.articles = []
         self.sources = {
             'sreweekly': 'https://sreweekly.com/feed/',
-            # Add more RSS feeds here
+            'geeknews': 'https://news.hada.io/rss/news',
+            'opentelemetry': 'https://opentelemetry.io/blog/index.xml',
+            # Vendor blogs
             'grafana': 'https://grafana.com/blog/index.xml',
             'honeycomb': 'https://www.honeycomb.io/feed',
         }
@@ -64,17 +66,6 @@ class ArticleCollector:
         # Limit to first 200 characters
         return text[:200] + '...' if len(text) > 200 else text
 
-    def collect_from_geeknews(self, days_back: int = 7) -> List[Dict]:
-        """
-        Collect articles from GeekNews
-        Note: GeekNews doesn't have a public API, so this is a placeholder
-        You may need to implement web scraping or find an RSS feed
-        """
-        # Placeholder - implement actual GeekNews collection
-        # You might need to use BeautifulSoup for web scraping
-        print("GeekNews collection not implemented yet - requires web scraping")
-        return []
-
     def collect_all(self, days_back: int = 7) -> List[Dict]:
         """Collect articles from all sources"""
         all_articles = []
@@ -85,10 +76,6 @@ class ArticleCollector:
             articles = self.collect_from_rss(name, url, days_back)
             all_articles.extend(articles)
             print(f"  Found {len(articles)} articles")
-
-        # Collect from GeekNews (if implemented)
-        # geeknews_articles = self.collect_from_geeknews(days_back)
-        # all_articles.extend(geeknews_articles)
 
         # Sort by published date
         all_articles.sort(key=lambda x: x['published'], reverse=True)
