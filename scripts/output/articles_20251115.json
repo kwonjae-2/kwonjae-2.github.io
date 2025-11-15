@@ -1,5 +1,61 @@
 [
   {
+    "title": "SSL 구성 생성기",
+    "link": "https://news.hada.io/topic?id=24385",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n다양한 서버 소프트웨어에 맞는 SSL/TLS 설정을 자동으로 생성하는 도구\nApache, nginx, HAProxy, Tomcat 등 20여 종의 서버 환경을 지원\n\nModern, Intermediate, Old 세 가지 Mozilla 구성 프로파일..."
+  },
+  {
+    "title": "Aurora RDS의 경쟁 상태(race condition) 발견 사례",
+    "link": "https://news.hada.io/topic?id=24384",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\nAWS Aurora RDS에서 발생한 경쟁 상태 버그를 실험적으로 확인하고 AWS로부터 원인 확인을 받은 사례\nHightouch는 이벤트 처리 시스템 확장 중 Aurora의 failover(장애 조치) 과정에서 쓰기 인스턴스 전환이 실패하는 현상을 발..."
+  },
+  {
+    "title": "Go의 16번째 생일",
+    "link": "https://news.hada.io/topic?id=24383",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\nGo 언어의 오픈소스 공개 16주년을 맞아, 최근 1년간의 주요 기술 진전과 향후 계획을 정리\nGo 1.24와 1.25 버전에서 테스트·보안·성능 전반의 대규모 개선이 이루어짐\n\nsynctest , container-aware scheduling"
+  },
+  {
+    "title": "맥OS용 Swift 기반 Winamp 클론",
+    "link": "https://news.hada.io/topic?id=24382",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n\nWinamp 인터페이스를 복제한 macOS용 음악 플레이어 프로젝트로, Swift 언어로 작성된 것으로 알려짐\nGitHub 저장소 주소는 존재하지만, 현재 404 오류로 접근 불가 상태\n페이지에는 GitHub 기본 네비게이션과 “Page not found” 메시..."
+  },
+  {
+    "title": "모든 찬사를 급식실의 여성들에게",
+    "link": "https://news.hada.io/topic?id=24381",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n미국 남부의 학교 급식 노동자들을 중심으로, 세대를 넘어 이어진 공공 급식의 헌신과 공동체 돌봄을 조명\n작가의 할머니 Beulah Culpepper는 1950년부터 30년간 초등학교 급식실에서 일하며, 배고픈 아이들에게 음식을 나누던 인물로 묘사\n..."
+  },
+  {
+    "title": "650GB 데이터(S3의 Delta Lake). Polars vs. DuckDB vs. Daft vs. Spark",
+    "link": "https://news.hada.io/topic?id=24380",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n\n650GB 규모의 Delta Lake 데이터를 S3에 저장하고, 이를 단일 노드 환경에서 Polars, DuckDB, Daft, Spark로 처리한 성능 비교 실험\n32GB 메모리의 EC2 인스턴스에서 각 엔진이 대용량 데이터를 처리할 수 있는지 검증, 클러스터 기반 Spark 대비..."
+  },
+  {
+    "title": "Epstein 파일을 정리하고 검색할 수 있는 사이트",
+    "link": "https://news.hada.io/topic?id=24379",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n\nEpstein 관련 문서를 정리해 검색할 수 있는 웹 기반 인터페이스 제공\n사이트는 파일, 인물, 조직, 국가 등으로 분류된 탐색 기능 구성\n검색 기능은 피해자들을 위한 정의(Justice for all victims) 라는 문구 아래 운영\n웹사..."
+  },
+  {
+    "title": "노 원 리브스 포에버 25주년, 여전히 합법적으로 구매 불가",
+    "link": "https://news.hada.io/topic?id=24378",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n2000년 출시된 클래식 스파이 슈터 ‘No One Lives Forever’ 가 25주년을 맞았지만, 여전히 정식 판매 경로가 존재하지 않음\n\n수차례의 기업 합병과 폐업, 권리 이전으로 인해 저작권이 Warner Bros., Activision, 20th Century Fox 사이에 "
+  },
+  {
     "title": "VPN 금지 추진하는 미국 주 의원들, 기술 이해 부족 논란",
     "link": "https://news.hada.io/topic?id=24377",
     "source": "geeknews",
@@ -12,62 +68,6 @@
     "source": "geeknews",
     "published": "2025-11-15",
     "description": "\n\nBitchat은 인터넷 연결이 없어도 안전하게 메시지를 주고받을 수 있는 메신저 앱으로, 블루투스를 이용해 기기 간 직접 통신을 지원\n\n팔레스타인 지역의 통신 인프라 붕괴와 감시 문제로 인해 자유로운 소통이 차단된 상황에서, 인터넷과 전력 없..."
-  },
-  {
-    "title": "가난하다는 것과 일시적으로 무일푼인 것은 다르다",
-    "link": "https://news.hada.io/topic?id=24375",
-    "source": "geeknews",
-    "published": "2025-11-15",
-    "description": "\n\n가난은 단순히 돈이 부족한 상태가 아니라, 다음 급여일에도 상황이 나아지지 않는 끝없는 생존의 반복 구조\n\n\n‘무일푼(broke)’ 은 일시적 현금 부족으로, 기본적인 생필품 구매나 생활 유지가 가능하지만 여유가 없는 상태\n가난한 사..."
-  },
-  {
-    "title": "EU의 ‘Chat Control 2.0’이 초래한 격렬한 개인정보 보호 반발",
-    "link": "https://news.hada.io/topic?id=24374",
-    "source": "geeknews",
-    "published": "2025-11-15",
-    "description": "\n유럽연합이 사적 디지털 통신 감시를 확대하는 ‘Chat Control 2.0’ 결정을 앞두고 있으며, 이는 온라인 프라이버시를 둘러싼 주요 정치적 충돌로 부상\n새 초안은 ‘위험 완화’와 ‘아동 보호’ 를 명분으로 하지만, 실제로는 모든 메시징 서비스에 의무..."
-  },
-  {
-    "title": "AGI 환상은 실제 엔지니어링을 가로막는 요인",
-    "link": "https://news.hada.io/topic?id=24373",
-    "source": "geeknews",
-    "published": "2025-11-15",
-    "description": "\n실리콘밸리에서는 AGI(인공 일반 지능) 을 실현 가능한 목표로 믿는 문화가 확산되어 있음\nOpenAI 내부에서는 ‘순수 언어 가설’ 을 기반으로, 언어 모델의 확장이 AGI로 이어질 수 있다는 신념이 형성됨\n이러한 믿음은 막대한 데이터센터 확장..."
-  },
-  {
-    "title": "AI 세계 시계",
-    "link": "https://news.hada.io/topic?id=24372",
-    "source": "geeknews",
-    "published": "2025-11-15",
-    "description": "\n9개의 AI 모델이 매 분마다 새로운 아날로그 시계 디자인을 생성하는 웹 프로젝트\n각 모델은 2000토큰의 제한 내에서 HTML/CSS 코드로 시계를 작성\n시계는 숫자 또는 로마 숫자 표시, CSS 애니메이션 초침, 반..."
-  },
-  {
-    "title": "파이어폭스에서 AI를 원하는 사람은 아무도 없을 것 같아요",
-    "link": "https://news.hada.io/topic?id=24371",
-    "source": "geeknews",
-    "published": "2025-11-15",
-    "description": "\n모질라가 ‘Window AI’ 라는 내장형 AI 어시스턴트를 파이어폭스에 추가해 일반 모드·비공개 모드와 병행되는 세 번째 브라우징 모드로 개발 중임\n공식 발표에 따르면 이 기능은 기존의 외부 챗봇 사이드바보다 깊이 통합된 형태이며, 사용자가 ..."
-  },
-  {
-    "title": "bluetui - Linux에서 Bluetooth를 관리하기 위한 TUI",
-    "link": "https://news.hada.io/topic?id=24370",
-    "source": "geeknews",
-    "published": "2025-11-15",
-    "description": "\n\nLinux 환경의 Bluetooth 관리 효율화를 위해 개발된 터미널 기반 사용자 인터페이스(TUI) 도구\n\nRust와 Ratatui 기반으로 작성되어 높은 성능과 안정성 제공, bluez 스택을 기반으로 동작\n\n..."
-  },
-  {
-    "title": "Tweeks - 웹 사이트를 자연어로 재구성하는 브라우저 확장 프로그램",
-    "link": "https://news.hada.io/topic?id=24369",
-    "source": "geeknews",
-    "published": "2025-11-14",
-    "description": "\n\nTweeks는 사용자가 방문하는 웹사이트의 인터페이스와 콘텐츠를 직접 수정할 수 있게 하는 브라우저 확장 도구\n\n자연어 명령으로 맞춤형 스크립트를 생성하거나, 미리 만들어진 공용 tweek 스크립트를 활용 가능\n\n&quot;이 사이트를 다크..."
-  },
-  {
-    "title": "정부 셧다운 해제 법안에 숨겨진 대마(헴프) 금지 조항",
-    "link": "https://news.hada.io/topic?id=24368",
-    "source": "geeknews",
-    "published": "2025-11-14",
-    "description": "\n미국 의회가 정부 셧다운 종료 법안에 전국적 ‘취하게 하는 헴프’ 금지 조항을 포함시킴\n법안은 헴프 정의를 총 THC 함량 기준으로 바꾸고, 0.4mg 이하 THC 제한을 설정해 대부분의 CBD·델타-8 제품을 불법화\n\n"
   },
   {
     "title": "A Star Wars dashboard deep dive: How to build your next visualization in less than 12 parsecs",
