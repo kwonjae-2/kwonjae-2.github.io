@@ -24,12 +24,18 @@ title: Weekly
                     </div>
 
                     <div style="margin-top: 1rem; padding-left: 0.5rem; border-left: 3px solid #4CAF50;">
-                        <!-- Extract article titles from content -->
+                        <!-- Extract article titles from content (Korean section only) -->
                         {% assign content_lines = post.content | newline_to_br | split: '<br />' %}
                         {% assign article_count = 0 %}
+                        {% assign in_korean_section = false %}
                         <ul style="margin: 0.5rem 0; padding-left: 1.5rem; list-style: none;">
                         {% for line in content_lines %}
-                            {% if line contains '#### ' and line contains '[' and article_count < 5 %}
+                            {% if line contains '## 한국어' %}
+                                {% assign in_korean_section = true %}
+                            {% elsif line contains '## English' %}
+                                {% assign in_korean_section = false %}
+                            {% endif %}
+                            {% if in_korean_section and line contains '#### ' and line contains '[' and article_count < 10 %}
                                 {% assign article_count = article_count | plus: 1 %}
                                 {% assign title_start = line | split: '[' | last %}
                                 {% assign article_title = title_start | split: ']' | first %}
@@ -40,9 +46,6 @@ title: Weekly
                             {% endif %}
                         {% endfor %}
                         </ul>
-                        {% if article_count == 0 %}
-                            <p style="color: #666; font-style: italic; margin: 0.5rem 0;">{{ post.description }}</p>
-                        {% endif %}
                     </div>
 
                     <div style="margin-top: 1rem; font-size: 0.9rem; color: #888;">

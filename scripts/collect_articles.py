@@ -177,11 +177,11 @@ class ArticleCollector:
 
         return text.strip()
 
-    def select_top_articles_with_ai(self, articles: List[Dict], top_n: int = 5) -> List[Dict]:
-        """Use Claude AI to select the most valuable articles for SRE/Observability professionals"""
+    def select_top_articles_with_ai(self, articles: List[Dict], min_n: int = 3, max_n: int = 10) -> List[Dict]:
+        """Use Claude AI to select the most valuable articles for SRE/Observability professionals (3-10 articles)"""
         if not self.anthropic_client:
             print("⚠️  Claude AI not configured. Falling back to simple selection.")
-            return articles[:top_n]
+            return articles[:min_n]
 
         print(f"\n🤖 Using Claude AI to analyze {len(articles)} articles...")
 
@@ -192,14 +192,20 @@ class ArticleCollector:
         ])
 
         prompt = f"""You are an expert in SRE (Site Reliability Engineering) and Observability.
-Your task is to analyze the following articles and select the TOP {top_n} most valuable articles for SRE and Observability professionals.
+Your task is to analyze the following articles and select between {min_n} to {max_n} most valuable articles for developers working in SRE and Observability.
 
-Consider these criteria:
-1. **Practical Value**: Does it provide actionable insights or real-world solutions?
-2. **Innovation**: Does it introduce new tools, techniques, or perspectives?
-3. **Relevance**: Is it directly relevant to SRE/Observability practitioners?
-4. **Impact**: Will it help improve system reliability, monitoring, or incident response?
-5. **Technical Depth**: Does it go beyond surface-level content?
+**Selection Criteria** (in order of priority):
+1. **Practical Value**: Actionable insights, real-world solutions, hands-on techniques
+2. **Technical Relevance**: Direct relevance to SRE/Observability practitioners and developers
+3. **Innovation**: New tools, techniques, best practices, or fresh perspectives
+4. **Technical Depth**: Goes beyond surface-level content with meaningful technical detail
+5. **Impact**: Helps improve system reliability, monitoring, incident response, or developer productivity
+
+**Important**:
+- Select ONLY articles that provide real value to developers
+- Minimum {min_n} articles, maximum {max_n} articles
+- Choose the exact number based on how many articles truly meet the quality bar
+- Quality over quantity - don't include mediocre articles just to reach a number
 
 Articles to analyze:
 
@@ -215,7 +221,7 @@ Please respond in JSON format with the following structure:
   ]
 }}
 
-Select exactly {top_n} articles and order them by importance (most important first)."""
+Order articles by importance (most important first)."""
 
         try:
             print("   📡 Sending request to Claude API...")
@@ -252,14 +258,14 @@ Select exactly {top_n} articles and order them by importance (most important fir
             print(f"❌ Failed to parse Claude AI response as JSON: {str(e)}")
             print(f"   Response text: {response_text[:200]}...")
             print("   Falling back to simple selection...")
-            return articles[:top_n]
+            return articles[:min_n]
         except Exception as e:
             print(f"❌ Error using Claude AI: {str(e)}")
             print(f"   Error type: {type(e).__name__}")
             import traceback
             print(f"   Traceback: {traceback.format_exc()}")
             print("   Falling back to simple selection...")
-            return articles[:top_n]
+            return articles[:min_n]
 
     def generate_article_summary_with_ai(self, article: Dict) -> Dict[str, str]:
         """Use Claude AI to generate bilingual (Korean/English) summary and key points"""
@@ -371,15 +377,15 @@ Respond in JSON format:
 
         print(f"\nSaved {len(articles)} articles to {filepath}")
 
-    def generate_markdown_draft(self, articles: List[Dict], top_n: int = 5, use_ai: bool = True):
-        """Generate a draft markdown post from top articles"""
+    def generate_markdown_draft(self, articles: List[Dict], min_n: int = 3, max_n: int = 10, use_ai: bool = True):
+        """Generate a draft markdown post from top articles (3-10 articles)"""
         today = datetime.now()
         filename = f"{today.strftime('%Y-%m-%d')}-weekly-{today.strftime('%Y%m%d')}.md"
 
         # Use AI to select and analyze articles if available
         if use_ai and self.anthropic_client:
             print("\n🤖 Using Claude AI to select and analyze articles...")
-            selected = self.select_top_articles_with_ai(articles, top_n)
+            selected = self.select_top_articles_with_ai(articles, min_n, max_n)
 
             # Generate bilingual summaries for each selected article
             print("\n📝 Generating bilingual summaries for selected articles...")
@@ -391,7 +397,7 @@ Respond in JSON format:
                 article['ai_key_points_en'] = summary_data.get('key_points_en', ['Key insight', 'Technical detail', 'Practical application'])
         else:
             # Fallback to simple selection
-            selected = articles[:top_n]
+            selected = articles[:min_n]
 
         markdown = f"""---
 title: "Weekly - {today.strftime('%B %d, %Y')}"
@@ -545,10 +551,10 @@ def main():
     today = datetime.now().strftime('%Y%m%d')
     collector.save_to_file(filtered, f'articles_{today}.json')
 
-    # Generate markdown post with AI
+    # Generate markdown post with AI (3-10 articles)
     print("\n" + "=" * 60)
     if filtered:
-        filepath = collector.generate_markdown_draft(filtered, top_n=5, use_ai=bool(api_key))
+        filepath = collector.generate_markdown_draft(filtered, min_n=3, max_n=10, use_ai=bool(api_key))
         print("=" * 60)
         print(f"\n✅ Weekly digest post created successfully!")
         print(f"📄 File: {filepath}")
