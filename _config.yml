@@ -20,10 +20,10 @@ resume: false
 resume-external: false
 resume-url: https://kwonjae-2.github.io/
 
-url: https://kwonjae-2.github.io/
+url: https://kwonjae-2.github.io
 # your url: https://USERNAME.github.io
 
-permalink: /:title/
+permalink: /:categories/:year:month:day/
 
 # To enable google analytics, supply your token below
 # analytics-google: 'UA-MYANALYTICS'
