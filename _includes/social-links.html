@@ -36,4 +36,10 @@
             <i class="fa-regular fa-envelope"></i>
         </a>
     {% endif %}
+
+    {% if site.weekly %}
+        <a class="link" data-title="Weekly" href="{{ site.url }}/weekly" rel="noopener" alt="anchor link for weekly posts" aria-label="anchor link for weekly posts">
+            <span style="font-size: 1.5em;">📚</span>
+        </a>
+    {% endif %}
 </div>
