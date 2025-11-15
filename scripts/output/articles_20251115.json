@@ -1,5 +1,82 @@
 [
   {
+    "title": "VPN 금지 추진하는 미국 주 의원들, 기술 이해 부족 논란",
+    "link": "https://news.hada.io/topic?id=24377",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n미국 위스콘신주와 미시간주에서 성인 콘텐츠 접근 연령 확인 법안에 VPN 차단 조항을 포함한 입법이 추진 중임\n위스콘신 법안(A.B.105/S.B.130)은 ‘미성년자에게 유해한 자료’의 범위를 확대하고, 해당 콘텐츠를 제공하는 웹사이트가 VPN 접속자를 차단..."
+  },
+  {
+    "title": "가자를 위한 Bitchat – 인터넷 없이 메시지 전송",
+    "link": "https://news.hada.io/topic?id=24376",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n\nBitchat은 인터넷 연결이 없어도 안전하게 메시지를 주고받을 수 있는 메신저 앱으로, 블루투스를 이용해 기기 간 직접 통신을 지원\n\n팔레스타인 지역의 통신 인프라 붕괴와 감시 문제로 인해 자유로운 소통이 차단된 상황에서, 인터넷과 전력 없..."
+  },
+  {
+    "title": "가난하다는 것과 일시적으로 무일푼인 것은 다르다",
+    "link": "https://news.hada.io/topic?id=24375",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n\n가난은 단순히 돈이 부족한 상태가 아니라, 다음 급여일에도 상황이 나아지지 않는 끝없는 생존의 반복 구조\n\n\n‘무일푼(broke)’ 은 일시적 현금 부족으로, 기본적인 생필품 구매나 생활 유지가 가능하지만 여유가 없는 상태\n가난한 사..."
+  },
+  {
+    "title": "EU의 ‘Chat Control 2.0’이 초래한 격렬한 개인정보 보호 반발",
+    "link": "https://news.hada.io/topic?id=24374",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n유럽연합이 사적 디지털 통신 감시를 확대하는 ‘Chat Control 2.0’ 결정을 앞두고 있으며, 이는 온라인 프라이버시를 둘러싼 주요 정치적 충돌로 부상\n새 초안은 ‘위험 완화’와 ‘아동 보호’ 를 명분으로 하지만, 실제로는 모든 메시징 서비스에 의무..."
+  },
+  {
+    "title": "AGI 환상은 실제 엔지니어링을 가로막는 요인",
+    "link": "https://news.hada.io/topic?id=24373",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n실리콘밸리에서는 AGI(인공 일반 지능) 을 실현 가능한 목표로 믿는 문화가 확산되어 있음\nOpenAI 내부에서는 ‘순수 언어 가설’ 을 기반으로, 언어 모델의 확장이 AGI로 이어질 수 있다는 신념이 형성됨\n이러한 믿음은 막대한 데이터센터 확장..."
+  },
+  {
+    "title": "AI 세계 시계",
+    "link": "https://news.hada.io/topic?id=24372",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n9개의 AI 모델이 매 분마다 새로운 아날로그 시계 디자인을 생성하는 웹 프로젝트\n각 모델은 2000토큰의 제한 내에서 HTML/CSS 코드로 시계를 작성\n시계는 숫자 또는 로마 숫자 표시, CSS 애니메이션 초침, 반..."
+  },
+  {
+    "title": "파이어폭스에서 AI를 원하는 사람은 아무도 없을 것 같아요",
+    "link": "https://news.hada.io/topic?id=24371",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n모질라가 ‘Window AI’ 라는 내장형 AI 어시스턴트를 파이어폭스에 추가해 일반 모드·비공개 모드와 병행되는 세 번째 브라우징 모드로 개발 중임\n공식 발표에 따르면 이 기능은 기존의 외부 챗봇 사이드바보다 깊이 통합된 형태이며, 사용자가 ..."
+  },
+  {
+    "title": "bluetui - Linux에서 Bluetooth를 관리하기 위한 TUI",
+    "link": "https://news.hada.io/topic?id=24370",
+    "source": "geeknews",
+    "published": "2025-11-15",
+    "description": "\n\nLinux 환경의 Bluetooth 관리 효율화를 위해 개발된 터미널 기반 사용자 인터페이스(TUI) 도구\n\nRust와 Ratatui 기반으로 작성되어 높은 성능과 안정성 제공, bluez 스택을 기반으로 동작\n\n..."
+  },
+  {
+    "title": "Tweeks - 웹 사이트를 자연어로 재구성하는 브라우저 확장 프로그램",
+    "link": "https://news.hada.io/topic?id=24369",
+    "source": "geeknews",
+    "published": "2025-11-14",
+    "description": "\n\nTweeks는 사용자가 방문하는 웹사이트의 인터페이스와 콘텐츠를 직접 수정할 수 있게 하는 브라우저 확장 도구\n\n자연어 명령으로 맞춤형 스크립트를 생성하거나, 미리 만들어진 공용 tweek 스크립트를 활용 가능\n\n&quot;이 사이트를 다크..."
+  },
+  {
+    "title": "정부 셧다운 해제 법안에 숨겨진 대마(헴프) 금지 조항",
+    "link": "https://news.hada.io/topic?id=24368",
+    "source": "geeknews",
+    "published": "2025-11-14",
+    "description": "\n미국 의회가 정부 셧다운 종료 법안에 전국적 ‘취하게 하는 헴프’ 금지 조항을 포함시킴\n법안은 헴프 정의를 총 THC 함량 기준으로 바꾸고, 0.4mg 이하 THC 제한을 설정해 대부분의 CBD·델타-8 제품을 불법화\n\n"
+  },
+  {
+    "title": "A Star Wars dashboard deep dive: How to build your next visualization in less than 12 parsecs",
+    "link": "https://grafana.com/blog/2025/11/14/a-star-wars-dashboard-deep-dive-how-to-build-your-next-visualization-in-less-than-12-parsecs/",
+    "source": "grafana",
+    "published": "2025-11-14",
+    "description": "Hello there! Earlier this year I created a Star Wars-themed dashboard featuring all sorts of fun visualizations from a galaxy far, far away, including a map of the Kessel Run, an overview of the Mille..."
+  },
+  {
     "title": "Continuous profiling for native code: Understanding the what, why, and how",
     "link": "https://grafana.com/blog/2025/11/14/continuous-profiling-for-native-code-understanding-the-what-why-and-how/",
     "source": "grafana",
