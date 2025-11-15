@@ -163,6 +163,20 @@ class ArticleCollector:
                 filtered.append(article)
         return filtered
 
+    def _strip_markdown_json(self, text: str) -> str:
+        """Strip markdown code block formatting from JSON responses"""
+        text = text.strip()
+        # Remove ```json and ``` markers
+        if text.startswith('```json'):
+            text = text[7:]  # Remove ```json
+        elif text.startswith('```'):
+            text = text[3:]  # Remove ```
+
+        if text.endswith('```'):
+            text = text[:-3]  # Remove trailing ```
+
+        return text.strip()
+
     def select_top_articles_with_ai(self, articles: List[Dict], top_n: int = 5) -> List[Dict]:
         """Use Claude AI to select the most valuable articles for SRE/Observability professionals"""
         if not self.anthropic_client:
@@ -217,8 +231,9 @@ Select exactly {top_n} articles and order them by importance (most important fir
             response_text = message.content[0].text
             print(f"   📝 Response length: {len(response_text)} characters")
 
-            # Parse JSON response
-            selection = json.loads(response_text)
+            # Strip markdown formatting and parse JSON response
+            clean_json = self._strip_markdown_json(response_text)
+            selection = json.loads(clean_json)
 
             # Extract selected articles
             selected = []
@@ -247,48 +262,66 @@ Select exactly {top_n} articles and order them by importance (most important fir
             return articles[:top_n]
 
     def generate_article_summary_with_ai(self, article: Dict) -> Dict[str, str]:
-        """Use Claude AI to generate a summary and key points for an article"""
+        """Use Claude AI to generate bilingual (Korean/English) summary and key points"""
         if not self.anthropic_client:
             return {
-                'summary': article['description'],
-                'key_points': [
+                'summary_ko': article['description'],
+                'summary_en': article['description'],
+                'key_points_ko': [
+                    '아티클의 주요 인사이트',
+                    '중요한 기술적 세부사항',
+                    '실무 적용 방안'
+                ],
+                'key_points_en': [
                     'Key insight from the article',
                     'Important technical detail',
                     'Practical application or takeaway'
                 ]
             }
 
-        prompt = f"""Analyze this article about SRE/Observability and provide:
-1. A concise 2-3 sentence summary focusing on the main value proposition
-2. Three specific, actionable key points
+        prompt = f"""Analyze this article about SRE/Observability and provide bilingual summaries (Korean and English):
 
 Article:
 Title: {article['title']}
 Source: {article['source']}
 Description: {article['description']}
 
+Provide:
+1. A concise 2-3 sentence summary in KOREAN focusing on the main value proposition
+2. The same summary in ENGLISH
+3. Three specific, actionable key points in KOREAN
+4. The same three key points in ENGLISH
+
 Respond in JSON format:
 {{
-  "summary": "2-3 sentence summary here",
-  "key_points": [
-    "Specific key point 1",
-    "Specific key point 2",
-    "Specific key point 3"
+  "summary_ko": "한글로 작성된 2-3문장 요약",
+  "summary_en": "English 2-3 sentence summary",
+  "key_points_ko": [
+    "첫 번째 핵심 포인트",
+    "두 번째 핵심 포인트",
+    "세 번째 핵심 포인트"
+  ],
+  "key_points_en": [
+    "First key point",
+    "Second key point",
+    "Third key point"
   ]
 }}"""
 
         try:
-            print(f"   📝 Generating summary for: {article['title'][:50]}...")
+            print(f"   📝 Generating bilingual summary for: {article['title'][:50]}...")
             message = self.anthropic_client.messages.create(
                 model="claude-sonnet-4-20250514",
-                max_tokens=500,
+                max_tokens=800,  # Increased for bilingual content
                 messages=[
                     {"role": "user", "content": prompt}
                 ]
             )
 
             response_text = message.content[0].text
-            result = json.loads(response_text)
+            # Strip markdown formatting and parse JSON
+            clean_json = self._strip_markdown_json(response_text)
+            result = json.loads(clean_json)
             print(f"   ✓ Summary generated ({message.usage.output_tokens} tokens)")
             return result
 
@@ -296,8 +329,14 @@ Respond in JSON format:
             print(f"❌ Failed to parse summary JSON for '{article['title'][:40]}': {str(e)}")
             print(f"   Response: {response_text[:150]}...")
             return {
-                'summary': article['description'],
-                'key_points': [
+                'summary_ko': article['description'],
+                'summary_en': article['description'],
+                'key_points_ko': [
+                    '아티클의 주요 인사이트',
+                    '중요한 기술적 세부사항',
+                    '실무 적용 방안'
+                ],
+                'key_points_en': [
                     'Key insight from the article',
                     'Important technical detail',
                     'Practical application or takeaway'
@@ -307,8 +346,14 @@ Respond in JSON format:
             print(f"❌ Error generating summary for '{article['title'][:40]}': {str(e)}")
             print(f"   Error type: {type(e).__name__}")
             return {
-                'summary': article['description'],
-                'key_points': [
+                'summary_ko': article['description'],
+                'summary_en': article['description'],
+                'key_points_ko': [
+                    '아티클의 주요 인사이트',
+                    '중요한 기술적 세부사항',
+                    '실무 적용 방안'
+                ],
+                'key_points_en': [
                     'Key insight from the article',
                     'Important technical detail',
                     'Practical application or takeaway'
@@ -336,12 +381,14 @@ Respond in JSON format:
             print("\n🤖 Using Claude AI to select and analyze articles...")
             selected = self.select_top_articles_with_ai(articles, top_n)
 
-            # Generate summaries for each selected article
-            print("\n📝 Generating summaries for selected articles...")
+            # Generate bilingual summaries for each selected article
+            print("\n📝 Generating bilingual summaries for selected articles...")
             for article in selected:
                 summary_data = self.generate_article_summary_with_ai(article)
-                article['ai_summary'] = summary_data['summary']
-                article['ai_key_points'] = summary_data['key_points']
+                article['ai_summary_ko'] = summary_data.get('summary_ko', article['description'])
+                article['ai_summary_en'] = summary_data.get('summary_en', article['description'])
+                article['ai_key_points_ko'] = summary_data.get('key_points_ko', ['주요 인사이트', '기술적 세부사항', '실무 적용'])
+                article['ai_key_points_en'] = summary_data.get('key_points_en', ['Key insight', 'Technical detail', 'Practical application'])
         else:
             # Fallback to simple selection
             selected = articles[:top_n]
@@ -353,43 +400,80 @@ date: {today.strftime('%Y-%m-%d')} 10:00:00 +0900
 category: weekly
 tags: [SRE, Observability, Weekly]
 author: kwonjaelee
-description: "Top {len(selected)} articles on SRE and Observability from this week"
+description: "이번 주 SRE와 Observability 관련 상위 {len(selected)}개 아티클 | Top {len(selected)} articles on SRE and Observability"
 ---
 
-Welcome to this week's edition! Here are the most valuable articles on SRE, Observability, and Infrastructure Engineering.
+## 한국어 (Korean)
 
-## 📚 This Week's Picks
+이번 주에도 찾아주셔서 감사합니다! SRE, Observability, 그리고 Infrastructure Engineering 분야의 가장 가치있는 아티클들을 소개합니다.
+
+### 📚 이번 주 추천 아티클
 
 """
 
+        # Korean version
         for i, article in enumerate(selected, 1):
-            # Use AI-generated summary if available, otherwise use description
-            summary = article.get('ai_summary', article['description'])
-            key_points = article.get('ai_key_points', [
+            summary_ko = article.get('ai_summary_ko', article['description'])
+            key_points_ko = article.get('ai_key_points_ko', [
+                '아티클의 주요 인사이트',
+                '중요한 기술적 세부사항',
+                '실무 적용 방안'
+            ])
+
+            markdown += f"""#### {i}. [{article['title']}]({article['link']})
+**출처:** {article['source']} | **날짜:** {article['published']}
+
+{summary_ko}
+
+**핵심 포인트:**
+"""
+            for point in key_points_ko:
+                markdown += f"- {point}\n"
+
+            markdown += "\n"
+
+        markdown += """---
+
+## English
+
+Welcome to this week's edition! Here are the most valuable articles on SRE, Observability, and Infrastructure Engineering.
+
+### 📚 This Week's Picks
+
+"""
+
+        # English version
+        for i, article in enumerate(selected, 1):
+            summary_en = article.get('ai_summary_en', article['description'])
+            key_points_en = article.get('ai_key_points_en', [
                 'Key insight from the article',
                 'Important technical detail',
                 'Practical application or takeaway'
             ])
 
-            markdown += f"""### {i}. [{article['title']}]({article['link']})
+            markdown += f"""#### {i}. [{article['title']}]({article['link']})
 **Source:** {article['source']} | **Date:** {article['published']}
 
-{summary}
+{summary_en}
 
 **Key Points:**
 """
-            for point in key_points:
+            for point in key_points_en:
                 markdown += f"- {point}\n"
 
-            markdown += "\n---\n\n"
+            markdown += "\n"
 
-        markdown += """## 🔗 Resources
+        markdown += """---
+
+## 🔗 Resources
 
 - [SRE Weekly](https://sreweekly.com/) - Your weekly dose of SRE news
 - [GeekNews](https://news.hada.io/) - Korean tech news aggregator
 - [OpenTelemetry Blog](https://opentelemetry.io/blog/)
 
 ---
+
+*아티클 제안이 있으시면 [이메일](mailto:kwonjae13@gmail.com)로 연락주시거나 댓글을 남겨주세요!*
 
 *Have an article suggestion? Feel free to reach out via [email](mailto:kwonjae13@gmail.com) or leave a comment below!*
 """
