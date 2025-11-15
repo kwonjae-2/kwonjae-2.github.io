@@ -1,40 +1,5 @@
 [
   {
-    "title": "Continuous profiling for native code: Understanding the what, why, and how",
-    "link": "https://grafana.com/blog/2025/11/14/continuous-profiling-for-native-code-understanding-the-what-why-and-how/",
-    "source": "grafana",
-    "published": "2025-11-14",
-    "description": "It’s hard to imagine deploying any application today without observability. Logs have been around since the early days of mainframes, metrics became standard with early Unix systems, and tracing gaine..."
-  },
-  {
-    "title": "Understand, diagnose, and optimize SQL queries: Introducing Grafana Cloud Database Observability",
-    "link": "https://grafana.com/blog/2025/11/13/understand-diagnose-and-optimize-sql-queries-introducing-grafana-cloud-database-observability/",
-    "source": "grafana",
-    "published": "2025-11-13",
-    "description": "It&rsquo;s widely acknowledged that most application performance problems stem not from the application itself, but from the underlying database. Slow or inefficient database queries are often the pri..."
-  },
-  {
-    "title": "Announcing 2025 OpenTelemetry Community Awards Winners",
-    "link": "https://opentelemetry.io/blog/2025/community-awards-winners/",
-    "source": "opentelemetry",
-    "published": "2025-11-12",
-    "description": "We are excited to announce the winners of the second OpenTelemetry Community\nAwards! These awards recognize individuals who have made a notable impact to\nthe OpenTelemetry project over the past year, ..."
-  },
-  {
-    "title": "Performance testing best practices: How to prepare for peak demand with Grafana Cloud k6",
-    "link": "https://grafana.com/blog/2025/11/12/performance-testing-best-practices-how-to-prepare-for-peak-demand-with-grafana-cloud-k6/",
-    "source": "grafana",
-    "published": "2025-11-12",
-    "description": "For many organizations, periods of high customer activity are anything but relaxing. Events like Black Friday, product launches, or major sales can put intense strain on the software and infrastructur..."
-  },
-  {
-    "title": "SRE Weekly Issue #496",
-    "link": "https://sreweekly.com/sre-weekly-issue-496/",
-    "source": "sreweekly",
-    "published": "2025-11-10",
-    "description": "View on sreweekly.com A message from our sponsor, CodeRabbit: CodeRabbit is your AI co-pilot for code reviews. Get instant code review feedback, one-click fix suggestions and define custom rules with ..."
-  },
-  {
     "title": "Evolving OpenTelemetry's Stabilization and Release Practices",
     "link": "https://opentelemetry.io/blog/2025/stability-proposal-announcement/",
     "source": "opentelemetry",
