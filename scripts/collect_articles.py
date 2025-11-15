@@ -422,10 +422,6 @@ author: kwonjaelee
 description: "이번 주 개발자를 위한 {len(selected)}개의 아티클 | {len(selected)} curated articles for developers"
 ---
 
-## 한국어 (Korean)
-
-이번 주에도 찾아주셔서 감사합니다! 개발자 성장과 실무에 도움이 되는 다양한 주제의 아티클들을 소개합니다.
-
 ### 📚 이번 주 추천 아티클
 
 """
@@ -452,10 +448,6 @@ description: "이번 주 개발자를 위한 {len(selected)}개의 아티클 | {
             markdown += "\n"
 
         markdown += """---
-
-## English
-
-Welcome to this week's edition! Here are curated articles covering diverse topics to help developers grow and excel in their work.
 
 ### 📚 This Week's Picks
 
