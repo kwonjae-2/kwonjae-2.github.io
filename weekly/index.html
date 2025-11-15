@@ -29,16 +29,13 @@ title: Weekly
                         {% assign article_count = 0 %}
                         <ul style="margin: 0.5rem 0; padding-left: 1.5rem; list-style: none;">
                         {% for line in content_lines %}
-                            {% if line contains '### ' and line contains '[' and article_count < 5 %}
+                            {% if line contains '#### ' and line contains '[' and article_count < 5 %}
                                 {% assign article_count = article_count | plus: 1 %}
                                 {% assign title_start = line | split: '[' | last %}
                                 {% assign article_title = title_start | split: ']' | first %}
-                                {% assign link_start = line | split: '(' | last %}
-                                {% assign article_link = link_start | split: ')' | first %}
                                 <li style="margin-bottom: 0.6rem; color: #555;">
                                     <span style="color: #4CAF50; font-weight: bold; margin-right: 0.5rem;">{{ article_count }}.</span>
-                                    <a href="{{ article_link }}" target="_blank" style="color: #2196F3; text-decoration: none; font-weight: 500;"
-                                       onclick="event.stopPropagation();">{{ article_title }}</a>
+                                    <span style="color: #333; font-weight: 500;">{{ article_title }}</span>
                                 </li>
                             {% endif %}
                         {% endfor %}
