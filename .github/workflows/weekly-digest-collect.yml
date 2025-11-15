@@ -1,4 +1,4 @@
-name: Weekly Digest - Collect and Publish
+name: Weekly - Collect and Publish
 
 on:
   schedule:
@@ -47,7 +47,7 @@ jobs:
             echo "No changes to commit"
           else
             TOMORROW=$(date -d "tomorrow" +%Y-%m-%d)
-            git commit -m "Add Weekly Digest - $TOMORROW
+            git commit -m "Add Weekly - $TOMORROW
 
           🤖 Auto-generated with Claude AI
 
@@ -58,13 +58,13 @@ jobs:
           - Grafana Blog
           - Honeycomb Blog"
             git push
-            echo "✅ Weekly digest committed and ready for Saturday publication!"
+            echo "✅ Weekly post committed and ready for Saturday publication!"
           fi
 
       - name: Upload artifacts (backup)
         uses: actions/upload-artifact@v4
         with:
-          name: weekly-digest-backup
+          name: weekly-backup
           path: |
             _posts/*weekly*.md
             scripts/output/

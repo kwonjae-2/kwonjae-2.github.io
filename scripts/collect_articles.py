@@ -32,8 +32,15 @@ class ArticleCollector:
         # Initialize Anthropic client if API key is provided
         self.anthropic_client = None
         if anthropic_api_key:
-            self.anthropic_client = Anthropic(api_key=anthropic_api_key)
-            print("✓ Claude AI integration enabled")
+            try:
+                print(f"🔑 Initializing Claude AI with API key (length: {len(anthropic_api_key)})")
+                self.anthropic_client = Anthropic(api_key=anthropic_api_key)
+                print("✓ Claude AI integration enabled")
+            except Exception as e:
+                print(f"❌ Failed to initialize Claude AI: {str(e)}")
+                print(f"   Error type: {type(e).__name__}")
+        else:
+            print("⚠️  No API key provided - AI features will be disabled")
 
         # Load previously published article URLs to avoid duplicates
         self.published_urls = self._load_published_urls()
@@ -197,6 +204,7 @@ Please respond in JSON format with the following structure:
 Select exactly {top_n} articles and order them by importance (most important first)."""
 
         try:
+            print("   📡 Sending request to Claude API...")
             message = self.anthropic_client.messages.create(
                 model="claude-sonnet-4-20250514",
                 max_tokens=2000,
@@ -204,8 +212,10 @@ Select exactly {top_n} articles and order them by importance (most important fir
                     {"role": "user", "content": prompt}
                 ]
             )
+            print(f"   ✓ Received response from Claude API (usage: {message.usage.input_tokens} in, {message.usage.output_tokens} out)")
 
             response_text = message.content[0].text
+            print(f"   📝 Response length: {len(response_text)} characters")
 
             # Parse JSON response
             selection = json.loads(response_text)
@@ -218,12 +228,21 @@ Select exactly {top_n} articles and order them by importance (most important fir
                     article = articles[article_idx].copy()
                     article['ai_reasoning'] = item['reasoning']
                     selected.append(article)
+                    print(f"   ✓ Selected article {article_idx + 1}: {article['title'][:60]}...")
 
             print(f"✓ Claude AI selected {len(selected)} articles")
             return selected
 
+        except json.JSONDecodeError as e:
+            print(f"❌ Failed to parse Claude AI response as JSON: {str(e)}")
+            print(f"   Response text: {response_text[:200]}...")
+            print("   Falling back to simple selection...")
+            return articles[:top_n]
         except Exception as e:
-            print(f"⚠️  Error using Claude AI: {str(e)}")
+            print(f"❌ Error using Claude AI: {str(e)}")
+            print(f"   Error type: {type(e).__name__}")
+            import traceback
+            print(f"   Traceback: {traceback.format_exc()}")
             print("   Falling back to simple selection...")
             return articles[:top_n]
 
@@ -259,6 +278,7 @@ Respond in JSON format:
 }}"""
 
         try:
+            print(f"   📝 Generating summary for: {article['title'][:50]}...")
             message = self.anthropic_client.messages.create(
                 model="claude-sonnet-4-20250514",
                 max_tokens=500,
@@ -268,10 +288,24 @@ Respond in JSON format:
             )
 
             response_text = message.content[0].text
-            return json.loads(response_text)
+            result = json.loads(response_text)
+            print(f"   ✓ Summary generated ({message.usage.output_tokens} tokens)")
+            return result
 
+        except json.JSONDecodeError as e:
+            print(f"❌ Failed to parse summary JSON for '{article['title'][:40]}': {str(e)}")
+            print(f"   Response: {response_text[:150]}...")
+            return {
+                'summary': article['description'],
+                'key_points': [
+                    'Key insight from the article',
+                    'Important technical detail',
+                    'Practical application or takeaway'
+                ]
+            }
         except Exception as e:
-            print(f"⚠️  Error generating summary for '{article['title']}': {str(e)}")
+            print(f"❌ Error generating summary for '{article['title'][:40]}': {str(e)}")
+            print(f"   Error type: {type(e).__name__}")
             return {
                 'summary': article['description'],
                 'key_points': [
@@ -378,12 +412,17 @@ Welcome to this week's edition! Here are the most valuable articles on SRE, Obse
 def main():
     """Main function"""
     print("=" * 60)
-    print("Weekly Digest Article Collector with Claude AI")
+    print("Weekly Article Collector with Claude AI")
     print("=" * 60)
 
     # Get API key from environment variable
     api_key = os.environ.get('ANTHROPIC_API_KEY')
-    if not api_key:
+    print(f"\n🔍 Environment check:")
+    print(f"   ANTHROPIC_API_KEY present: {bool(api_key)}")
+    if api_key:
+        print(f"   API key length: {len(api_key)}")
+        print(f"   API key prefix: {api_key[:10]}...")
+    else:
         print("⚠️  Warning: ANTHROPIC_API_KEY not found in environment")
         print("   AI features will be disabled. Set ANTHROPIC_API_KEY to enable.")
 

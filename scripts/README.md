@@ -1,6 +1,6 @@
-# Weekly Digest Automation Scripts
+# Weekly Automation Scripts
 
-This directory contains scripts to automate the collection and preparation of Weekly Digest posts using **Claude AI**.
+This directory contains scripts to automate the collection and preparation of Weekly posts using **Claude AI**.
 
 ## Features
 
