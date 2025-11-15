@@ -1,0 +1,45 @@
+name: Weekly Digest - Collect Articles
+
+on:
+  schedule:
+    # Run every Wednesday, Thursday, and Friday at 9 AM KST (00:00 UTC)
+    - cron: '0 0 * * 3,4,5'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  collect-articles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: Collect articles
+        run: |
+          cd scripts
+          python collect_articles.py
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: collected-articles
+          path: |
+            scripts/output/
+            scripts/drafts/
+          retention-days: 7
+
+      - name: Comment on collection results
+        run: |
+          echo "Articles collected successfully!"
+          echo "Check the artifacts for collected articles and draft posts."

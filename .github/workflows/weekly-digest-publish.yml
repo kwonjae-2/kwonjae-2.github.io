@@ -1,0 +1,66 @@
+name: Weekly Digest - Auto Publish
+
+on:
+  schedule:
+    # Run every Saturday at 10 AM KST (01:00 UTC)
+    - cron: '0 1 * * 6'
+  workflow_dispatch: # Allow manual trigger
+    inputs:
+      post_file:
+        description: 'Path to the post file in _posts/ directory'
+        required: true
+        type: string
+
+jobs:
+  publish-weekly-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Check for new weekly digest post
+        id: check_post
+        run: |
+          # Check if there's a new post ready to publish
+          TODAY=$(date +%Y-%m-%d)
+          POST_FILE="_posts/${TODAY}-weekly-digest-*.md"
+
+          if ls $POST_FILE 1> /dev/null 2>&1; then
+            echo "post_exists=true" >> $GITHUB_OUTPUT
+            echo "post_file=$(ls $POST_FILE)" >> $GITHUB_OUTPUT
+          else
+            echo "post_exists=false" >> $GITHUB_OUTPUT
+            echo "No post file found for today. Skipping publication."
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_post.outputs.post_exists == 'true'
+        run: |
+          git add _posts/
+          git commit -m "Publish Weekly Digest - $(date +%Y-%m-%d)" || echo "No changes to commit"
+          git push
+
+      - name: Trigger Jekyll build
+        if: steps.check_post.outputs.post_exists == 'true'
+        run: |
+          echo "Weekly Digest published successfully!"
+          echo "GitHub Pages will rebuild automatically."
+
+  notify-no-post:
+    runs-on: ubuntu-latest
+    needs: publish-weekly-digest
+    if: failure()
+    steps:
+      - name: No post available
+        run: |
+          echo "⚠️ No Weekly Digest post found for publication."
+          echo "Please ensure a post file is created in _posts/ directory before the scheduled time."
