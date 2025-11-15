@@ -420,6 +420,7 @@ category: weekly
 tags: [Development, Tech, Weekly]
 author: kwonjaelee
 description: "이번 주 개발자를 위한 {len(selected)}개의 아티클 | {len(selected)} curated articles for developers"
+article_count: {len(selected)}
 ---
 
 ### 📚 이번 주 추천 아티클
