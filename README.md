@@ -1,58 +1,42 @@
-# Kwonjae Lee - Personal Portfolio
+# Kwonjae Lee
 
-A minimalist personal portfolio website built with Jekyll.
+Personal site featuring curated tech articles for developers.
 
-## About
+## 🌐 Live Site
 
-This is a simple and clean personal portfolio website for Kwonjae Lee, SRE & Observability Engineer.
+[kwonjae-2.github.io](https://kwonjae-2.github.io)
 
-## Features
+## 📚 Weekly
 
-- **Clean Design**: Minimalist and professional layout
-- **Responsive**: Works on all devices
-- **Fast Loading**: Optimized for speed
-- **SEO Optimized**: Search engine friendly
-- **Social Links**: Connect through LinkedIn, GitHub, and Email
+Automated weekly digest of curated tech articles covering:
+- AI/ML & LLM applications
+- Software engineering & architecture
+- SRE & Observability
+- DevOps & infrastructure
+- Team culture & developer productivity
 
-## Technical Stack
+Articles are automatically collected, AI-curated, and published every Saturday at 10 AM KST.
 
-- [Jekyll](https://jekyllrb.com/) - Static site generator
-- [Sass](https://sass-lang.com/) - CSS preprocessor
-- [SVG](https://www.w3.org/Graphics/SVG/) - Vector graphics
-- GitHub Pages - Hosting
+## 🤖 Automation
 
-## Local Development
+- **Collection**: Python script fetches articles from multiple RSS feeds
+- **Curation**: Claude AI selects 3-10 high-quality articles based on developer value
+- **Publishing**: GitHub Actions workflow runs every Friday at 9 PM KST
+- **Bilingual**: Each article includes both Korean and English summaries
 
-To run this site locally:
+## 🛠️ Tech Stack
 
-1. Install [Jekyll](https://jekyllrb.com) and [Bundler](https://bundler.io/)
-2. Clone this repository
-3. Run the following commands:
+- **Site**: Jekyll + GitHub Pages
+- **Automation**: Python + GitHub Actions
+- **AI**: Anthropic Claude (claude-sonnet-4-20250514)
+- **Sources**: SRE Weekly, GeekNews, OpenTelemetry, Grafana, Honeycomb
 
-```bash
-bundle install
-bundle exec jekyll serve
-```
+## 📧 Contact
 
-4. Open [http://localhost:4000](http://localhost:4000) in your browser
-
-## Configuration
-
-Site configuration can be customized in `_config.yml` file.
-
-## Deployment
-
-This site is automatically deployed to GitHub Pages when changes are pushed to the `gh-pages` branch.
-
-## Contact
-
-- **LinkedIn**: [kwonjae-lee-213ba3157](https://linkedin.com/in/kwonjae-lee-213ba3157)
-- **GitHub**: [kwonjae-2](https://github.com/kwonjae-2)
-- **Email**: kwonjae13@gmail.com
+- [LinkedIn](https://linkedin.com/in/kwonjae-lee-213ba3157)
+- [GitHub](https://github.com/kwonjae-2)
+- [Email](mailto:kwonjae13@gmail.com)
 
 ---
 
-## License
-
-Based on [Indigo](https://github.com/sergiokopplin/indigo) theme by Sérgio Kopplin.
-[MIT](https://kopplin.mit-license.org/) License
+Theme based on [Indigo](https://github.com/sergiokopplin/indigo) by Sérgio Kopplin
