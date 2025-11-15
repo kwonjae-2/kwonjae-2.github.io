@@ -1,0 +1,240 @@
+[
+  {
+    "title": "Continuous profiling for native code: Understanding the what, why, and how",
+    "link": "https://grafana.com/blog/2025/11/14/continuous-profiling-for-native-code-understanding-the-what-why-and-how/",
+    "source": "grafana",
+    "published": "2025-11-14",
+    "description": "It’s hard to imagine deploying any application today without observability. Logs have been around since the early days of mainframes, metrics became standard with early Unix systems, and tracing gaine..."
+  },
+  {
+    "title": "Understand, diagnose, and optimize SQL queries: Introducing Grafana Cloud Database Observability",
+    "link": "https://grafana.com/blog/2025/11/13/understand-diagnose-and-optimize-sql-queries-introducing-grafana-cloud-database-observability/",
+    "source": "grafana",
+    "published": "2025-11-13",
+    "description": "It&rsquo;s widely acknowledged that most application performance problems stem not from the application itself, but from the underlying database. Slow or inefficient database queries are often the pri..."
+  },
+  {
+    "title": "Announcing 2025 OpenTelemetry Community Awards Winners",
+    "link": "https://opentelemetry.io/blog/2025/community-awards-winners/",
+    "source": "opentelemetry",
+    "published": "2025-11-12",
+    "description": "We are excited to announce the winners of the second OpenTelemetry Community\nAwards! These awards recognize individuals who have made a notable impact to\nthe OpenTelemetry project over the past year, ..."
+  },
+  {
+    "title": "Performance testing best practices: How to prepare for peak demand with Grafana Cloud k6",
+    "link": "https://grafana.com/blog/2025/11/12/performance-testing-best-practices-how-to-prepare-for-peak-demand-with-grafana-cloud-k6/",
+    "source": "grafana",
+    "published": "2025-11-12",
+    "description": "For many organizations, periods of high customer activity are anything but relaxing. Events like Black Friday, product launches, or major sales can put intense strain on the software and infrastructur..."
+  },
+  {
+    "title": "SRE Weekly Issue #496",
+    "link": "https://sreweekly.com/sre-weekly-issue-496/",
+    "source": "sreweekly",
+    "published": "2025-11-10",
+    "description": "View on sreweekly.com A message from our sponsor, CodeRabbit: CodeRabbit is your AI co-pilot for code reviews. Get instant code review feedback, one-click fix suggestions and define custom rules with ..."
+  },
+  {
+    "title": "Evolving OpenTelemetry's Stabilization and Release Practices",
+    "link": "https://opentelemetry.io/blog/2025/stability-proposal-announcement/",
+    "source": "opentelemetry",
+    "published": "2025-11-08",
+    "description": "Summary\nOpenTelemetry is, by any metric, one of the largest and most exciting projects\nin the cloud native space. Over the past five years, this community has come\ntogether to build one of the most es..."
+  },
+  {
+    "title": "Contributing the Unroll Processor to the OpenTelemetry Collector Contrib",
+    "link": "https://opentelemetry.io/blog/2025/contrib-unroll-processor/",
+    "source": "opentelemetry",
+    "published": "2025-11-07",
+    "description": "The idea for unrolling bundled logs inside the OpenTelemetry Collector didn&rsquo;t\nstart with a processor.\nBy &ldquo;unrolling,&rdquo; I mean taking a single log record that contains multiple logical..."
+  },
+  {
+    "title": "Announcing the 2025 OpenTelemetry Governance Committee Election",
+    "link": "https://opentelemetry.io/blog/2025/gc-elections/",
+    "source": "opentelemetry",
+    "published": "2025-11-06",
+    "description": "The OpenTelemetry project is excited to announce the 2025 OpenTelemetry\nGovernance Committee (GC) election. Nominations are due by 17 October 2025 23:59\nUTC. The list of eligible candidates will be sh..."
+  },
+  {
+    "title": "Announcing Support for Complex Attribute Types in OTel",
+    "link": "https://opentelemetry.io/blog/2025/complex-attribute-types/",
+    "source": "opentelemetry",
+    "published": "2025-11-05",
+    "description": "It’s common to use simple key-value properties as attributes in telemetry. Most\ntelemetry backends are optimized for this pattern, making it efficient to store,\nindex, and query data.\nOpenTelemetry is..."
+  },
+  {
+    "title": "OpenTelemetry eBPF Instrumentation Marks the First Release",
+    "link": "https://opentelemetry.io/blog/2025/obi-announcing-first-release/",
+    "source": "opentelemetry",
+    "published": "2025-11-03",
+    "description": "Following a significant collaboration between Grafana Labs, Splunk, Coralogix,\nOdigos and many other community members, we are thrilled to announce the first\nalpha release of OpenTelemetry eBPF\nInstru..."
+  },
+  {
+    "title": "SRE Weekly Issue #495",
+    "link": "https://sreweekly.com/sre-weekly-issue-495/",
+    "source": "sreweekly",
+    "published": "2025-11-03",
+    "description": "View on sreweekly.com I&#8217;m back! Kidney donation was a fascinating and rewarding experience, and I encourage you to learn more. It&#8217;s amazing how it&#8217;s possible to fix one human with sp..."
+  },
+  {
+    "title": "Grafana Mimir 3.0 release: performance improvements, a new query engine, and more",
+    "link": "https://grafana.com/blog/2025/11/03/grafana-mimir-3-0-release-all-the-latest-updates/",
+    "source": "grafana",
+    "published": "2025-11-03",
+    "description": "In 2022, we introduced Grafana Mimir, our open source, horizontally scalable, multi-tenant time series database (TSDB) designed for long-term storage of Prometheus and OpenTelemetry metrics. Over the ..."
+  },
+  {
+    "title": "Hacking for better observability at scale: How Geotab quickly improved their monitoring with Grafana",
+    "link": "https://grafana.com/blog/2025/10/31/hacking-observability-for-vehicle-fleets/",
+    "source": "grafana",
+    "published": "2025-10-31",
+    "description": "Hackathons are a fantastic way to experiment with new ideas and build projects quickly. In fact, we run several hackathons every year inside of Grafana Labs, and many of our coolest features started o..."
+  },
+  {
+    "title": "Announcing the 2025 OpenTelemetry Governance Committee Election Candidates",
+    "link": "https://opentelemetry.io/blog/2025/gc-candidates/",
+    "source": "opentelemetry",
+    "published": "2025-10-30",
+    "description": "The OpenTelemetry Election Committee is excited to announce the final list of\ncandidates for the upcoming 2025 OpenTelemetry Governance Committee Election!\nIf you are an\neligible voter,\nyou’ll have th..."
+  },
+  {
+    "title": "Announcing the 2025 Governance Committee Election Results",
+    "link": "https://opentelemetry.io/blog/2025/gc-elections-results/",
+    "source": "opentelemetry",
+    "published": "2025-10-30",
+    "description": "We are delighted to announce the results of the\n2025 OpenTelemetry Governance Committee Election!\nThe OpenTelemetry project continues to bring together an exceptionally vibrant\ncommunity, who are shap..."
+  },
+  {
+    "title": "Prometheus native histograms in Grafana Cloud: Get more precision from your Grafana visualizations",
+    "link": "https://grafana.com/blog/2025/10/30/get-more-precision-from-your-grafana-visualizations-with-prometheus-native-histograms-in-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-10-30",
+    "description": "In May, we announced the public preview of Prometheus native histograms in Grafana Cloud, unlocking greater precision, ease of use, and compatibility for analyzing latency, duration, and other distrib..."
+  },
+  {
+    "title": "SQL expressions in Grafana: Combine and manipulate data from multiple sources",
+    "link": "https://grafana.com/blog/2025/10/30/sql-expressions-in-grafana-combine-and-manipulate-data-from-multiple-sources/",
+    "source": "grafana",
+    "published": "2025-10-30",
+    "description": "One of Grafana&rsquo;s greatest strengths is its ability to provide a consistent monitoring experience for all your data sources. But not everyone wants to go through the process of transforming that ..."
+  },
+  {
+    "title": "Grafana Labs at KubeCon: OpenTelemetry eBPF Instrumentation, Prometheus deep dives, and more",
+    "link": "https://grafana.com/blog/2025/10/29/grafana-labs-at-kubecon-opentelemetry-ebpf-instrumentation-prometheus-deep-dives-and-more/",
+    "source": "grafana",
+    "published": "2025-10-29",
+    "description": "KubeCon + CloudNativeCon North America 2025 is right around the corner — and we can’t wait to see you there! \nThe event will run from November 10-13 in Atlanta, Georgia, bringing together open source ..."
+  },
+  {
+    "title": "Faster, more collaborative data exploration: Introducing saved queries in Grafana Cloud",
+    "link": "https://grafana.com/blog/2025/10/28/faster-more-collaborative-data-exploration-introducing-saved-queries-in-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-10-28",
+    "description": "Writing queries is one of Grafana&rsquo;s most powerful features, but it can also be one of the most time-consuming. Whether you&rsquo;re exploring logs or building new dashboards, you often find your..."
+  },
+  {
+    "title": "The Declarative configuration journey: Why it took 5 years to ignore health check endpoints in tracing",
+    "link": "https://opentelemetry.io/blog/2025/declarative-config/",
+    "source": "opentelemetry",
+    "published": "2025-10-21",
+    "description": "One of the most persistent and popular feature requests for Java OpenTelemetry\nover the past couple of years has been the ability to efficiently drop spans\nfor health check endpoints – or any other lo..."
+  },
+  {
+    "title": "Demystifying Automatic Instrumentation: How the Magic Actually Works",
+    "link": "https://opentelemetry.io/blog/2025/demystifying-auto-instrumentation/",
+    "source": "opentelemetry",
+    "published": "2025-10-20",
+    "description": "Despite the rise of OpenTelemetry and eBPF, most developers\ndon&rsquo;t know what automatic instrumentation actually does under the hood. This\npost breaks it down—not to suggest you build your own, bu..."
+  },
+  {
+    "title": "OpenTelemetry Sampling update",
+    "link": "https://opentelemetry.io/blog/2025/sampling-milestones/",
+    "source": "opentelemetry",
+    "published": "2025-10-16",
+    "description": "Introduction\nOpenTelemetry published version 1.0 of its Tracing specification over four years\nago, and the same year W3C TraceContext Level 1 was published\nwith W3C Recommendation status. We as a comm..."
+  },
+  {
+    "title": "Exploring OpenTelemetry Priorities for Mainframes - Insights from Survey Responses",
+    "link": "https://opentelemetry.io/blog/2025/mainframe-survey/",
+    "source": "opentelemetry",
+    "published": "2025-10-10",
+    "description": "Which OpenTelemetry features are considered most important by users for\nenhancing the observability of mainframes? Earlier this year, the\nOpenTelemetry on Mainframes Special Interest Group\n(SIG) and t..."
+  },
+  {
+    "title": "Join us for OpenTelemetry Talks and Activities at KubeCon NA 2025",
+    "link": "https://opentelemetry.io/blog/2025/kubecon-na/",
+    "source": "opentelemetry",
+    "published": "2025-10-10",
+    "description": "The OpenTelemetry project maintainers, members of the governance committee, and\ntechnical committee are thrilled to be at KubeCon NA in Atlanta from November\n10 - 13, 2025. Register today to join us!\n..."
+  },
+  {
+    "title": "OTel Unplugged EU at FOSDEM 2026",
+    "link": "https://opentelemetry.io/blog/2025/otel-unplugged-fosdem/",
+    "source": "opentelemetry",
+    "published": "2025-10-10",
+    "description": "\n\n\nOpenTelemetry is coming to FOSDEM!\nWhen we put out our community survey, you requested more meetups and we have\nheard you! We&rsquo;re happy to announce that we are bringing back OTel Unplugged,\nth..."
+  },
+  {
+    "title": "A day in the life of an OpenTelemetry maintainer",
+    "link": "https://opentelemetry.io/blog/2025/day-opentelemetry-maintainer/",
+    "source": "opentelemetry",
+    "published": "2025-10-07",
+    "description": "When people think about open source, they often picture lines of code, clever\nalgorithms, or maybe a GitHub repository full of issues and pull requests. What\ncan be harder to see is the human side. Th..."
+  },
+  {
+    "title": "2025 OpenTelemetry Community Awards",
+    "link": "https://opentelemetry.io/blog/2025/community-awards/",
+    "source": "opentelemetry",
+    "published": "2025-10-06",
+    "description": "OpenTelemetry is a community-driven project, fueled by a group of awesome humans\nwho are actively revolutionizing the field of observability with their\ncontributions. Whether it&rsquo;s through code, ..."
+  },
+  {
+    "title": "OpenTelemetry Android: Road to Stable",
+    "link": "https://opentelemetry.io/blog/2025/android-road-to-stable/",
+    "source": "opentelemetry",
+    "published": "2025-10-02",
+    "description": "TL;DR – We want your\nfeedback\nabout the OpenTelemetry Android agent API before it stabilizes.\nGreat news! The OpenTelemetry Android SIG is actively working on stabilizing the\nmain initialization and c..."
+  },
+  {
+    "title": "Announcing OpenTelemetry Technical Committee Election Results",
+    "link": "https://opentelemetry.io/blog/2025/tc-election-results/",
+    "source": "opentelemetry",
+    "published": "2025-10-01",
+    "description": "The OpenTelemetry\nTechnical Committee\nis delighted to announce two new elected members! Please join us in\ncongratulating David Ashpole and\nJosh MacDonald!\nBoth David and Josh are long-time OpenTelemet..."
+  },
+  {
+    "title": "Call for Contributors: OpenTelemetry for Kotlin",
+    "link": "https://opentelemetry.io/blog/2025/kotlin-multiplatform-opentelemetry/",
+    "source": "opentelemetry",
+    "published": "2025-09-30",
+    "description": "Why launch OpenTelemetry for Kotlin?\nKotlin Multiplatform (KMP)\nallows running Kotlin code on many different platforms, such as browser, server,\nand desktop environments. Traditionally Kotlin has been..."
+  },
+  {
+    "title": "Retrospective of September 25th go.opentelemetry.io incident",
+    "link": "https://opentelemetry.io/blog/2025/go-opentelemetry-io-expired-certificate/",
+    "source": "opentelemetry",
+    "published": "2025-09-26",
+    "description": "On September 25th, at 10:35 UTC, we were notified that the\ngo.opentelemetry.io’s SSL certificate had expired.\nThis endpoint is the canonical URL for most Go modules within the OpenTelemetry\norganizati..."
+  },
+  {
+    "title": "SRE Weekly Issue #494",
+    "link": "https://sreweekly.com/sre-weekly-issue-494/",
+    "source": "sreweekly",
+    "published": "2025-09-15",
+    "description": "View on sreweekly.com SRE Weekly will be on hiatus for the next 6 weeks while I&#8217;m on medical leave. If all goes to plan, I&#8217;ll be donating a kidney for a loved one later this week, reducing..."
+  },
+  {
+    "title": "SRE Weekly Issue #493",
+    "link": "https://sreweekly.com/sre-weekly-issue-493/",
+    "source": "sreweekly",
+    "published": "2025-09-08",
+    "description": "View on sreweekly.com A message from our sponsor, Shipfox: Shipfox supercharges GitHub Actions &#8211; no workflow changes, 30-min setup. 2x faster builds with better CPU, faster disks &#38; high-thro..."
+  },
+  {
+    "title": "SRE Weekly Issue #492",
+    "link": "https://sreweekly.com/sre-weekly-issue-492/",
+    "source": "sreweekly",
+    "published": "2025-09-01",
+    "description": "View on sreweekly.com A message from our sponsor, Observe, Inc.: Built on a scalable, cost-efficient data lake, Observe delivers AI-powered observability at scale. With its context-aware Knowledge Gra..."
+  }
+]
