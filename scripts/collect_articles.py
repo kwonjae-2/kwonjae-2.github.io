@@ -35,14 +35,51 @@ class ArticleCollector:
             self.anthropic_client = Anthropic(api_key=anthropic_api_key)
             print("✓ Claude AI integration enabled")
 
-    def collect_from_rss(self, name: str, url: str, days_back: int = 7) -> List[Dict]:
-        """Collect articles from an RSS feed"""
+        # Load previously published article URLs to avoid duplicates
+        self.published_urls = self._load_published_urls()
+
+    def _load_published_urls(self) -> set:
+        """Load URLs from previously published posts to avoid duplicates"""
+        published_urls = set()
+        posts_dir = Path(__file__).parent.parent / '_posts'
+
+        if not posts_dir.exists():
+            return published_urls
+
+        # Read all weekly digest posts
+        for post_file in posts_dir.glob('*-weekly-*.md'):
+            try:
+                with open(post_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    # Extract URLs using regex
+                    import re
+                    urls = re.findall(r'https?://[^\s\)]+', content)
+                    published_urls.update(urls)
+            except Exception as e:
+                print(f"Warning: Could not read {post_file}: {e}")
+
+        if published_urls:
+            print(f"✓ Loaded {len(published_urls)} URLs from previous posts to avoid duplicates")
+
+        return published_urls
+
+    def collect_from_rss(self, name: str, url: str, days_back: int = 7, max_entries: int = 50) -> List[Dict]:
+        """Collect articles from an RSS feed, expanding to older articles if needed"""
         try:
             feed = feedparser.parse(url)
             cutoff_date = datetime.now() - timedelta(days=days_back)
             articles = []
+            recent_articles = []
+            older_articles = []
 
-            for entry in feed.entries[:20]:  # Limit to recent 20 entries
+            # Process more entries to have a larger pool
+            for entry in feed.entries[:max_entries]:
+                link = entry.get('link', '')
+
+                # Skip if already published
+                if link in self.published_urls:
+                    continue
+
                 # Parse the published date
                 pub_date = None
                 if hasattr(entry, 'published_parsed'):
@@ -50,16 +87,24 @@ class ArticleCollector:
                 elif hasattr(entry, 'updated_parsed'):
                     pub_date = datetime(*entry.updated_parsed[:6])
 
-                # Check if article is recent
-                if pub_date and pub_date >= cutoff_date:
+                if pub_date:
                     article = {
                         'title': entry.get('title', 'No Title'),
-                        'link': entry.get('link', ''),
+                        'link': link,
                         'source': name,
                         'published': pub_date.strftime('%Y-%m-%d'),
                         'description': self._clean_description(entry.get('summary', '')),
+                        'pub_date_obj': pub_date,  # Keep for sorting
                     }
-                    articles.append(article)
+
+                    # Separate recent and older articles
+                    if pub_date >= cutoff_date:
+                        recent_articles.append(article)
+                    else:
+                        older_articles.append(article)
+
+            # Combine: prefer recent articles, but include older ones if needed
+            articles = recent_articles + older_articles
 
             return articles
         except Exception as e:
@@ -77,16 +122,29 @@ class ArticleCollector:
     def collect_all(self, days_back: int = 7) -> List[Dict]:
         """Collect articles from all sources"""
         all_articles = []
+        cutoff_date = datetime.now() - timedelta(days=days_back)
 
         # Collect from RSS feeds
         for name, url in self.sources.items():
             print(f"Collecting from {name}...")
-            articles = self.collect_from_rss(name, url, days_back)
-            all_articles.extend(articles)
-            print(f"  Found {len(articles)} articles")
+            articles = self.collect_from_rss(name, url, days_back, max_entries=50)
 
-        # Sort by published date
-        all_articles.sort(key=lambda x: x['published'], reverse=True)
+            # Count recent vs older articles
+            recent = sum(1 for a in articles if a.get('pub_date_obj') and a['pub_date_obj'] >= cutoff_date)
+            older = len(articles) - recent
+
+            all_articles.extend(articles)
+            if older > 0:
+                print(f"  Found {len(articles)} articles ({recent} recent, {older} older)")
+            else:
+                print(f"  Found {len(articles)} recent articles")
+
+        # Sort by published date (most recent first)
+        all_articles.sort(key=lambda x: x.get('pub_date_obj', datetime.min), reverse=True)
+
+        # Remove pub_date_obj before returning (used only for sorting)
+        for article in all_articles:
+            article.pop('pub_date_obj', None)
 
         return all_articles
 
@@ -334,10 +392,11 @@ def main():
 
     collector = ArticleCollector(anthropic_api_key=api_key)
 
-    # Collect articles from the last 7 days
+    # Collect articles from the last 7 days (but include older if needed)
     print("\n📡 Collecting articles from RSS feeds...")
+    print("   (Including older articles if recent ones are insufficient)")
     articles = collector.collect_all(days_back=7)
-    print(f"\nTotal articles collected: {len(articles)}")
+    print(f"\n✓ Total articles collected: {len(articles)}")
 
     if len(articles) == 0:
         print("\n⚠️  No articles found. Check your RSS feeds or date range.")
@@ -354,11 +413,13 @@ def main():
 
     print("\n🔍 Filtering by SRE/Observability keywords...")
     filtered = collector.filter_by_keywords(articles, keywords)
-    print(f"Articles matching keywords: {len(filtered)}")
+    print(f"✓ Articles matching keywords: {len(filtered)}")
 
     if len(filtered) == 0:
         print("\n⚠️  No articles matched the keywords. Using all articles.")
         filtered = articles
+    elif len(filtered) < 10:
+        print(f"⚠️  Only {len(filtered)} articles found - may include older content")
 
     # Save collected articles
     today = datetime.now().strftime('%Y%m%d')
@@ -373,6 +434,7 @@ def main():
         print(f"📄 File: {filepath}")
         if api_key:
             print("🤖 Claude AI analyzed and selected the best articles")
+        print("🔄 Duplicates from previous posts: EXCLUDED")
         print("\nNext: Commit and push to publish on Saturday")
     else:
         print("\n⚠️  No articles found. Try adjusting the date range or keywords.")
