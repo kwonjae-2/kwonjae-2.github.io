@@ -1,0 +1,296 @@
+[
+  {
+    "title": "Show GN: Gosuda Chat: CGO없는 TUI챗",
+    "link": "https://news.hada.io/topic?id=24516",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "안녕하세요, @iwanhae님의 SSH챗을 넘겨받아 유지보수하게 되었습니다.\n핵심 기능은 다음과 같습니다.\n#인스턴트 채팅\n\n핸들 색상 설정가능(재로그인시 그대로 반영)\n@닉네임 형식으로 사용자 호출 가능\n채팅 메시지 로딩 개선\n\n100개만 불러와서 메모리 점유율 과"
+  },
+  {
+    "title": "Mozilla의 LLM 비용 관리 솔루션: any-llm-gateway 오픈소스 공개",
+    "link": "https://news.hada.io/topic?id=24515",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "Mozilla AI가 LLM(대형 언어 모델) 사용 시 발생하는 비용 폭증과 혁신 억제 문제를 해결하기 위해 오픈소스 프록시 서버 'any-llm-gateway'를 공개했습니다. 이는 기존 any-llm 라이브러리를 기반으로 예산 관리, API 키 관리, 사용량 분석 기능을 강화한 프로덕션급 도구입니다.\n핵심 기능:\n\n"
+  },
+  {
+    "title": "PHP 8.5의 새로운 기능들",
+    "link": "https://news.hada.io/topic?id=24514",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\nPHP 8.5는 파이프 연산자, clone with, 새 URI 파서 등 여러 기능을 포함한 주요 업데이트 버전\n\n파이프 연산자는 함수 호출 체인을 단순화해 가독성과 유지보수성을 높임\n\nClone with 기능은 객체 복..."
+  },
+  {
+    "title": "runs-on - 더 저렴하고 빠르며, 셀프 호스팅 가능한 GitHub Actions 러너",
+    "link": "https://news.hada.io/topic?id=24513",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\nAWS 계정 내에서 완전한 셀프 호스팅 GitHub Actions 러너를 운영가능한 현대적 CI/CD 인프라 솔루션\n\n공식 GitHub 러너보다 7~15배 저렴하며 CPU 성능 30% 향상. 워크플로 완전 호환\n\n수백 개의 동시 작업을 무제한으로..."
+  },
+  {
+    "title": "안드로이드와 아이폰 사용자, 이제 Pixel 10부터 파일 공유 가능",
+    "link": "https://news.hada.io/topic?id=24512",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\n\nQuick Share가 iOS의 AirDrop과 호환되어 안드로이드와 아이폰 간 파일 전송이 가능해짐\n이 기능은 Pixel 10 시리즈부터 순차적으로 배포되며, 가족이나 친구 간의 사진·파일 공유를 단순화함\n\n보안 중심 설계를 기반..."
+  },
+  {
+    "title": "Is the OTCA Exam Right for You? Insights for Both Newcomers and Advanced Users",
+    "link": "https://opentelemetry.io/blog/2025/otca-for-newcomers-and-advanced-users/",
+    "source": "opentelemetry",
+    "published": "2025-11-21",
+    "description": "In the IT industry, certifications often generate debate – some regard them as\nessential career milestones, while others question their practical value. While\nOpenTelemetry is getting widely adopted, ..."
+  },
+  {
+    "title": "레드얼럿 2: 크로노 디바이드",
+    "link": "https://news.hada.io/topic?id=24511",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\n웹 기술로 ‘커맨드 앤 컨커: 레드얼럿 2’ 를 브라우저에서 재현한 팬 제작 실시간 전략 게임\n\n별도 설치 없이 웹 브라우저에서 바로 실행되며, 멀티플레이와 원본 맵을 지원하는 베타 버전 제공\n\n크로스플랫..."
+  },
+  {
+    "title": "마이크로소프트, Zork 오픈소스로 공개",
+    "link": "https://news.hada.io/topic?id=24510",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\n1980년대 텍스트 어드벤처 게임 Zork I·II·III의 소스 코드가 MIT 라이선스로 공개되어 누구나 학습·연구·실행 가능\n\nMicrosoft OSPO, Team Xbox, Activision이 협력해 역사적 코드 보존과 교육 활용을 목표로..."
+  },
+  {
+    "title": "미국 세관국경보호국(CBP), ‘의심스러운 이동 패턴’을 이유로 미국 내 운전자 감시 및 구금",
+    "link": "https://news.hada.io/topic?id=24509",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\n\n미국 국경순찰대(Border Patrol) 가 전국 운전자의 이동 경로를 감시해 ‘의심스러운’ 패턴을 보이는 사람을 식별·구금하는 비밀 예측정보 프로그램 운영\n\n차량 번호판 인식 카메라 네트워크와 알고리듬 분석을 통해 차량의 출..."
+  },
+  {
+    "title": "나노 바나나 프로: 구글 딥마인드의 Gemini 3 Pro 기반 이미지 생성 모델",
+    "link": "https://news.hada.io/topic?id=24508",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\n\nNano Banana Pro는 Gemini 3 Pro를 기반으로 한 구글 딥마인드의 최신 이미지 생성 및 편집 모델로, 시각적 아이디어를 정밀하게 구현하는 기능 제공\n\n텍스트 렌더링 향상과 다국어 지원을 통해 포스터, 목업..."
+  },
+  {
+    "title": "Zensical - 현대적 정적 사이트 생성기",
+    "link": "https://news.hada.io/topic?id=24507",
+    "source": "geeknews",
+    "published": "2025-11-21",
+    "description": "\n\nMarkdown 기반 문서 작성을 통해 오픈소스나 상용 프로젝트용 전문 스태틱 웹사이트 생성 지원\n\nMaterial for MkDocs 제작진이 설계한 차세대 정적 사이트 생성기로, 빠른 빌드와 현대적 디자인 제공\n\nRust 런..."
+  },
+  {
+    "title": "ObservabilityCON on the Road: New cities, new sessions in 2026",
+    "link": "https://grafana.com/blog/2025/11/20/observabilitycon-on-the-road-new-cities-new-sessions-in-2026/",
+    "source": "grafana",
+    "published": "2025-11-20",
+    "description": "Last month, observability enthusiasts from around the world gathered in London for ObservabilityCON 2025, our flagship observability event, where we shared major updates in actually useful AI, SaaS ec..."
+  },
+  {
+    "title": "The Declarative configuration journey: Why it took 5 years to ignore health check endpoints in tracing",
+    "link": "https://opentelemetry.io/blog/2025/declarative-config/",
+    "source": "opentelemetry",
+    "published": "2025-11-19",
+    "description": "One of the most persistent and popular feature requests for Java OpenTelemetry\nover the past couple of years has been the ability to efficiently drop spans\nfor health check endpoints – or any other lo..."
+  },
+  {
+    "title": "Grafana 12.3 release: Interactive learning experiences, new and improved logs visualizations, and more",
+    "link": "https://grafana.com/blog/2025/11/19/grafana-12-3-release-all-the-latest-features/",
+    "source": "grafana",
+    "published": "2025-11-19",
+    "description": "Grafana 12.3 is here, delivering new features for interactive learning, deeper insights into logging data, and so much more. Overall, a big theme in the latest minor release is to make data exploratio..."
+  },
+  {
+    "title": "Grafana Enterprise security update: critical severity security fix for CVE-2025-41115",
+    "link": "https://grafana.com/blog/2025/11/19/grafana-enterprise-security-update-critical-severity-security-fix-for-cve-2025-41115/",
+    "source": "grafana",
+    "published": "2025-11-19",
+    "description": "Along with the release of Grafana Enterprise 12.3, we are releasing updated versions of Grafana Enterprise 12.2.1, 12.1.3 and 12.0.6, all of which contain a fix for a critical severity vulnerability (..."
+  },
+  {
+    "title": "Azure Monitor offers Grafana dashboards natively for immediate, real-time operational monitoring",
+    "link": "https://grafana.com/blog/2025/11/18/azure-monitor-offers-grafana-dashboards-natively-for-immediate-real-time-operational-monitoring-now-ga/",
+    "source": "grafana",
+    "published": "2025-11-18",
+    "description": "Editor’s note: This blog originally published in May 2025 when Azure Monitor dashboards with Grafana became available in public preview. It was updated in November 2025 to reflect general availability..."
+  },
+  {
+    "title": "How to pair Grafana Drilldown with Loki for faster logging insights",
+    "link": "https://grafana.com/blog/2025/11/18/how-to-pair-grafana-drilldown-with-loki-for-faster-logging-insights/",
+    "source": "grafana",
+    "published": "2025-11-18",
+    "description": "Our logs can tell us so much about the state of our systems, but they can also be a bit overwhelming. Yes, Grafana Loki—and, by extension, Grafana Cloud Logs, which is powered by Loki—reimagined the w..."
+  },
+  {
+    "title": "SRE Weekly Issue #497",
+    "link": "https://sreweekly.com/sre-weekly-issue-497/",
+    "source": "sreweekly",
+    "published": "2025-11-17",
+    "description": "View on sreweekly.com A message from our sponsor, Costory: You didn’t sign up to do FinOps.Costory automatically explains why your cloud costs change, and reports it straight to Slack.Built for SREs w..."
+  },
+  {
+    "title": "A tale of two incident responses: How our AI assistant found the root cause 3.5x faster",
+    "link": "https://grafana.com/blog/2025/11/17/a-tale-of-two-incident-responses-how-our-ai-assist-helped-us-find-the-cause-3-5x-faster/",
+    "source": "grafana",
+    "published": "2025-11-17",
+    "description": "About two months ago, an incident at Grafana Labs was kicked off in typical fashion: A series of alerts were triggered, our on-call engineer acknowledged it on Slack, and the rest of the team quickly ..."
+  },
+  {
+    "title": "Grafana Play updates: A redesigned homepage to celebrate our community",
+    "link": "https://grafana.com/blog/2025/11/17/grafana-play-updates-a-redesigned-homepage-to-celebrate-our-community/",
+    "source": "grafana",
+    "published": "2025-11-17",
+    "description": "Grafana Play is a free, publicly accessible sandbox environment where anyone can explore and learn about Grafana, no setup or sign-in required. It comes preloaded with sample dashboards demonstrating ..."
+  },
+  {
+    "title": "A Star Wars dashboard deep dive: How to build your next visualization in less than 12 parsecs",
+    "link": "https://grafana.com/blog/2025/11/14/a-star-wars-dashboard-deep-dive-how-to-build-your-next-visualization-in-less-than-12-parsecs/",
+    "source": "grafana",
+    "published": "2025-11-14",
+    "description": "Hello there! Earlier this year I created a Star Wars-themed dashboard featuring all sorts of fun visualizations from a galaxy far, far away, including a map of the Kessel Run, an overview of the Mille..."
+  },
+  {
+    "title": "Announcing 2025 OpenTelemetry Community Awards Winners",
+    "link": "https://opentelemetry.io/blog/2025/community-awards-winners/",
+    "source": "opentelemetry",
+    "published": "2025-11-12",
+    "description": "We are excited to announce the winners of the second OpenTelemetry Community\nAwards! These awards recognize individuals who have made a notable impact to\nthe OpenTelemetry project over the past year, ..."
+  },
+  {
+    "title": "SRE Weekly Issue #496",
+    "link": "https://sreweekly.com/sre-weekly-issue-496/",
+    "source": "sreweekly",
+    "published": "2025-11-10",
+    "description": "View on sreweekly.com A message from our sponsor, CodeRabbit: CodeRabbit is your AI co-pilot for code reviews. Get instant code review feedback, one-click fix suggestions and define custom rules with ..."
+  },
+  {
+    "title": "Evolving OpenTelemetry's Stabilization and Release Practices",
+    "link": "https://opentelemetry.io/blog/2025/stability-proposal-announcement/",
+    "source": "opentelemetry",
+    "published": "2025-11-08",
+    "description": "Summary\nOpenTelemetry is, by any metric, one of the largest and most exciting projects\nin the cloud native space. Over the past five years, this community has come\ntogether to build one of the most es..."
+  },
+  {
+    "title": "Contributing the Unroll Processor to the OpenTelemetry Collector Contrib",
+    "link": "https://opentelemetry.io/blog/2025/contrib-unroll-processor/",
+    "source": "opentelemetry",
+    "published": "2025-11-07",
+    "description": "The idea for unrolling bundled logs inside the OpenTelemetry Collector didn&rsquo;t\nstart with a processor.\nBy &ldquo;unrolling,&rdquo; I mean taking a single log record that contains multiple logical..."
+  },
+  {
+    "title": "Announcing the 2025 OpenTelemetry Governance Committee Election",
+    "link": "https://opentelemetry.io/blog/2025/gc-elections/",
+    "source": "opentelemetry",
+    "published": "2025-11-06",
+    "description": "The OpenTelemetry project is excited to announce the 2025 OpenTelemetry\nGovernance Committee (GC) election. Nominations are due by 17 October 2025 23:59\nUTC. The list of eligible candidates will be sh..."
+  },
+  {
+    "title": "Announcing Support for Complex Attribute Types in OTel",
+    "link": "https://opentelemetry.io/blog/2025/complex-attribute-types/",
+    "source": "opentelemetry",
+    "published": "2025-11-05",
+    "description": "It’s common to use simple key-value properties as attributes in telemetry. Most\ntelemetry backends are optimized for this pattern, making it efficient to store,\nindex, and query data.\nOpenTelemetry is..."
+  },
+  {
+    "title": "SRE Weekly Issue #495",
+    "link": "https://sreweekly.com/sre-weekly-issue-495/",
+    "source": "sreweekly",
+    "published": "2025-11-03",
+    "description": "View on sreweekly.com I&#8217;m back! Kidney donation was a fascinating and rewarding experience, and I encourage you to learn more. It&#8217;s amazing how it&#8217;s possible to fix one human with sp..."
+  },
+  {
+    "title": "Announcing the 2025 OpenTelemetry Governance Committee Election Candidates",
+    "link": "https://opentelemetry.io/blog/2025/gc-candidates/",
+    "source": "opentelemetry",
+    "published": "2025-10-30",
+    "description": "The OpenTelemetry Election Committee is excited to announce the final list of\ncandidates for the upcoming 2025 OpenTelemetry Governance Committee Election!\nIf you are an\neligible voter,\nyou’ll have th..."
+  },
+  {
+    "title": "Announcing the 2025 Governance Committee Election Results",
+    "link": "https://opentelemetry.io/blog/2025/gc-elections-results/",
+    "source": "opentelemetry",
+    "published": "2025-10-30",
+    "description": "We are delighted to announce the results of the\n2025 OpenTelemetry Governance Committee Election!\nThe OpenTelemetry project continues to bring together an exceptionally vibrant\ncommunity, who are shap..."
+  },
+  {
+    "title": "Demystifying Automatic Instrumentation: How the Magic Actually Works",
+    "link": "https://opentelemetry.io/blog/2025/demystifying-auto-instrumentation/",
+    "source": "opentelemetry",
+    "published": "2025-10-20",
+    "description": "Despite the rise of OpenTelemetry and eBPF, most developers\ndon&rsquo;t know what automatic instrumentation actually does under the hood. This\npost breaks it down—not to suggest you build your own, bu..."
+  },
+  {
+    "title": "OpenTelemetry Sampling update",
+    "link": "https://opentelemetry.io/blog/2025/sampling-milestones/",
+    "source": "opentelemetry",
+    "published": "2025-10-16",
+    "description": "Introduction\nOpenTelemetry published version 1.0 of its Tracing specification over four years\nago, and the same year W3C TraceContext Level 1 was published\nwith W3C Recommendation status. We as a comm..."
+  },
+  {
+    "title": "Exploring OpenTelemetry Priorities for Mainframes - Insights from Survey Responses",
+    "link": "https://opentelemetry.io/blog/2025/mainframe-survey/",
+    "source": "opentelemetry",
+    "published": "2025-10-10",
+    "description": "Which OpenTelemetry features are considered most important by users for\nenhancing the observability of mainframes? Earlier this year, the\nOpenTelemetry on Mainframes Special Interest Group\n(SIG) and t..."
+  },
+  {
+    "title": "Join us for OpenTelemetry Talks and Activities at KubeCon NA 2025",
+    "link": "https://opentelemetry.io/blog/2025/kubecon-na/",
+    "source": "opentelemetry",
+    "published": "2025-10-10",
+    "description": "The OpenTelemetry project maintainers, members of the governance committee, and\ntechnical committee are thrilled to be at KubeCon NA in Atlanta from November\n10 - 13, 2025. Register today to join us!\n..."
+  },
+  {
+    "title": "OTel Unplugged EU at FOSDEM 2026",
+    "link": "https://opentelemetry.io/blog/2025/otel-unplugged-fosdem/",
+    "source": "opentelemetry",
+    "published": "2025-10-10",
+    "description": "\n\n\nOpenTelemetry is coming to FOSDEM!\nWhen we put out our community survey, you requested more meetups and we have\nheard you! We&rsquo;re happy to announce that we are bringing back OTel Unplugged,\nth..."
+  },
+  {
+    "title": "A day in the life of an OpenTelemetry maintainer",
+    "link": "https://opentelemetry.io/blog/2025/day-opentelemetry-maintainer/",
+    "source": "opentelemetry",
+    "published": "2025-10-07",
+    "description": "When people think about open source, they often picture lines of code, clever\nalgorithms, or maybe a GitHub repository full of issues and pull requests. What\ncan be harder to see is the human side. Th..."
+  },
+  {
+    "title": "2025 OpenTelemetry Community Awards",
+    "link": "https://opentelemetry.io/blog/2025/community-awards/",
+    "source": "opentelemetry",
+    "published": "2025-10-06",
+    "description": "OpenTelemetry is a community-driven project, fueled by a group of awesome humans\nwho are actively revolutionizing the field of observability with their\ncontributions. Whether it&rsquo;s through code, ..."
+  },
+  {
+    "title": "OpenTelemetry Android: Road to Stable",
+    "link": "https://opentelemetry.io/blog/2025/android-road-to-stable/",
+    "source": "opentelemetry",
+    "published": "2025-10-02",
+    "description": "TL;DR – We want your\nfeedback\nabout the OpenTelemetry Android agent API before it stabilizes.\nGreat news! The OpenTelemetry Android SIG is actively working on stabilizing the\nmain initialization and c..."
+  },
+  {
+    "title": "Announcing OpenTelemetry Technical Committee Election Results",
+    "link": "https://opentelemetry.io/blog/2025/tc-election-results/",
+    "source": "opentelemetry",
+    "published": "2025-10-01",
+    "description": "The OpenTelemetry\nTechnical Committee\nis delighted to announce two new elected members! Please join us in\ncongratulating David Ashpole and\nJosh MacDonald!\nBoth David and Josh are long-time OpenTelemet..."
+  },
+  {
+    "title": "Call for Contributors: OpenTelemetry for Kotlin",
+    "link": "https://opentelemetry.io/blog/2025/kotlin-multiplatform-opentelemetry/",
+    "source": "opentelemetry",
+    "published": "2025-09-30",
+    "description": "Why launch OpenTelemetry for Kotlin?\nKotlin Multiplatform (KMP)\nallows running Kotlin code on many different platforms, such as browser, server,\nand desktop environments. Traditionally Kotlin has been..."
+  },
+  {
+    "title": "SRE Weekly Issue #494",
+    "link": "https://sreweekly.com/sre-weekly-issue-494/",
+    "source": "sreweekly",
+    "published": "2025-09-15",
+    "description": "View on sreweekly.com SRE Weekly will be on hiatus for the next 6 weeks while I&#8217;m on medical leave. If all goes to plan, I&#8217;ll be donating a kidney for a loved one later this week, reducing..."
+  },
+  {
+    "title": "SRE Weekly Issue #493",
+    "link": "https://sreweekly.com/sre-weekly-issue-493/",
+    "source": "sreweekly",
+    "published": "2025-09-08",
+    "description": "View on sreweekly.com A message from our sponsor, Shipfox: Shipfox supercharges GitHub Actions &#8211; no workflow changes, 30-min setup. 2x faster builds with better CPU, faster disks &#38; high-thro..."
+  }
+]
