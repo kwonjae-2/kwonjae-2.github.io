@@ -12,7 +12,7 @@ picture: assets/images/profile.png
 
 # your site color theme, true for dark theme, 
 # false to light theme, auto to switch with system.
-dark-theme: false
+dark-theme: auto
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -40,6 +40,7 @@ disqus:
 linkedin: kwonjae-lee-213ba3157
 github: kwonjae-2
 email: kwonjae13@gmail.com
+insights_url: https://github.com/kwonjae-2/scribbles/issues
 
 authors:
   kwonjaelee:

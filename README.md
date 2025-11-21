@@ -17,6 +17,16 @@ Automated weekly digest of curated tech articles covering:
 
 Articles are automatically collected, AI-curated, and published every Saturday at 10 AM KST.
 
+## ✨ Features
+
+- **Clean Design**: Minimalist and professional layout
+- **Responsive**: Works on all devices
+- **Fast Loading**: Optimized for speed
+- **SEO Optimized**: Search engine friendly
+- **Social Links**: Connect through LinkedIn, GitHub, and Email
+- **Insight Hub**: Lightbulb icon links directly to current Scribbles issues
+- **Adaptive Theme**: Automatically follows the visitor's light/dark preference
+
 ## 🤖 Automation
 
 - **Collection**: Python script fetches articles from multiple RSS feeds
@@ -30,6 +40,14 @@ Articles are automatically collected, AI-curated, and published every Saturday a
 - **Automation**: Python + GitHub Actions
 - **AI**: Anthropic Claude (claude-sonnet-4-20250514)
 - **Sources**: SRE Weekly, GeekNews, OpenTelemetry, Grafana, Honeycomb
+
+## ⚙️ Configuration
+
+Site configuration can be customized in `_config.yml`. The site now uses `dark-theme: auto` so the UI adapts to the visitor's OS preference, and the `insights_url` property drives the new lightbulb icon that links to current Scribbles issues.
+
+## 🚀 Deployment
+
+This site is automatically deployed to GitHub Pages whenever changes land on `gh-pages`.
 
 ## 📧 Contact
 
