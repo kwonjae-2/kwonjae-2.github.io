@@ -237,7 +237,7 @@ Order articles by importance (most important first)."""
         try:
             print("   📡 Sending request to OpenAI API...")
             response = self.openai_client.chat.completions.create(
-                model="gpt-4o",
+                model="gpt-5.2",
                 max_tokens=2000,
                 messages=[
                     {"role": "user", "content": prompt}
@@ -333,7 +333,7 @@ Respond in JSON format:
         try:
             print(f"   📝 Generating bilingual summary for: {article['title'][:50]}...")
             response = self.openai_client.chat.completions.create(
-                model="gpt-4o",
+                model="gpt-5.2",
                 max_tokens=800,  # Increased for bilingual content
                 messages=[
                     {"role": "user", "content": prompt}
