@@ -12,13 +12,13 @@ from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Optional
 import re
-from anthropic import Anthropic
+from openai import OpenAI
 
 
 class ArticleCollector:
     """Collects articles from RSS feeds and various sources"""
 
-    def __init__(self, anthropic_api_key: Optional[str] = None):
+    def __init__(self, openai_api_key: Optional[str] = None):
         self.articles = []
         self.sources = {
             'sreweekly': 'https://sreweekly.com/feed/',
@@ -29,15 +29,15 @@ class ArticleCollector:
             'honeycomb': 'https://www.honeycomb.io/feed',
         }
 
-        # Initialize Anthropic client if API key is provided
-        self.anthropic_client = None
-        if anthropic_api_key:
+        # Initialize OpenAI client if API key is provided
+        self.openai_client = None
+        if openai_api_key:
             try:
-                print(f"🔑 Initializing Claude AI with API key (length: {len(anthropic_api_key)})")
-                self.anthropic_client = Anthropic(api_key=anthropic_api_key)
-                print("✓ Claude AI integration enabled")
+                print(f"🔑 Initializing OpenAI API with API key (length: {len(openai_api_key)})")
+                self.openai_client = OpenAI(api_key=openai_api_key)
+                print("✓ OpenAI integration enabled")
             except Exception as e:
-                print(f"❌ Failed to initialize Claude AI: {str(e)}")
+                print(f"❌ Failed to initialize OpenAI: {str(e)}")
                 print(f"   Error type: {type(e).__name__}")
         else:
             print("⚠️  No API key provided - AI features will be disabled")
@@ -178,12 +178,12 @@ class ArticleCollector:
         return text.strip()
 
     def select_top_articles_with_ai(self, articles: List[Dict], min_n: int = 3, max_n: int = 10) -> List[Dict]:
-        """Use Claude AI to select the most valuable articles for SRE/Observability professionals (3-10 articles)"""
-        if not self.anthropic_client:
-            print("⚠️  Claude AI not configured. Falling back to simple selection.")
+        """Use OpenAI to select the most valuable articles for SRE/Observability professionals (3-10 articles)"""
+        if not self.openai_client:
+            print("⚠️  OpenAI not configured. Falling back to simple selection.")
             return articles[:min_n]
 
-        print(f"\n🤖 Using Claude AI to analyze {len(articles)} articles...")
+        print(f"\n🤖 Using OpenAI to analyze {len(articles)} articles...")
 
         # Prepare articles list for Claude
         articles_text = "\n\n".join([
@@ -235,17 +235,20 @@ Please respond in JSON format with the following structure:
 Order articles by importance (most important first)."""
 
         try:
-            print("   📡 Sending request to Claude API...")
-            message = self.anthropic_client.messages.create(
-                model="claude-sonnet-4-20250514",
+            print("   📡 Sending request to OpenAI API...")
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4o",
                 max_tokens=2000,
                 messages=[
                     {"role": "user", "content": prompt}
-                ]
+                ],
+                response_format={"type": "json_object"}
             )
-            print(f"   ✓ Received response from Claude API (usage: {message.usage.input_tokens} in, {message.usage.output_tokens} out)")
+            
+            usage = response.usage
+            print(f"   ✓ Received response from OpenAI API (usage: {usage.prompt_tokens} in, {usage.completion_tokens} out)")
 
-            response_text = message.content[0].text
+            response_text = response.choices[0].message.content
             print(f"   📝 Response length: {len(response_text)} characters")
 
             # Strip markdown formatting and parse JSON response
@@ -262,16 +265,16 @@ Order articles by importance (most important first)."""
                     selected.append(article)
                     print(f"   ✓ Selected article {article_idx + 1}: {article['title'][:60]}...")
 
-            print(f"✓ Claude AI selected {len(selected)} articles")
+            print(f"✓ OpenAI selected {len(selected)} articles")
             return selected
 
         except json.JSONDecodeError as e:
-            print(f"❌ Failed to parse Claude AI response as JSON: {str(e)}")
+            print(f"❌ Failed to parse OpenAI response as JSON: {str(e)}")
             print(f"   Response text: {response_text[:200]}...")
             print("   Falling back to simple selection...")
             return articles[:min_n]
         except Exception as e:
-            print(f"❌ Error using Claude AI: {str(e)}")
+            print(f"❌ Error using OpenAI: {str(e)}")
             print(f"   Error type: {type(e).__name__}")
             import traceback
             print(f"   Traceback: {traceback.format_exc()}")
@@ -279,8 +282,8 @@ Order articles by importance (most important first)."""
             return articles[:min_n]
 
     def generate_article_summary_with_ai(self, article: Dict) -> Dict[str, str]:
-        """Use Claude AI to generate bilingual (Korean/English) summary and key points"""
-        if not self.anthropic_client:
+        """Use OpenAI to generate bilingual (Korean/English) summary and key points"""
+        if not self.openai_client:
             return {
                 'summary_ko': article['description'],
                 'summary_en': article['description'],
@@ -329,19 +332,21 @@ Respond in JSON format:
 
         try:
             print(f"   📝 Generating bilingual summary for: {article['title'][:50]}...")
-            message = self.anthropic_client.messages.create(
-                model="claude-sonnet-4-20250514",
+            response = self.openai_client.chat.completions.create(
+                model="gpt-4o",
                 max_tokens=800,  # Increased for bilingual content
                 messages=[
                     {"role": "user", "content": prompt}
-                ]
+                ],
+                response_format={"type": "json_object"}
             )
 
-            response_text = message.content[0].text
+            response_text = response.choices[0].message.content
             # Strip markdown formatting and parse JSON
             clean_json = self._strip_markdown_json(response_text)
             result = json.loads(clean_json)
-            print(f"   ✓ Summary generated ({message.usage.output_tokens} tokens)")
+            usage = response.usage
+            print(f"   ✓ Summary generated ({usage.completion_tokens} tokens)")
             return result
 
         except json.JSONDecodeError as e:
@@ -396,8 +401,8 @@ Respond in JSON format:
         filename = f"{today.strftime('%Y-%m-%d')}-weekly-{today.strftime('%Y%m%d')}.md"
 
         # Use AI to select and analyze articles if available
-        if use_ai and self.anthropic_client:
-            print("\n🤖 Using Claude AI to select and analyze articles...")
+        if use_ai and self.openai_client:
+            print("\n🤖 Using OpenAI to select and analyze articles...")
             selected = self.select_top_articles_with_ai(articles, min_n, max_n)
 
             # Generate bilingual summaries for each selected article
@@ -497,7 +502,7 @@ Articles curated from various tech blogs and communities including SRE Weekly, G
             f.write(markdown)
 
         print(f"\n✓ Generated post: {filepath}")
-        if use_ai and self.anthropic_client:
+        if use_ai and self.openai_client:
             print("  ✓ AI-powered selection and analysis complete!")
 
         return filepath
@@ -506,21 +511,21 @@ Articles curated from various tech blogs and communities including SRE Weekly, G
 def main():
     """Main function"""
     print("=" * 60)
-    print("Weekly Article Collector with Claude AI")
+    print("Weekly Article Collector with OpenAI")
     print("=" * 60)
 
     # Get API key from environment variable
-    api_key = os.environ.get('ANTHROPIC_API_KEY')
+    api_key = os.environ.get('OPENAI_API_KEY')
     print(f"\n🔍 Environment check:")
-    print(f"   ANTHROPIC_API_KEY present: {bool(api_key)}")
+    print(f"   OPENAI_API_KEY present: {bool(api_key)}")
     if api_key:
         print(f"   API key length: {len(api_key)}")
         print(f"   API key prefix: {api_key[:10]}...")
     else:
-        print("⚠️  Warning: ANTHROPIC_API_KEY not found in environment")
-        print("   AI features will be disabled. Set ANTHROPIC_API_KEY to enable.")
+        print("⚠️  Warning: OPENAI_API_KEY not found in environment")
+        print("   AI features will be disabled. Set OPENAI_API_KEY to enable.")
 
-    collector = ArticleCollector(anthropic_api_key=api_key)
+    collector = ArticleCollector(openai_api_key=api_key)
 
     # Collect articles from the last 7 days (but include older if needed)
     print("\n📡 Collecting articles from RSS feeds...")
@@ -548,7 +553,7 @@ def main():
         print(f"\n✅ Weekly digest post created successfully!")
         print(f"📄 File: {filepath}")
         if api_key:
-            print("🤖 Claude AI analyzed and selected the best articles")
+            print("🤖 OpenAI analyzed and selected the best articles")
         print("🔄 Duplicates from previous posts: EXCLUDED")
         print("\nNext: Commit and push to publish on Saturday")
     else:
