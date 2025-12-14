@@ -26,9 +26,9 @@ jobs:
         run: |
           pip install -r scripts/requirements.txt
 
-      - name: Collect and generate post with Claude AI
+      - name: Collect and generate post with OpenAI
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           cd scripts
           python collect_articles.py
@@ -49,7 +49,7 @@ jobs:
             TOMORROW=$(date -d "tomorrow" +%Y-%m-%d)
             git commit -m "Add Weekly - $TOMORROW
 
-          🤖 Auto-generated with Claude AI
+          🤖 Auto-generated with OpenAI
 
           Articles collected and analyzed automatically from:
           - SRE Weekly
