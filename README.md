@@ -39,7 +39,7 @@ Articles are automatically collected, AI-curated, and published every Saturday a
 - **Site**: Jekyll + GitHub Pages
 - **Automation**: Python + GitHub Actions
 - **AI**: Anthropic Claude (claude-sonnet-4-20250514)
-- **Sources**: SRE Weekly, GeekNews, OpenTelemetry, Grafana, Honeycomb
+- **Sources**: SRE Weekly, GeekNews, OpenTelemetry, Grafana, Honeycomb, Anthropic Engineering, Hacker News, Lenny's Newsletter
 
 ## ⚙️ Configuration
 

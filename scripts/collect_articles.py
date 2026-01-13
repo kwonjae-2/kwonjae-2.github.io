@@ -27,6 +27,10 @@ class ArticleCollector:
             # Vendor blogs
             'grafana': 'https://grafana.com/blog/index.xml',
             'honeycomb': 'https://www.honeycomb.io/feed',
+            # AI & Engineering
+            'anthropic': 'https://raw.githubusercontent.com/conoro/anthropic-engineering-rss-feed/main/anthropic_engineering_rss.xml',
+            'hackernews': 'https://news.ycombinator.com/rss',
+            'lenny': 'https://www.lennysnewsletter.com/feed',
         }
 
         # Initialize OpenAI client if API key is provided

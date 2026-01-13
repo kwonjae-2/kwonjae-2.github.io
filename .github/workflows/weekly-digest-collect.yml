@@ -56,7 +56,10 @@ jobs:
           - GeekNews
           - OpenTelemetry Blog
           - Grafana Blog
-          - Honeycomb Blog"
+          - Honeycomb Blog
+          - Anthropic Engineering
+          - Hacker News
+          - Lenny's Newsletter"
             git push
             echo "✅ Weekly post committed and ready for Saturday publication!"
           fi

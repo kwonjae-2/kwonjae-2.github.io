@@ -59,6 +59,9 @@ python collect_articles.py
    - OpenTelemetry Blog
    - Grafana Blog
    - Honeycomb Blog
+   - Anthropic Engineering Blog
+   - Hacker News (Y Combinator)
+   - Lenny's Newsletter (Product, Growth, AI)
 
 2. **Filters** by SRE/Observability keywords
 
@@ -96,6 +99,7 @@ Edit `collect_articles.py` and add new feeds to the `sources` dictionary:
 ```python
 self.sources = {
     'sreweekly': 'https://sreweekly.com/feed/',
+    'anthropic': 'https://raw.githubusercontent.com/conoro/anthropic-engineering-rss-feed/main/anthropic_engineering_rss.xml',
     'your_source': 'https://example.com/feed.xml',
 }
 ```
