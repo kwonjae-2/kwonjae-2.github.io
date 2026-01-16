@@ -1,0 +1,730 @@
+[
+  {
+    "title": "Just the Browser",
+    "link": "https://justthebrowser.com/",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "Signal creator Moxie Marlinspike wants to do for AI what he did for messaging",
+    "link": "https://arstechnica.com/security/2026/01/signal-creator-moxie-marlinspike-wants-to-do-for-ai-what-he-did-for-messaging/",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "이란에서 인터넷이 끊겨도 Bluetooth와 Wi-Fi로 연결을 유지하는 Briar",
+    "link": "https://news.hada.io/topic?id=25874",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "\n\nBriar 메신저는 인터넷이 차단된 상황에서도 Bluetooth와 Wi-Fi 직접 연결을 통해 통신을 지속할 수 있는 보안 중심 오프라인 메시징 앱\n\n중앙 서버 없이 기기 간 직접 통신(P2P) 구조로 동작하며, 인터넷 연결 시에는 "
+  },
+  {
+    "title": "On Being a Human Being in the Time of Collapse (2022) [pdf]",
+    "link": "https://web.cs.ucdavis.edu/~rogaway/papers/crisis/crisis.pdf",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "오픈코드를 디스코드에서 컨트롤 할 수 있는 오픈소스 플러그인, Kimaki",
+    "link": "https://news.hada.io/topic?id=25873",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "kimaki는 디스코드 안에서 AI 코딩 에이전트(OpenCode 기반)를 직접 조작할 수 있게 해주는 봇입니다\n디스코드의 각 채널을 로컬 머신의 특정 프로젝트 디렉터리와 연결하고, 채널에 메시지를 보내면 AI가 해당 코드베이스를 읽고 수정하거나 터미널 명령을 실행합니다.\n텍스트 입력뿐 아니라 파일 첨부"
+  },
+  {
+    "title": "The spectrum of isolation: From bare metal to WebAssembly",
+    "link": "https://buildsoftwaresystems.com/post/guide-to-execution-environments/",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "pf: Make af-to less magical",
+    "link": "https://undeadly.org/cgi?action=article;sid=20260116085115",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "Pocket TTS: CPU에 목소리를 부여하는 고품질 TTS",
+    "link": "https://news.hada.io/topic?id=25871",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "\n1억 개의 파라미터로 구성된 Pocket TTS는 음성 복제 기능을 갖춘 경량 텍스트-음성 변환 모델로, 일반 노트북 CPU에서도 실시간 실행 가능\n기존의 대형 LLM 기반 TTS(10억 개 이상 파라미터) 와 소형 Kokoro TTS(8,200만 파라미터)"
+  },
+  {
+    "title": "Interactive eBPF",
+    "link": "https://ebpf.party/",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "모든 AI 프로젝트는 결국 에이전트가 된다",
+    "link": "https://news.hada.io/topic?id=25870",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "\n프로젝트 진행중에 단순한 스크립트 작성에서 자율적 AI 에이전트 구축으로 발전하는 과정이 반복적으로 나타남\n개발중인 도구들에 대해 도구 접근권을 부여하자 단순 대화형 모델이 계획·실행·반복 가능한 에이전트로 전환됨\n분류기나 조건문 기반 로직은..."
+  },
+  {
+    "title": "Vercel, React 모범 사례 저장소 공개",
+    "link": "https://news.hada.io/topic?id=25869",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "\nVercel이 React와 Next.js의 10년 이상 성능 최적화 경험을 기반으로 한 구조화된 저장소 React-Best-Practices를 공개함\n이 저장소는 AI 에이전트와 LLM이 코드 리뷰나 리팩터링 시 일관된 최적화 결정을 내릴 수 있도록 설계됨\n핵심은 "
+  },
+  {
+    "title": "아이디어는 싸다, 실행은 더 싸다",
+    "link": "https://news.hada.io/topic?id=25868",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "기존 통념 → 완전 뒤집힘\n\n과거 15년간 개발자로 살아오면서 믿었던 진리: “아이디어는 싸고(cheap), 실행(execution)이 전부다”\n\n이제는 아이디어는 여전히 싸지만, 실행마저 훨씬 더 싸졌다(execution is cheaper)\n\nAI 덕분에 실제로 일..."
+  },
+  {
+    "title": "AI가 AI를 학습하면 생기는 일, ‘모델 붕괴’ 현상과 예방법",
+    "link": "https://news.hada.io/topic?id=25867",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "모델 붕괴(Model Collapse)란?\n\nAI가 AI가 생성한 데이터로 재학습할 때 발생하는 퇴화 현상\nNature 논문 기반으로 증명된 구조적 위험\n\n겉보기 특징\n\n평균 성능·벤치마크 점수는 유지 또는 상승\n하지만 드문 케이스(아웃"
+  },
+  {
+    "title": "OpenBSD-current now runs as guest under Apple Hypervisor",
+    "link": "https://www.undeadly.org/cgi?action=article;sid=20260115203619",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "팔란티어가 ICE의 급습 지역 선정을 위해 사용하는 앱 ‘ELITE’",
+    "link": "https://news.hada.io/topic?id=25866",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "\n\n‘ELITE’는 미국 이민세관단속국(ICE) 이 추방 대상자를 찾기 위해 사용하는 팔란티어(Palantir) 의 내부 도구로, 지도 기반 인터페이스를 통해 특정 지역의 표적 밀집도를 시각화함\n이 앱은 Google Maps와 유사한 형태로, 이민자 밀집도를 포함..."
+  },
+  {
+    "title": "외로움 대유행을 어떻게 해결할 수 있을까?",
+    "link": "https://news.hada.io/topic?id=25864",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "\n\n외로움 문제가 사회 전반에서 심각한 수준으로 확산되고 있음\n개인 간 사회적 연결 부족이 정신 건강과 삶의 질에 부정적 영향을 미침\n기술 발전에도 불구하고 대면 관계 감소가 지속되는 현상\n커뮤니티, 오프라인 모임, "
+  },
+  {
+    "title": "Show HN: BGP Scout – BGP Network Browser",
+    "link": "https://bgpscout.io/",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "중국의 풍력 및 태양광 발전 확장의 경이로운 규모를 담은 사진들",
+    "link": "https://news.hada.io/topic?id=25863",
+    "source": "geeknews",
+    "published": "2026-01-16",
+    "description": "\n중국은 지난해 전 세계 신규 풍력·태양광 설비의 절반 이상을 설치하며 재생에너지 확장을 주도\n2024년 5월 한 달 동안만 폴란드 전체 전력 수요를 충당할 수준의 재생에너지를 추가 설치\n동부의 도시 옥상부터 서부 사막의 초대형 풍력단지"
+  },
+  {
+    "title": "My Gripes with Prolog",
+    "link": "https://buttondown.com/hillelwayne/archive/my-gripes-with-prolog/",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "List of individual trees",
+    "link": "https://en.wikipedia.org/wiki/List_of_individual_trees",
+    "source": "hackernews",
+    "published": "2026-01-16",
+    "description": "Comments"
+  },
+  {
+    "title": "All 23-Bit Still Lifes Are Glider Constructible",
+    "link": "https://mvr.github.io/posts/xs23.html",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "OpenTelemetry JS Statement on Node.js DOS Mitigation",
+    "link": "https://opentelemetry.io/blog/2026/oteljs-nodejs-dos-mitigation/",
+    "source": "opentelemetry",
+    "published": "2026-01-15",
+    "description": "You may have seen a recent Node.js security advisory and related coverage\ndiscussing a potential denial-of-service issue involving async_hooks.\nOpenTelemetry (and other APM tools) were mentioned becau..."
+  },
+  {
+    "title": "Linux boxes via SSH: suspended when disconected",
+    "link": "https://shellbox.dev/",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "Briar keeps Iran connected via Bluetooth and Wi-Fi when the internet goes dark",
+    "link": "https://briarproject.org/manual/fa/",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "Data is the only moat",
+    "link": "https://frontierai.substack.com/p/data-is-your-only-moat",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "JuiceFS is a distributed POSIX file system built on top of Redis and S3",
+    "link": "https://github.com/juicedata/juicefs",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "CVEs affecting the Svelte ecosystem",
+    "link": "https://svelte.dev/blog/cves-affecting-the-svelte-ecosystem",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "Ask HN: How can we solve the loneliness epidemic?",
+    "link": "https://news.ycombinator.com/item?id=46635345",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "Apple is fighting for TSMC capacity as Nvidia takes center stage",
+    "link": "https://www.culpium.com/p/exclusiveapple-is-fighting-for-tsmc",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "How to show up in any room with a low heart rate: Silicon Valley’s missing etiquette playbook | Sam Lessin",
+    "link": "https://www.lennysnewsletter.com/p/silicon-valleys-missing-etiquette-playbook",
+    "source": "lenny",
+    "published": "2026-01-15",
+    "description": "How to build trust, lower your heart rate, and win in business by understanding proper etiquette"
+  },
+  {
+    "title": "Pocket TTS: A high quality TTS that gives your CPU a voice",
+    "link": "https://kyutai.org/blog/2026-01-13-pocket-tts",
+    "source": "hackernews",
+    "published": "2026-01-15",
+    "description": "Comments"
+  },
+  {
+    "title": "Calling New Contributors - Help Us Improve the OpenTelemetry Onboarding Experience",
+    "link": "https://opentelemetry.io/blog/2025/calling-new-contributors/",
+    "source": "opentelemetry",
+    "published": "2026-01-14",
+    "description": "Update as of 2025-12-08\nA giant thank you to those of you who have volunteered to participate! We have\nreceived more interest than expected, so sign-ups are closed for now. Stay\ntuned to the OpenTelem..."
+  },
+  {
+    "title": "Claude is good at assembling blocks, but still falls apart at creating them",
+    "link": "https://www.approachwithalacrity.com/claude-ne/",
+    "source": "hackernews",
+    "published": "2026-01-14",
+    "description": "Comments"
+  },
+  {
+    "title": "Announcing 2025 OpenTelemetry Community Awards Winners",
+    "link": "https://opentelemetry.io/blog/2025/community-awards-winners/",
+    "source": "opentelemetry",
+    "published": "2026-01-14",
+    "description": "We are excited to announce the winners of the second OpenTelemetry Community\nAwards! These awards recognize individuals who have made a notable impact to\nthe OpenTelemetry project over the past year, ..."
+  },
+  {
+    "title": "Inside The Internet Archive's Infrastructure",
+    "link": "https://hackernoon.com/the-long-now-of-the-web-inside-the-internet-archives-fight-against-forgetting",
+    "source": "hackernews",
+    "published": "2026-01-14",
+    "description": "Comments"
+  },
+  {
+    "title": "First impressions of Claude Cowork",
+    "link": "https://simonw.substack.com/p/first-impressions-of-claude-cowork",
+    "source": "hackernews",
+    "published": "2026-01-14",
+    "description": "Comments"
+  },
+  {
+    "title": "Bringing the Predators to Life in MAME",
+    "link": "https://lysiwyg.mataroa.blog/blog/bringing-the-predators-to-life-in-mame/",
+    "source": "hackernews",
+    "published": "2026-01-14",
+    "description": "Comments"
+  },
+  {
+    "title": "Show HN: OpenWork – An open-source alternative to Claude Cowork",
+    "link": "https://github.com/different-ai/openwork",
+    "source": "hackernews",
+    "published": "2026-01-14",
+    "description": "Comments"
+  },
+  {
+    "title": "Exploring OpenTelemetry Priorities for Mainframes - Insights from Survey Responses",
+    "link": "https://opentelemetry.io/blog/2025/mainframe-survey/",
+    "source": "opentelemetry",
+    "published": "2026-01-13",
+    "description": "Which OpenTelemetry features are considered most important by users for\nenhancing the observability of mainframes? Earlier this year, the\nOpenTelemetry on Mainframes Special Interest Group\n(SIG) and t..."
+  },
+  {
+    "title": "Demystifying OpenTelemetry: Why You Shouldn’t Fear Observability in Traditional Environments",
+    "link": "https://opentelemetry.io/blog/2026/demystifying-opentelemetry/",
+    "source": "opentelemetry",
+    "published": "2026-01-13",
+    "description": "For decades, traditional technology environments, ranging from on-premises data\ncenters to legacy applications and industrial control systems, have powered the\ncore of many organizations. These system..."
+  },
+  {
+    "title": "🎙️This week on How I AI: The power user’s guide to Codex",
+    "link": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-the-power-users",
+    "source": "lenny",
+    "published": "2026-01-12",
+    "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network"
+  },
+  {
+    "title": "Cue Does It All, but Can It Literate?",
+    "link": "https://xlii.space/cue/cue-does-it-all-but-can-it-literate/",
+    "source": "hackernews",
+    "published": "2026-01-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Go-legacy-winxp: Compile Golang 1.24 code for Windows XP",
+    "link": "https://github.com/syncguy/go-legacy-winxp/tree/winxp-compat",
+    "source": "hackernews",
+    "published": "2026-01-12",
+    "description": "Comments"
+  },
+  {
+    "title": "The power user’s guide to Codex: parallelizing workflows, planning techniques, advanced context engineering tips, automating code reviews, and more | Alexander Embiricos",
+    "link": "https://www.lennysnewsletter.com/p/a-full-software-engineering-teammate",
+    "source": "lenny",
+    "published": "2026-01-12",
+    "description": "Listen now | &#127897;&#65039; The power user's guide to Codex: Parallelizing workflows, planning techniques, advanced context engineering tips, automating code reviews, more"
+  },
+  {
+    "title": "Altaid 8800",
+    "link": "https://sunrise-ev.com/8080.htm",
+    "source": "hackernews",
+    "published": "2026-01-12",
+    "description": "Comments"
+  },
+  {
+    "title": "SRE Weekly Issue #505",
+    "link": "https://sreweekly.com/sre-weekly-issue-505/",
+    "source": "sreweekly",
+    "published": "2026-01-12",
+    "description": "View on sreweekly.com A message from our sponsor, Hopp: Paging at 2am? 🚨 Make incident triage feel like you’re at the same keyboard with Hopp. crisp, readable screen-sharing no more &#8220;can you zoo..."
+  },
+  {
+    "title": "Primecoin and Cunningham Prime Chains",
+    "link": "https://www.johndcook.com/blog/2026/01/10/prime-chains/",
+    "source": "hackernews",
+    "published": "2026-01-11",
+    "description": "Comments"
+  },
+  {
+    "title": "Why most AI products fail: Lessons from 50+ AI deployments at OpenAI, Google & Amazon",
+    "link": "https://www.lennysnewsletter.com/p/what-openai-and-google-engineers-learned",
+    "source": "lenny",
+    "published": "2026-01-11",
+    "description": "Lessons from 50+ enterprise AI deployments"
+  },
+  {
+    "title": "Show HN: pgwire-replication - pure rust client for Postgres CDC",
+    "link": "https://github.com/vnvo/pgwire-replication",
+    "source": "hackernews",
+    "published": "2026-01-11",
+    "description": "Comments"
+  },
+  {
+    "title": "I Built a 1 Petabyte Server from Scratch [video]",
+    "link": "https://www.youtube.com/watch?v=vVI7atoAeoo",
+    "source": "hackernews",
+    "published": "2026-01-11",
+    "description": "Comments"
+  },
+  {
+    "title": "🧠 Community Wisdom: Building a PM copilot with a large context window, navigating career growth and relocation, managing product backlogs effectively, office seating dynamics, and more",
+    "link": "https://www.lennysnewsletter.com/p/community-wisdom-building-a-pm-copilot",
+    "source": "lenny",
+    "published": "2026-01-10",
+    "description": "Community Wisdom 168"
+  },
+  {
+    "title": "OpenTelemetry.io 2025 review",
+    "link": "https://opentelemetry.io/blog/2026/2025-year-in-review/",
+    "source": "opentelemetry",
+    "published": "2026-01-09",
+    "description": "As 2025 has come to an end, we&rsquo;re taking a moment to look back at everything the\ncommunity accomplished across the website, documentation, and localization\nefforts. The year was another exciting..."
+  },
+  {
+    "title": "What 10,000 Slack Messages Reveal About OpenTelemetry Adoption Challenges",
+    "link": "https://opentelemetry.io/blog/2026/slack-community-insights/",
+    "source": "opentelemetry",
+    "published": "2026-01-07",
+    "description": "The OpenTelemetry community has grown tremendously over the past few years, and\nwith that growth comes valuable insights hidden in our community conversations.\nWe analyzed nearly 10,000 messages from ..."
+  },
+  {
+    "title": "Best of Lenny’s Newsletter 2026",
+    "link": "https://www.lennysnewsletter.com/p/best-of-lennys-newsletter-2026",
+    "source": "lenny",
+    "published": "2026-01-06",
+    "description": "The 25 best posts from the past year, plus a few all-time classics"
+  },
+  {
+    "title": "This week on How I AI: Zapier's CEO shares his personal AI stack",
+    "link": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-zapiers-ceo",
+    "source": "lenny",
+    "published": "2026-01-05",
+    "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network"
+  },
+  {
+    "title": "Zapier’s CEO shares his personal AI stack | Wade Foster",
+    "link": "https://www.lennysnewsletter.com/p/zapiers-ceo-shares-his-personal-ai-stack",
+    "source": "lenny",
+    "published": "2026-01-05",
+    "description": "Watch now | &#127897;&#65039; Wade Foster (co-founder and CEO of Zapier) on extracting company culture from meeting transcripts, building interview evaluation agents, and finding hidden talent with Gr..."
+  },
+  {
+    "title": "SRE Weekly Issue #504",
+    "link": "https://sreweekly.com/sre-weekly-issue-504/",
+    "source": "sreweekly",
+    "published": "2026-01-05",
+    "description": "View on sreweekly.com Finding the grain of sand in a heap of Salt Salt is Cloudflare&#8217;s configuration management tool. How do you find the root cause of a configuration management failure when yo..."
+  },
+  {
+    "title": "The high-growth handbook: Molly Graham’s frameworks for leading through chaos, change, and scale",
+    "link": "https://www.lennysnewsletter.com/p/the-high-growth-handbook-molly-graham",
+    "source": "lenny",
+    "published": "2026-01-04",
+    "description": "Former Facebook, Google, and CZI leader shares her battle-tested frameworks for managing rapid growth, why giving away your job is the path to success, and how to stay sane while your company scales 1..."
+  },
+  {
+    "title": "We replaced our sales team with 20 AI agents—here’s what happened | Jason Lemkin (SaaStr)",
+    "link": "https://www.lennysnewsletter.com/p/we-replaced-our-sales-team-with-20-ai-agents",
+    "source": "lenny",
+    "published": "2026-01-01",
+    "description": "Jason Lemkin on why he replaced his entire sales team with AI agents, how he fine-tuned them to work better than his human sales people, which vendors to choose, and how to become hyper-employable in ..."
+  },
+  {
+    "title": "This week on How I AI: How Webflow’s CPO built an AI chief of staff",
+    "link": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-webflows",
+    "source": "lenny",
+    "published": "2025-12-29",
+    "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network"
+  },
+  {
+    "title": "How Webflow’s CPO built an AI chief of staff to manage her calendar, prep for meetings, and drive AI adoption | Rachel Wolan",
+    "link": "https://www.lennysnewsletter.com/p/how-webflows-cpo-built-an-ai-chief",
+    "source": "lenny",
+    "published": "2025-12-29",
+    "description": "Watch now | &#127897;&#65039; The CPO&#8217;s custom AI chief-of-staff app helps prep for meetings, audit her calendar, and level up her entire organization"
+  },
+  {
+    "title": "SRE Weekly Issue #503",
+    "link": "https://sreweekly.com/sre-weekly-issue-503/",
+    "source": "sreweekly",
+    "published": "2025-12-29",
+    "description": "View on sreweekly.com The Abstraction Debt in Infrastructure as Code Abstraction is meant to encapsulate complexity, but when done poorly, it creates opacity—a lack of visibility into what’s actually ..."
+  },
+  {
+    "title": "10 contrarian leadership truths every leader needs to hear | Matt MacInnis (Rippling)",
+    "link": "https://www.lennysnewsletter.com/p/10-contrarian-leadership-truths",
+    "source": "lenny",
+    "published": "2025-12-28",
+    "description": "Rippling's CPO on why you should deliberately understaff projects, how to recognize true product-market fit, why VCs want you to keep failing, and the frameworks that built a $16B company"
+  },
+  {
+    "title": "🧠 Community Wisdom: Measuring business impact after rollout, clarity vs. capacity as the real bottleneck, what makes podcast content valuable, keeping secondary users engaged, and more",
+    "link": "https://www.lennysnewsletter.com/p/community-wisdom-measuring-business",
+    "source": "lenny",
+    "published": "2025-12-27",
+    "description": "Community Wisdom 167"
+  },
+  {
+    "title": "AI tools are overdelivering: results from our large-scale AI productivity survey",
+    "link": "https://www.lennysnewsletter.com/p/ai-tools-are-overdelivering-results-c08",
+    "source": "lenny",
+    "published": "2025-12-24",
+    "description": "What exactly AI is doing for people, which AI tools have product-market fit, where the biggest opportunities remain, and what it all means"
+  },
+  {
+    "title": "AI tools are overdelivering: results from our large-scale AI productivity survey",
+    "link": "https://www.lennysnewsletter.com/p/ai-tools-are-overdelivering-results",
+    "source": "lenny",
+    "published": "2025-12-23",
+    "description": "What exactly AI is doing for people, which AI tools have product-market fit, where the biggest opportunities remain, and what it all means"
+  },
+  {
+    "title": "This week on How I AI: How to get your whole team excited about AI",
+    "link": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-to-get",
+    "source": "lenny",
+    "published": "2025-12-22",
+    "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network"
+  },
+  {
+    "title": "How to get your whole team excited about AI (and actually using it) | Brian Greenbaum (product designer at Pendo)",
+    "link": "https://www.lennysnewsletter.com/p/how-to-get-your-whole-team-excited",
+    "source": "lenny",
+    "published": "2025-12-22",
+    "description": "Watch now | &#127897;&#65039; How to transform your organization from AI-curious to AI-proficient: synchronous workshops, asynchronous sharing channels, and measuring adoption success"
+  },
+  {
+    "title": "SRE Weekly Issue #502",
+    "link": "https://sreweekly.com/sre-weekly-issue-502/",
+    "source": "sreweekly",
+    "published": "2025-12-22",
+    "description": "View on sreweekly.com Eliminating Cold Starts 2: shard and conquer Cloudflare reduced their cold-start rate for Workers requests through sharding and consistent hashing, with an interesting solution f..."
+  },
+  {
+    "title": "The coming AI security crisis (and what to do about it) | Sander Schulhoff",
+    "link": "https://www.lennysnewsletter.com/p/the-coming-ai-security-crisis",
+    "source": "lenny",
+    "published": "2025-12-21",
+    "description": "AI guardrails don't work. Security researcher Sander Schulhoff on prompt injection, red teaming, why AI defenses fail, and what actually secures AI products."
+  },
+  {
+    "title": "🧠 Community Wisdom: What PMs need to master in the age of AI, testing product activation with AI browsers, splitting time between PM work and prompt engineering, Mixpanel vs. PostHog, and more",
+    "link": "https://www.lennysnewsletter.com/p/community-wisdom-what-pms-need-to",
+    "source": "lenny",
+    "published": "2025-12-20",
+    "description": "Community Wisdom 166"
+  },
+  {
+    "title": "Announcing the 2025 OpenTelemetry Governance Committee Election Candidates",
+    "link": "https://opentelemetry.io/blog/2025/gc-candidates/",
+    "source": "opentelemetry",
+    "published": "2025-12-15",
+    "description": "The OpenTelemetry Election Committee is excited to announce the final list of\ncandidates for the upcoming 2025 OpenTelemetry Governance Committee Election!\nIf you are an\neligible voter,\nyou’ll have th..."
+  },
+  {
+    "title": "SRE Weekly Issue #501",
+    "link": "https://sreweekly.com/sre-weekly-issue-501/",
+    "source": "sreweekly",
+    "published": "2025-12-15",
+    "description": "View on sreweekly.com A message from our sponsor, Depot: &#8220;Waiting for a runner&#8221; but the runner is online? Depot debugs three cases where symptoms misled engineers. Workflow permissions, Az..."
+  },
+  {
+    "title": "New Configuration Schema release candidate",
+    "link": "https://opentelemetry.io/blog/2025/declarative-config-rc3/",
+    "source": "opentelemetry",
+    "published": "2025-12-12",
+    "description": "The latest release of the OpenTelemetry Configuration Schema is\nout this week. It brings the Configuration working group one step closer to\ncompletion after 3 years of effort, and the schema one step ..."
+  },
+  {
+    "title": "How to use AI to analyze and visualize CAN data with Grafana Assistant",
+    "link": "https://grafana.com/blog/how-to-use-ai-to-analyze-and-visualize-can-data-with-grafana-assistant/",
+    "source": "grafana",
+    "published": "2025-12-12",
+    "description": "Note: A version of this post originally appeared on the CSS Electronics blog. \nMartin Falch, co-owner and head of sales and marketing at CSS Electronics, is an expert on CAN bus data. Martin works clo..."
+  },
+  {
+    "title": "‘Grafana’s Big Tent’ podcast: Welcome to season 3!",
+    "link": "https://grafana.com/blog/grafanas-big-tent-podcast-welcome-to-season-3/",
+    "source": "grafana",
+    "published": "2025-12-11",
+    "description": "Sometimes the simplest questions spark the most entertaining rabbit holes. Questions like: “Can you monitor a candle without starting a fire?” or “Should your robot boat have redundancy, or just a twi..."
+  },
+  {
+    "title": "Grafana Labs: Top 10 moments of 2025",
+    "link": "https://grafana.com/blog/grafana-labs-top-10-moments-of-2025/",
+    "source": "grafana",
+    "published": "2025-12-11",
+    "description": "For Grafana Labs, 2025 was a year defined by innovation, growth, and the power of our community.\nWe celebrated the release of Grafana 12 at our 10th annual GrafanaCON event, and marked major milestone..."
+  },
+  {
+    "title": "Removal of Drilldown Investigations in Grafana: What you need to know",
+    "link": "https://grafana.com/blog/removal-of-drilldown-investigations-in-grafana-what-you-need-to-know/",
+    "source": "grafana",
+    "published": "2025-12-04",
+    "description": "Back in May, we introduced the public preview of Grafana Drilldown Investigations, a new feature intended to help Grafana OSS and Grafana Cloud users accelerate their incident response.\nNow, as we hea..."
+  },
+  {
+    "title": "Send OpenTelemetry traces and logs from Cloudflare Workers to Grafana Cloud",
+    "link": "https://grafana.com/blog/send-opentelemetry-traces-and-logs-from-cloudflare-workers-to-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-12-04",
+    "description": "\nNote: This blog was co-authored by Nevika Shah, a senior product manager at Cloudflare.\nCloudflare Workers is a developer platform for deploying serverless functions, frontends, containers, and datab..."
+  },
+  {
+    "title": "What's new in the Grafana Image Renderer: higher-quality results, security enhancements, and more",
+    "link": "https://grafana.com/blog/whats-new-in-the-grafana-image-renderer-higher-quality-results-security-enhancements-and-more/",
+    "source": "grafana",
+    "published": "2025-12-03",
+    "description": "Whether it’s for an email or that upcoming presentation, many Grafana users like to share their favorite dashboards or panels outside of Grafana itself. The Grafana Image Renderer is a backend service..."
+  },
+  {
+    "title": "Contextual, in-product guidance for every Grafana user: A closer look at Interactive Learning",
+    "link": "https://grafana.com/blog/contextual-in-product-guidance-for-every-grafana-user-a-closer-look-at-interactive-learning/",
+    "source": "grafana",
+    "published": "2025-12-02",
+    "description": "As developer advocates at Grafana Labs, we’re always looking for new ways to help our users better understand and learn observability. You might remember our previous project that brought learning to ..."
+  },
+  {
+    "title": "Deprecating Zipkin Exporter",
+    "link": "https://opentelemetry.io/blog/2025/deprecating-zipkin-exporters/",
+    "source": "opentelemetry",
+    "published": "2025-12-01",
+    "description": "The OpenTelemetry project is deprecating the Zipkin exporter specification in\nfavor of\nZipkin&rsquo;s OTLP ingestion support.\nThank you to all Zipkin contributors for helping OpenTelemetry reach this\n..."
+  },
+  {
+    "title": "Improve service reliability and ops culture with Grafana Cloud Service Center",
+    "link": "https://grafana.com/blog/improve-service-reliability-and-ops-culture-with-grafana-cloud-service-center/",
+    "source": "grafana",
+    "published": "2025-12-01",
+    "description": "Today’s engineering organizations are built around service ownership. Service owners are accountable for keeping their services reliable, performant, and ready to scale. But no service operates in iso..."
+  },
+  {
+    "title": "How to monitor Amazon Bedrock AgentCore AI agent infrastructure in Grafana Cloud",
+    "link": "https://grafana.com/blog/how-to-monitor-amazon-bedrock-agentcore-ai-agent-infrastructure-in-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-11-28",
+    "description": "Modern AI agents are now highly advanced, frequently becoming essential components of engineering workflows and deployment pipelines.\nHowever, operating these systems often feels like trying to naviga..."
+  },
+  {
+    "title": "How to monitor AI agent applications on Amazon Bedrock AgentCore with Grafana Cloud",
+    "link": "https://grafana.com/blog/how-to-monitor-ai-agent-applications-on-amazon-bedrock-agentcore-with-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-11-26",
+    "description": "Today&rsquo;s AI agents have grown increasingly sophisticated, moving into production environments and becoming integral parts of engineering workflows. But these agents can also be black boxes for en..."
+  },
+  {
+    "title": "Introducing advanced tool use on the Claude Developer Platform",
+    "link": "https://www.anthropic.com/engineering/advanced-tool-use",
+    "source": "anthropic",
+    "published": "2025-11-24",
+    "description": "Introducing advanced tool use on the Claude Developer Platform"
+  },
+  {
+    "title": "Contributing the Unroll Processor to the OpenTelemetry Collector Contrib",
+    "link": "https://opentelemetry.io/blog/2025/contrib-unroll-processor/",
+    "source": "opentelemetry",
+    "published": "2025-11-07",
+    "description": "The idea for unrolling bundled logs inside the OpenTelemetry Collector didn&rsquo;t\nstart with a processor.\nBy &ldquo;unrolling,&rdquo; I mean taking a single log record that contains multiple logical..."
+  },
+  {
+    "title": "Code execution with MCP: Building more efficient agents",
+    "link": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+    "source": "anthropic",
+    "published": "2025-11-04",
+    "description": "Code execution with MCP: Building more efficient agents"
+  },
+  {
+    "title": "Announcing the 2025 Governance Committee Election Results",
+    "link": "https://opentelemetry.io/blog/2025/gc-elections-results/",
+    "source": "opentelemetry",
+    "published": "2025-10-30",
+    "description": "We are delighted to announce the results of the\n2025 OpenTelemetry Governance Committee Election!\nThe OpenTelemetry project continues to bring together an exceptionally vibrant\ncommunity, who are shap..."
+  },
+  {
+    "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+    "link": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+    "source": "anthropic",
+    "published": "2025-10-20",
+    "description": "Beyond permission prompts: making Claude Code more secure and autonomous"
+  },
+  {
+    "title": "OpenTelemetry Sampling update",
+    "link": "https://opentelemetry.io/blog/2025/sampling-milestones/",
+    "source": "opentelemetry",
+    "published": "2025-10-16",
+    "description": "Introduction\nOpenTelemetry published version 1.0 of its Tracing specification over four years\nago, and the same year W3C TraceContext Level 1 was published\nwith W3C Recommendation status. We as a comm..."
+  },
+  {
+    "title": "Equipping agents for the real world with Agent Skills",
+    "link": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+    "source": "anthropic",
+    "published": "2025-10-16",
+    "description": "Equipping agents for the real world with Agent Skills"
+  },
+  {
+    "title": "OTel Unplugged EU at FOSDEM 2026",
+    "link": "https://opentelemetry.io/blog/2025/otel-unplugged-fosdem/",
+    "source": "opentelemetry",
+    "published": "2025-10-10",
+    "description": "\n\n\nOpenTelemetry is coming to FOSDEM!\nWhen we put out our community survey, you requested more meetups and we have\nheard you! We&rsquo;re happy to announce that we are bringing back OTel Unplugged,\nth..."
+  },
+  {
+    "title": "Effective context engineering for AI agents",
+    "link": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "source": "anthropic",
+    "published": "2025-09-29",
+    "description": "Effective context engineering for AI agents"
+  },
+  {
+    "title": "Building agents with the Claude Agent SDK",
+    "link": "https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk",
+    "source": "anthropic",
+    "published": "2025-09-29",
+    "description": "Building agents with the Claude Agent SDK"
+  },
+  {
+    "title": "A postmortem of three recent issues",
+    "link": "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues",
+    "source": "anthropic",
+    "published": "2025-09-17",
+    "description": "A postmortem of three recent issues"
+  },
+  {
+    "title": "Writing effective tools for agents — with agents",
+    "link": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+    "source": "anthropic",
+    "published": "2025-09-11",
+    "description": "Writing effective tools for agents — with agents"
+  },
+  {
+    "title": "Desktop Extensions: One-click MCP server installation for Claude Desktop",
+    "link": "https://www.anthropic.com/engineering/desktop-extensions",
+    "source": "anthropic",
+    "published": "2025-06-26",
+    "description": "Desktop Extensions: One-click MCP server installation for Claude Desktop"
+  },
+  {
+    "title": "How we built our multi-agent research system",
+    "link": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "source": "anthropic",
+    "published": "2025-06-13",
+    "description": "How we built our multi-agent research system"
+  },
+  {
+    "title": "Claude Code: Best practices for agentic coding",
+    "link": "https://www.anthropic.com/engineering/claude-code-best-practices",
+    "source": "anthropic",
+    "published": "2025-04-18",
+    "description": "Claude Code: Best practices for agentic coding"
+  },
+  {
+    "title": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
+    "link": "https://www.anthropic.com/engineering/claude-think-tool",
+    "source": "anthropic",
+    "published": "2025-03-20",
+    "description": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations"
+  },
+  {
+    "title": "Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet",
+    "link": "https://www.anthropic.com/engineering/swe-bench-sonnet",
+    "source": "anthropic",
+    "published": "2025-01-06",
+    "description": "Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet"
+  },
+  {
+    "title": "Building effective agents",
+    "link": "https://www.anthropic.com/engineering/building-effective-agents",
+    "source": "anthropic",
+    "published": "2024-12-19",
+    "description": "Building effective agents"
+  },
+  {
+    "title": "Introducing Contextual Retrieval",
+    "link": "https://www.anthropic.com/engineering/contextual-retrieval",
+    "source": "anthropic",
+    "published": "2024-09-19",
+    "description": "Introducing Contextual Retrieval"
+  }
+]
