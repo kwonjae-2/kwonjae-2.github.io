@@ -8,6 +8,7 @@ import feedparser
 import json
 import requests
 import os
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import List, Dict, Optional
@@ -285,23 +286,26 @@ Order articles by importance (most important first)."""
             print("   Falling back to simple selection...")
             return articles[:min_n]
 
-    def generate_article_summary_with_ai(self, article: Dict) -> Dict[str, str]:
-        """Use OpenAI to generate bilingual (Korean/English) summary and key points"""
+    def generate_article_summary_with_ai(self, article: Dict, max_retries: int = 3) -> Dict[str, str]:
+        """Use OpenAI to generate bilingual (Korean/English) summary and key points with retry logic"""
+        fallback_result = {
+            'summary_ko': article['description'],
+            'summary_en': article['description'],
+            'key_points_ko': [
+                '아티클의 주요 인사이트',
+                '중요한 기술적 세부사항',
+                '실무 적용 방안'
+            ],
+            'key_points_en': [
+                'Key insight from the article',
+                'Important technical detail',
+                'Practical application or takeaway'
+            ]
+        }
+
         if not self.openai_client:
-            return {
-                'summary_ko': article['description'],
-                'summary_en': article['description'],
-                'key_points_ko': [
-                    '아티클의 주요 인사이트',
-                    '중요한 기술적 세부사항',
-                    '실무 적용 방안'
-                ],
-                'key_points_en': [
-                    'Key insight from the article',
-                    'Important technical detail',
-                    'Practical application or takeaway'
-                ]
-            }
+            print(f"   ⚠️  OpenAI client not available, using fallback for: {article['title'][:40]}...")
+            return fallback_result
 
         prompt = f"""Analyze this article for software developers and provide bilingual summaries (Korean and English):
 
@@ -334,59 +338,62 @@ Respond in JSON format:
   ]
 }}"""
 
-        try:
-            print(f"   📝 Generating bilingual summary for: {article['title'][:50]}...")
-            response = self.openai_client.chat.completions.create(
-                model="gpt-5.2",
-                max_tokens=800,  # Increased for bilingual content
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                response_format={"type": "json_object"}
-            )
+        for attempt in range(max_retries):
+            try:
+                print(f"   📝 Generating bilingual summary for: {article['title'][:50]}..." + (f" (attempt {attempt + 1}/{max_retries})" if attempt > 0 else ""))
+                response = self.openai_client.chat.completions.create(
+                    model="gpt-5.2",
+                    max_tokens=800,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ],
+                    response_format={"type": "json_object"},
+                    timeout=60  # Add explicit timeout
+                )
 
-            response_text = response.choices[0].message.content
-            # Strip markdown formatting and parse JSON
-            clean_json = self._strip_markdown_json(response_text)
-            result = json.loads(clean_json)
-            usage = response.usage
-            print(f"   ✓ Summary generated ({usage.completion_tokens} tokens)")
-            return result
+                response_text = response.choices[0].message.content
+                # Strip markdown formatting and parse JSON
+                clean_json = self._strip_markdown_json(response_text)
+                result = json.loads(clean_json)
 
-        except json.JSONDecodeError as e:
-            print(f"❌ Failed to parse summary JSON for '{article['title'][:40]}': {str(e)}")
-            print(f"   Response: {response_text[:150]}...")
-            return {
-                'summary_ko': article['description'],
-                'summary_en': article['description'],
-                'key_points_ko': [
-                    '아티클의 주요 인사이트',
-                    '중요한 기술적 세부사항',
-                    '실무 적용 방안'
-                ],
-                'key_points_en': [
-                    'Key insight from the article',
-                    'Important technical detail',
-                    'Practical application or takeaway'
-                ]
-            }
-        except Exception as e:
-            print(f"❌ Error generating summary for '{article['title'][:40]}': {str(e)}")
-            print(f"   Error type: {type(e).__name__}")
-            return {
-                'summary_ko': article['description'],
-                'summary_en': article['description'],
-                'key_points_ko': [
-                    '아티클의 주요 인사이트',
-                    '중요한 기술적 세부사항',
-                    '실무 적용 방안'
-                ],
-                'key_points_en': [
-                    'Key insight from the article',
-                    'Important technical detail',
-                    'Practical application or takeaway'
-                ]
-            }
+                # Validate required fields exist and are non-empty
+                required_fields = ['summary_ko', 'summary_en', 'key_points_ko', 'key_points_en']
+                for field in required_fields:
+                    if field not in result or not result[field]:
+                        raise ValueError(f"Missing or empty required field: {field}")
+
+                # Validate key_points are lists with at least 3 items
+                for key_field in ['key_points_ko', 'key_points_en']:
+                    if not isinstance(result[key_field], list) or len(result[key_field]) < 3:
+                        raise ValueError(f"Invalid {key_field}: expected list with at least 3 items")
+
+                usage = response.usage
+                print(f"   ✓ Summary generated ({usage.completion_tokens} tokens)")
+                return result
+
+            except json.JSONDecodeError as e:
+                print(f"   ⚠️  JSON parse error (attempt {attempt + 1}/{max_retries}): {str(e)}")
+                if 'response_text' in locals():
+                    print(f"      Response preview: {response_text[:150]}...")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)  # Exponential backoff: 1s, 2s, 4s
+                    continue
+
+            except ValueError as e:
+                print(f"   ⚠️  Validation error (attempt {attempt + 1}/{max_retries}): {str(e)}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+                    continue
+
+            except Exception as e:
+                error_type = type(e).__name__
+                print(f"   ⚠️  {error_type} (attempt {attempt + 1}/{max_retries}): {str(e)}")
+                if attempt < max_retries - 1:
+                    time.sleep(2 ** attempt)
+                    continue
+
+        print(f"   ❌ All {max_retries} attempts failed for '{article['title'][:40]}', using fallback")
+        return fallback_result
 
     def save_to_file(self, articles: List[Dict], filename: str):
         """Save collected articles to JSON file"""
