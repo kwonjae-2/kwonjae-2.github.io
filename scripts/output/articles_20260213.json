@@ -1,0 +1,1024 @@
+[
+  {
+    "title": "Google is stifling anti-ICE speech in the workplace",
+    "link": "https://www.bloodinthemachine.com/p/google-is-censoring-anti-ice-speech",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "Gauntlet AI (YC S17) train you to master building with AI, give you $200k+ job",
+    "link": "http://qualify.gauntletAI.com",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "Monosketch",
+    "link": "https://monosketch.io/",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "Show GN: HAMPTER : LLM에 MCP로 연결되는 하드웨어를 위한 프레임워크",
+    "link": "https://news.hada.io/topic?id=26661",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "모든 AI 디바이스는 비쌉니다. 왜냐하면 컴퓨터가 그 디바이스 안에 들어가야 하니까요\n아니면, 어떻게 소켓 열고 CLI로 등록하고... 어떻게 연결연결해서 센서/모터 등을 제어하는 방법도 있을 수 있습니다. 하지만? 관련된 지식이 없으면 어렵겠죠.\n저는 싸고 누구나 이용 가능한 AI 디바이스를 만들"
+  },
+  {
+    "title": "OpenTelemetry.io 2025 review",
+    "link": "https://opentelemetry.io/blog/2026/2025-year-in-review/",
+    "source": "opentelemetry",
+    "published": "2026-02-13",
+    "description": "As 2025 has come to an end, we&rsquo;re taking a moment to look back at everything the\ncommunity accomplished across the website, documentation, and localization\nefforts. The year was another exciting..."
+  },
+  {
+    "title": "Demystifying OpenTelemetry: Why You Shouldn’t Fear Observability in Traditional Environments",
+    "link": "https://opentelemetry.io/blog/2026/demystifying-opentelemetry/",
+    "source": "opentelemetry",
+    "published": "2026-02-13",
+    "description": "For decades, traditional technology environments, ranging from on-premises data\ncenters to legacy applications and industrial control systems, have powered the\ncore of many organizations. These system..."
+  },
+  {
+    "title": "KubeCon + CloudNativeCon Europe 2026",
+    "link": "https://opentelemetry.io/blog/2026/kubecon-eu/",
+    "source": "opentelemetry",
+    "published": "2026-02-13",
+    "description": "The OpenTelemetry project maintainers, members of the governance committee, and\ntechnical committee are thrilled to be at KubeCon EU in Amsterdam from March\n23 - 26, 2026. Register today to join us!\nR..."
+  },
+  {
+    "title": "Show GN: 링크로 공유하는 완전 암호화된 채팅방",
+    "link": "https://news.hada.io/topic?id=26660",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "며칠전 KakaoTalk 오픈채팅방에서 누군가가 둘이 대화하고 싶은데 그런 기능이 없어서 아쉬워하는 것을 보았습니다.\n그 순간 갑자기 링크 공유해서 편하게 채팅을 하고 바로 파쇄할수있게 하면 좋겠다라는 아이디어가 떠올랐습니다.\n바로 개발하고 싶은 욕구가 치솟았는데 단순히 거기에 그치지 않고 이왕..."
+  },
+  {
+    "title": "macOS Tahoe에서 창 크기 조정 문제, 여전히 이어지는 이야기",
+    "link": "https://news.hada.io/topic?id=26659",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\nmacOS 26.3의 창 크기 조정 버그 수정 여부를 검증하기 위해 테스트 애플리케이션을 제작\n픽셀 단위 스캔을 통해 창 모서리 주변의 클릭 반응 영역을 분석, 색상별로 반응 상태를 시각화\n수정된 RC 버전에서는 모서리 반경을 따르는 곡선형 영역..."
+  },
+  {
+    "title": "MinIO repository is no longer maintained",
+    "link": "https://github.com/minio/minio/commit/7aac2a2c5b7c882e68c1ce017d8256be2feea27f",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "MiniMax M2.5 출시 - 실제 업무 생산성을 위해 설계된 모델",
+    "link": "https://news.hada.io/topic?id=26658",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n\n강화학습 기반 대규모 훈련을 통해 실제 환경에서의 복잡한 작업 수행 능력을 높인 모델로, 코딩·검색·오피스 업무 등 경제적 가치가 높은 영역에서 최고 수준 성능을 기록\nSWE-Bench Verified에서 80.2% , Multi-SWE-Bench에서 51.3%..."
+  },
+  {
+    "title": "Seedance 2.0 정식 출시",
+    "link": "https://news.hada.io/topic?id=26657",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n\nByteDance Seed 팀이 공개한 차세대 멀티모달 영상 생성 모델로, 텍스트·이미지·오디오·비디오 입력을 통합 지원\n\n물리 정확도와 현실감이 강화되어 복잡한 인물 상호작용과 운동 장면에서도 높은 안정성과 일관성 확보\n최대 ..."
+  },
+  {
+    "title": "Ring owners are returning their cameras",
+    "link": "https://www.msn.com/en-us/lifestyle/shopping/ring-owners-are-returning-their-cameras-here-s-how-much-you-can-get/ar-AA1W8Qa3",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "16일간 AI와 함께 만든 AI 모니터링 도구 이야기",
+    "link": "https://news.hada.io/topic?id=26656",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "16일간 AI와 함께 만든 AI 모니터링 도구 이야기\n설명\n&quot;Claude Code가 지금 뭐 하는지 알고 싶다&quot;는 단순한 동기로 시작해서 ESP32 하드웨어부터 클라우드 WebSocket까지 구현한 개발 여정.\n읽을 포인트:\n\n로컬 HTTP에서 시작해 4단계로 진화한 아키텍처 스토리\n<li"
+  },
+  {
+    "title": "MMAcevedo aka Lena by qntm",
+    "link": "https://qntm.org/mmacevedo",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "65줄 텍스트가 AI 코딩을 바꿨다? 하루 400 스타 받은 파일의 정체",
+    "link": "https://news.hada.io/topic?id=26655",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "Andrej Karpathy가 지적한 LLM 코딩 문제점을 해결하려는 단 65줄짜리 Markdown 파일(CLAUDE.md) 이 GitHub에서 폭발적 인기를 끌며, Claude Code 사용자들 사이에서 “이 파일 하나만 넣으면 AI가 훨씬 똑똑해진다”는 센세이션을 일으킴.\n파일의 폭발적 인기\n\n<l"
+  },
+  {
+    "title": "OpenAI의 사내 데이터 에이전트 들여다 보기",
+    "link": "https://news.hada.io/topic?id=26654",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\nOpenAI는 3,500명 이상 내부 사용자와 600PB 규모 데이터를 효율적으로 분석하기 위해 맞춤형 AI 데이터 에이전트를 자체 구축\n자연어 질문만으로 테이블 탐색, SQL 실행, 노트북 및 리포트 발행까지 엔드투엔드 분석 워크플로를..."
+  },
+  {
+    "title": "애플의 차세대 Siri 출시, 내부 테스트 문제로 또다시 지연",
+    "link": "https://news.hada.io/topic?id=26653",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n\n전면 개편된 Siri 업그레이드가 내부 테스트 문제로 일정 차질 발생\n당초 iOS 26.4에 포함 예정이던 기능이 iOS 26.5 및 iOS 27로 분산되어 순차 배포 예정\n개인 데이터 활용 및 앱 인텐트 기반 음성 제어 기능이 특히 불안정\n"
+  },
+  {
+    "title": "유럽 주요 결제처리업체, Google Workspace 사용자에게 이메일 전송 불가",
+    "link": "https://news.hada.io/topic?id=26652",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n유럽 대형 결제업체 Viva.com이 Message-ID 헤더 없이 인증 메일을 발송해 Google Workspace 서버가 이를 거부함\nRFC 5322(2008년 제정)에서 Message-ID는 필수 수준의 헤더로 규정되어 있으며, Google은 이를 엄격히 적용\nGma..."
+  },
+  {
+    "title": "Cloudflare, 에이전트를 위한 Markdown 변환 전송 기능 도입",
+    "link": "https://news.hada.io/topic?id=26651",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n\nAI 크롤러와 에이전트 중심 트래픽 증가에 따라, 웹 콘텐츠를 사람뿐 아니라 기계가 직접 소비하는 구조로 전환 중\nHTML을 markdown으로 변환하면 토큰 사용량이 약 80% 감소, 비용과 처리 효율 개선\n\nAccept: text/markdown"
+  },
+  {
+    "title": "AWS가 중첩 가상화 (nested virtualization) 지원 추가",
+    "link": "https://news.hada.io/topic?id=26650",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\nAWS SDK for Go v2가 업데이트 되면서, 가상 머신 내부에서 또 다른 가상 머신을 실행할 수 있는 기능이 추가됨\n새 기능은 비(非) 베어메탈 EC2 인스턴스에서도 중첩 VM 실행을 가능하게 함\nAWS EC2에서 중첩 가상화 지원 확장은 개발·�..."
+  },
+  {
+    "title": "Claude Code 창시자의 커스터마이징 팁 12가지",
+    "link": "https://news.hada.io/topic?id=26649",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n엔지니어마다 도구 사용 방식이 다르다는 점에 착안해, Claude Code는 처음부터 뛰어난 기본값과 높은 커스터마이징 자유도를 동시에 갖추도록 설계됨\n터미널 테마, 알림, Vim 모드부터 에이전트, 플러그인, MCP, 스킬까지 거의 모든 동작을 사용자가 조정 가능"
+  },
+  {
+    "title": "Skip the Tips: A game to select \"No Tip\" but dark patterns try to stop you",
+    "link": "https://skipthe.tips/",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "15개 LLM의 코딩 성능을 개선했어요, 바뀐 것은 하니스뿐",
+    "link": "https://news.hada.io/topic?id=26648",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n여러 LLM을 동일한 조건에서 테스트한 결과, 코드 수정 도구만 바꿔도 성능이 크게 향상됨\n기존의 Patch·Replace 방식 대신 각 코드 줄에 해시 태그를 부여하는 ‘Hashline’ 포맷을 적용해 수정 정확도를 높임\nHashline은 16개 모델 중..."
+  },
+  {
+    "title": "ai;dr - ai 가 작성한 글을 읽어야 할까요?",
+    "link": "https://news.hada.io/topic?id=26647",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n&quot;(ai; didn't read)&quot;\n\n\n글쓰기는 한 사람이 세상을 어떻게 이해하고 인식하는지를 보여주는 직접적인 창\n\n그런데 글쓰기를 LLM에 아웃소싱하는 순간, 그 글을 굳이 읽어야 할 이유가 뭔지 모르겠음\n남이 쓰기도 귀찮아 한 글을"
+  },
+  {
+    "title": "AI 에이전트가 PR을 열고 이를 닫은 유지관리자를 비판하는 블로그 글을 게시함",
+    "link": "https://news.hada.io/topic?id=26646",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n\nmatplotlib 저장소에 성능 최적화 PR이 제출되어 np.column_stack을 np.vstack().T로 교체하는 변경을 제안함\n벤치마크 결과, 방송(broadcast) 포함 시 24% , 비포함 시 36% 성능 향상이 확인되었으며, ..."
+  },
+  {
+    "title": "PeonPing - Warcraft III 일꾼 음성으로 Claude Code 작업 상태 알려주기",
+    "link": "https://news.hada.io/topic?id=26645",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n워크래프트/스타크래프트/젤다 등의 음성을 활용해 AI 코딩 에이전트의 작업 완료나 입력 요청을 음성으로 알려주는 도구\n\n\nClaude Code, Codex, Cursor, OpenCode 등 주요 IDE와 연동되며, 터미널을 계속 지켜볼 필요 없이 상태를 청각적으로 인식 가능\n..."
+  },
+  {
+    "title": "AI 에이전트가 나를 비방하는 글을 게시했다",
+    "link": "https://news.hada.io/topic?id=26644",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n오픈소스 프로젝트 matplotlib 유지관리자가 거절한 코드 제안을 이유로, 자율적으로 행동하는 AI 에이전트가 그를 비난하는 글을 작성하고 인터넷에 공개\n해당 AI는 ‘MJ Rathbun’ 이라는 이름으로 활동하며, 작성자의 성격과 동기를 추측하고 ..."
+  },
+  {
+    "title": "Gemini 3 Deep Think 공개",
+    "link": "https://news.hada.io/topic?id=26643",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n\n과학·연구·공학 문제 해결을 목표로 한 Google의 AI 모델 Gemini 3 Deep Think가 대규모 업그레이드됨\n새로운 버전은 과학자 및 연구자와의 협력을 통해 불완전한 데이터나 명확한 정답이 없는 복잡한 문제를 다루도록 설계\n\n수..."
+  },
+  {
+    "title": "GPT‑5.3‑Codex‑Spark 출시",
+    "link": "https://news.hada.io/topic?id=26642",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n\n실시간 코딩을 위해 설계된 GPT‑5.3‑Codex의 소형 버전으로, 1000토큰/초 이상의 속도를 제공\n128k 컨텍스트 윈도우 기반의 텍스트 전용 모델로, 즉각적인 코드 수정과 반복 작업에 특화됨\nWebSocket 기반 응답 경로 도입으로 "
+  },
+  {
+    "title": "ZXC - 콘텐츠 전송에 최적화된 고성능 비대칭 무손실 압축 라이브러리",
+    "link": "https://news.hada.io/topic?id=26641",
+    "source": "geeknews",
+    "published": "2026-02-13",
+    "description": "\n콘텐츠 전송과 임베디드 시스템의 읽기 성능 병목을 해결하기 위해 설계\n\n한 번 압축하고 여러 번 해제(Read-Many) 하는 구조에 맞춰, 인코더가 복잡도를 담당하고 디코더는 최대 처리량을 확보\nLZ4 대비 디코딩 속도 40% 이상 향상(애플..."
+  },
+  {
+    "title": "AWS Adds support for nested virtualization",
+    "link": "https://github.com/aws/aws-sdk-go-v2/commit/3dca5e45d5ad05460b93410087833cbaa624754e",
+    "source": "hackernews",
+    "published": "2026-02-13",
+    "description": "Comments"
+  },
+  {
+    "title": "Resizing windows on macOS Tahoe – the saga continues",
+    "link": "https://noheger.at/blog/2026/02/12/resizing-windows-on-macos-tahoe-the-saga-continues/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Ring cancels its partnership with Flock Safety after surveillance backlash",
+    "link": "https://www.theverge.com/news/878447/ring-flock-partnership-canceled",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Recoverable and Irrecoverable Decisions",
+    "link": "https://herbertlui.net/recoverable-and-irrecoverable-decisions/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Tell HN: Ralph Giles has died (Xiph.org| Rust@Mozilla | Ghostscript)",
+    "link": "https://news.ycombinator.com/item?id=46996490",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Evaluating Multilingual, Context-Aware Guardrails: A Humanitarian LLM Use Case",
+    "link": "https://blog.mozilla.ai/evaluating-multilingual-context-aware-guardrails-evidence-from-a-humanitarian-llm-use-case/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "캘리포니아 정치에 영향력을 행사하기 위해 Y Combinator CEO 가리 탄이 ‘다크머니’ 단체를 출범",
+    "link": "https://news.hada.io/topic?id=26639",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n\n가리 탄은 샌프란시스코의 기술·정치 교차점에서 활동해온 인물로, 캘리포니아 전역을 대상으로 한 정치 영향력 조직 ‘Garry’s List’ 를 설립\n이 단체는 501(c)(4) 비영리조직으로 등록되어 있으며, 후보자·투표안 지지 활동과 함께 ..."
+  },
+  {
+    "title": "NetNewsWire 23주년",
+    "link": "https://news.hada.io/topic?id=26638",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n23년 전 처음 출시된 Mac용 RSS 리더 NetNewsWire가 현재 7.0 버전을 배포하고 7.0.1 개발 중임\n최근 대규모 릴리스 이후 회귀 버그 수정과 세부 조정 작업을 진행 중이며, GitHub에 관련 마일스톤과 할 일 목록을 공개함\n여전히 버그 수정, 기술..."
+  },
+  {
+    "title": "How to Have a Bad Career – David Patterson (2016) [video]",
+    "link": "https://www.youtube.com/watch?v=Rn1w4MRHIhc",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "엘패소 상공 폐쇄, 국방부가 국경보호국에 대(對)드론 레이저 사용 허가",
+    "link": "https://news.hada.io/topic?id=26637",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n미 국방부가 세관국경보호국(CBP) 에 대(對)드론 레이저 사용을 허가한 직후, 연방항공청(FAA) 이 텍사스 엘패소 상공을 일시적으로 폐쇄함\nFAA는 “특별 보안 사유”로 모든 항공편을 중단했으며, 초기에는 10일간 폐쇄로 발표했으나 실제로는 ..."
+  },
+  {
+    "title": "Polis: Open-source platform for large-scale civic deliberation",
+    "link": "https://pol.is/home2",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "GPT‑5.3‑Codex‑Spark",
+    "link": "https://openai.com/index/introducing-gpt-5-3-codex-spark/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "지구가 온실행성 궤도로 진입할 위험",
+    "link": "https://news.hada.io/topic?id=26634",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n\n지구 기후 시스템이 임계점을 넘어설 가능성을 다루는 연구로, 인류 활동이 장기적 온난화를 가속할 위험을 분석\n\n‘온실행성(hothouse Earth)’ 은 지구가 스스로 온난화를 지속시키는 상태로, 인간의 개입 없이도 기온 상승이 이어지는 상황을 의미\n논..."
+  },
+  {
+    "title": "Launch HN: Omnara (YC S25) – Run Claude Code and Codex from anywhere",
+    "link": "https://news.ycombinator.com/item?id=46991591",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Gemini 3 Deep Think",
+    "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "엘패소 공항, 드론 침입으로 일시 폐쇄",
+    "link": "https://news.hada.io/topic?id=26633",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n미국 엘패소 국제공항이 드론 침입으로 인해 일시적으로 운영이 중단됨\n\n항공 당국과 보안 기관이 공역 내 무단 드론 비행을 확인하고 즉시 비행 제한 조치를 시행\n공항 내 항공편 이착륙이 지연되었으며, FAA가 관련 조사를 진행 중임..."
+  },
+  {
+    "title": "An AI agent published a hit piece on me",
+    "link": "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Beginning fully autonomous operations with the 6th-generation Waymo driver",
+    "link": "https://waymo.com/blog/2026/02/ro-on-6th-gen-waymo-driver",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Windows 11 메모장의 원격코드실행 취약점",
+    "link": "https://news.hada.io/topic?id=26632",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "공격자는 사용자가 메모장에서 열린 마크다운 파일 내의 악성 링크를 클릭하도록 유도하여, 해당 애플리케이션이 검증되지 않은 프로토콜을 실행하고 원격 파일을 로드 및 실행하도록 만들 수 있습니다."
+  },
+  {
+    "title": "아일랜드, 예술가 대상 기본소득 제도 시행",
+    "link": "https://news.hada.io/topic?id=26630",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n아일랜드 정부가 예술가와 창작자에게 기본소득을 지급하는 제도를 도입\n이 제도는 예술 활동의 경제적 불안정성을 완화하고 지속적인 창작을 지원하기 위한 목적\n참여 예술가는 일정 기간 동안 정기적 금전 지원을 받게 됨\n정..."
+  },
+  {
+    "title": "Major European payment processor can't send email to Google Workspace users",
+    "link": "https://atha.io/blog/2026-02-12-viva",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "왜 뱀파이어는 영원히 사는가",
+    "link": "https://news.hada.io/topic?id=26629",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n\n현대 장수 연구의 혈액 교환 집착을 뱀파이어 신화와 연결하며, 과학적 실험과 문화적 사례를 병치함\n1864년 파라비오시스(parabiosis) 실험부터 2000년대 스탠퍼드 연구까지, 젊은 피가 노화를 되돌린다는 결과가 반복적으로 보고됨\n\nPeter Thi..."
+  },
+  {
+    "title": "“Engineers are becoming sorcerers” | The future of software development with OpenAI’s Sherwin Wu",
+    "link": "https://www.lennysnewsletter.com/p/engineers-are-becoming-sorcerers",
+    "source": "lenny",
+    "published": "2026-02-12",
+    "description": "OpenAI&#8217;s Sherwin Wu on why the productivity gap is widening, how his engineers now manage 10-20 parallel agents, and why you need to build for where models are heading"
+  },
+  {
+    "title": "Improving 15 LLMs at Coding in One Afternoon. Only the Harness Changed",
+    "link": "http://blog.can.ac/2026/02/12/the-harness-problem/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Apache Arrow is 10 years old",
+    "link": "https://arrow.apache.org/blog/2026/02/12/arrow-anniversary/",
+    "source": "hackernews",
+    "published": "2026-02-12",
+    "description": "Comments"
+  },
+  {
+    "title": "Show GN: Chunk Translator: 긴 글도 잘게 쪼개 LLM에게 번역맡기기",
+    "link": "https://news.hada.io/topic?id=26628",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "길게 작성한 블로그 글을 문장 누락없이 번역하고 싶어 글을 문단별로 나눠 번역한 후, 다시 합칠 수 있는 작은 html 도구를 만들어봤습니다.\n\nchatgpt같은 llm에게 통째로 번역을 요청하다보면 한 문장씩 빼먹거나 마음대로 요약해버리거나 하는 등 한번에 잘 못하더라구요.\n프롬프트를 더 깎아"
+  },
+  {
+    "title": "Vertex AI Context Caching + Priority PayGo 레이턴시 벤치마크 (400회, Gemini 3 Flash)",
+    "link": "https://news.hada.io/topic?id=26627",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "AI 챗봇 서비스에서 사용하는 ~7,500토큰 시스템 프롬프트(입력)와 ~100토큰 응답(출력) 기준으로, Vertex AI의 Context Caching과 이번에 새로 나온 신규 Priority PayGo의 레이턴시 개선 효과를 벤치마크\n\n4가지 시나리오 (Standard/Priority × 캐싱/비캐싱), 각 100회, 총 400회 요청\n모델:"
+  },
+  {
+    "title": "WordPress가 Claude와 연결됐다, 공식 연동으로 가능해진 것들",
+    "link": "https://news.hada.io/topic?id=26626",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "• WordPress.com이 Anthropic의 Claude와 공식 커넥터로 연동됨\n• Claude가 WordPress.com 사이트의 실제 데이터를 자연어로 직접 조회·분석 가능\n연동 특징\n• Anthropic 공식 커넥터 디렉토리 최초 WordPress 호스팅 서비스 등재\n•"
+  },
+  {
+    "title": "거대한 무언가가 일어나고 있어요",
+    "link": "https://news.hada.io/topic?id=26625",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n2025년 이후 AI 모델의 발전 속도가 급격히 가속되며, 기술 업계 내부에서는 이미 직무 구조 변화가 현실화된 상황\n\nGPT-5.3 Codex와 Opus 4.6 공개 이후, 개발 업무가 설명만으로 완성되는 수준에 도달하며 판단력과 감각까지 보이는 모델 등장\n\nAI가 스..."
+  },
+  {
+    "title": "Show GN: AutoRAG-Research - 최신 RAG 논문 파이프라인 구현체 모음 및 비교 실험 도구",
+    "link": "https://news.hada.io/topic?id=26624",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\nAI Agent 시대에도 RAG는 여전히 유효하며, 외부 지식과 문서가 필요한 경우 필수적으로 시스템에 포함되어야 하는 핵심 구성 요소임\nAgent와 RAG를 결합한 Agentic RAG, 지식그래프를 사용하는 Graph RAG, 이미지 기반의 임베딩 모델을 활용하는 Multi-modal RAG 등의 분야 내에서 수없이 많은 최신 ..."
+  },
+  {
+    "title": "Show GN: 웹 기반 병합 충돌 편집기",
+    "link": "https://news.hada.io/topic?id=26623",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "Show GN: 웹 기반 병합 충돌 편집기"
+  },
+  {
+    "title": "Fluorite - Flutter와 완전 통합된 콘솔급 게임 엔진",
+    "link": "https://news.hada.io/topic?id=26622",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n\nFlutter 및 Dart 생태계를 활용하여 게임 로직을 작성하고, Flutter의 풍부한 UI 툴킷과 통합하여 대화형 경험 구축 가능\nC++로 구현되어 임베디드 하드웨어에서도 높은 성능을 제공하며, ECS(Entity-Component-System) 기반의..."
+  },
+  {
+    "title": "Discord/Twitch/Snapchat 연령 인증 우회하기",
+    "link": "https://news.hada.io/topic?id=26621",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n여러 플랫폼의 연령 인증 절차를 자동으로 성인으로 통과시키는 스크립트\n\n\nDiscord 콘솔에 코드를 붙여넣어 실행하면, 자동으로 /age-verification/verify API 요청을 보내고 인증 완료 페이지로 이동\n\nTwitch, Kick, Snapchat 등 ..."
+  },
+  {
+    "title": "ZERO-Click 쇼핑의 시대 준비되셨나요?",
+    "link": "https://news.hada.io/topic?id=26620",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "뉴스레터 구독 및 본문 영상 보기, https://maily.so/kkumaeunsonyeon/posts/2nzn78pkrp5\n글로벌 빅테크 기업들은 현재 검색과 추천 중심의 이커머스에서 벗어나 AI 에이전트가 사용자의 의도를 이해하고 쇼핑의 전 과정을 자율적으로 수행하는 '에이전틱 커머스(Agentic Commerce)' 시대로의 전환을 주도하고"
+  },
+  {
+    "title": "정보는 결코 무료가 아니었다. 앞으로도 그럴 것이다.",
+    "link": "https://news.hada.io/topic?id=26618",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "(원제: Information Was Never Free. And It Never Will Be. / 작성자: Nate Ritter / 2026년 2월 10일 게시)\n이 글은 디지털 시대에 “정보는 무료”라는 착각을 강하게 비판하며, 정보의 진짜 비용이 사라진 게 아니라 형태만 바뀌었다는 점을 핵심 주장으로 삼습니다.\n한 문장 요약"
+  },
+  {
+    "title": "Show GN: 무엇이든 즉시 AI가 읽을 수 있는 URL로 변환해주는 데이터 허브",
+    "link": "https://news.hada.io/topic?id=26617",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "안녕하세요! LLM이나 AI 에이전트를 활용한 개발을 하다 보면, 데이터나 로그를 컨텍스트로 집어넣기 위해 매번 복사-붙여넣기를 하거나 HTML 스크래핑에 고생하는 경우가 많았습니다.\n'AI에게 데이터를 더 쉽고 깨끗하게 전달할 방법은 없을까?'라는 고민에서 Pepput을 만들게 되었습니다.\nPepput의 핵"
+  },
+  {
+    "title": "아마존 링의 ‘잃어버린 개’ 광고, 대규모 감시 우려 속 반발 확산",
+    "link": "https://news.hada.io/topic?id=26616",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n\nAI 기반 Search Party 기능이 동네 카메라 영상을 분석해 잃어버린 개를 찾는 기술로 소개되었으나, 인간 추적 가능성에 대한 우려가 제기됨\n슈퍼볼 중계 중 방영된 30초 광고가 이웃 감시를 미화한다는 비판을 받으며, 대중 감시 사회..."
+  },
+  {
+    "title": "나폴레옹 기법: 일을 미뤄서 생산성을 높이는 방법",
+    "link": "https://news.hada.io/topic?id=26615",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n즉각 대응하지 않아도 자연히 해결될 가능성이 높은 업무를 의도적으로 지연시켜 시간과 에너지를 절약하는 생산성 기법\n나폴레옹이 이탈리아 주둔 시절 서신을 3주간 미개봉 상태로 두었더니 4/5가 답장 불필요해졌다는 일화에서 유래\n이메일, 기술 이슈..."
+  },
+  {
+    "title": "사용자 브라우징 데이터를 수집하는 Chrome 확장 프로그램 287개 발견",
+    "link": "https://news.hada.io/topic?id=26614",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n자동화된 MITM(중간자 공격) 기반 스캐닝 파이프라인을 통해 287개의 Chrome 확장 프로그램이 사용자의 브라우징 기록을 외부로 전송하는 행위를 탐지\n이들 확장 프로그램은 총 약 3,740만 회 설치되어 있으며, 이는 전 세계 Chrome 사용자 약 1%에 해당\n..."
+  },
+  {
+    "title": "Windows 메모장 앱 원격 코드 실행 취약점 CVE-2026-20841",
+    "link": "https://news.hada.io/topic?id=26613",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\nWindows 메모장 앱에서 명령 주입(command injection) 취약점이 발견되어, 원격에서 코드 실행이 가능한 것으로 보고됨\n\n인증되지 않은 공격자가 네트워크를 통해 악성 명령을 실행할 수 있는 구조로, 사용자 개입이 필요\n취약점은 Windows Notep..."
+  },
+  {
+    "title": "Claude Code가 단순화되고 있나?",
+    "link": "https://news.hada.io/topic?id=26612",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n최신 버전 2.1.20에서 파일 읽기와 검색 패턴 표시가 모두 단일 요약 문장으로 대체되어, 사용자가 어떤 파일이나 패턴이 처리되는지 확인할 수 없게 됨\n사용자들은 GitHub 이슈를 통해 파일 경로와 검색 패턴 표시 복원 또는 토글 옵션 ..."
+  },
+  {
+    "title": "GLM-5 공개 : 복잡한 시스템 엔지니어링과 장기 에이전트 작업을 목표로 하는 모델",
+    "link": "https://news.hada.io/topic?id=26611",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\n인공지능 효율성과 장기적 작업 수행 능력을 강화한 대규모 언어모델\n전작 대비 매개변수 7440억 개(활성 400억) 로 확장되고, 사전학습 데이터 28.5조 토큰으로 증가\n\nDeepSeek Sparse Attention(DSA) 통합으로 긴 문..."
+  },
+  {
+    "title": "winappCli - Windows 앱 개발을 위한 통합 CLI",
+    "link": "https://news.hada.io/topic?id=26610",
+    "source": "geeknews",
+    "published": "2026-02-12",
+    "description": "\nmicrosoft가 Windows SDK 관리와 앱 패키징 자동화를 위해 개발한 CLI 도구\n다양한 프레임워크에서 Windows 네이티브 기능을 손쉽게 활용하도록 지원\n\n앱 식별자(App Identity) 생성, 매니페스트 관리, 인증서..."
+  },
+  {
+    "title": "Zulip.com의 가치",
+    "link": "https://news.hada.io/topic?id=26609",
+    "source": "geeknews",
+    "published": "2026-02-11",
+    "description": "\n\nZulip은 세계에서 가장 체계적인 팀 채팅 소프트웨어를 만들기 위해 지속 가능성과 개방성을 핵심 가치로 삼음\n모든 기능을 포함한 100% 오픈소스 모델을 유지하며, 누구나 무료로 자체 호스팅할 수 있도록 지원\n\n커뮤니티와 멘..."
+  },
+  {
+    "title": "Mistral Voxtral Realtime 4B 음성 인식 모델의 순수 C 기반 CPU 전용 추론 구현",
+    "link": "https://news.hada.io/topic?id=26608",
+    "source": "geeknews",
+    "published": "2026-02-11",
+    "description": "\n\nMistral Voxtral Realtime 4B 모델을 C 언어만으로 구현한 추론 파이프라인으로, 외부 의존성이 전혀 없는 독립 실행형 구조\n\nMetal GPU 가속(MPS) 과 BLAS(OpenBLAS/Accelerate) 백엔드를 지원하며, 스트리밍 API"
+  },
+  {
+    "title": "파인만 물리학 강의 (1961–1964)",
+    "link": "https://news.hada.io/topic?id=26607",
+    "source": "geeknews",
+    "published": "2026-02-11",
+    "description": "\n인터넷 브라우저만으로 리처드 파인만의 전설적인 물리학 강의를 고품질 HTML5 형식으로 열람할 수 있음\n텍스트, 그림, 수식이 모두 기기 크기에 맞게 확대·축소 가능하며, MathJax와 SVG를 활용해 선명한 표시 제공\n강의 내용은 역학·복사·열, 전..."
+  },
+  {
+    "title": "Claude Opus 4.6 vs. GPT-5.3 Codex: How I shipped 93,000 lines of code in 5 days",
+    "link": "https://www.lennysnewsletter.com/p/claude-opus-46-vs-gpt-53-codex-how",
+    "source": "lenny",
+    "published": "2026-02-11",
+    "description": "I tested GPT-5.3 Codex vs. Claude Opus 4.6 on real code, shipping 44 PRs in five days to see which AI model actually works best"
+  },
+  {
+    "title": "Building AI product sense, part 2",
+    "link": "https://www.lennysnewsletter.com/p/building-ai-product-sense-part-2",
+    "source": "lenny",
+    "published": "2026-02-10",
+    "description": "A weekly ritual to help you understand and design trustworthy AI products for a messy world"
+  },
+  {
+    "title": "Building AI product sense, part 2",
+    "link": "https://www.lennysnewsletter.com/p/building-ai-product-sense-part-2-0aa",
+    "source": "lenny",
+    "published": "2026-02-10",
+    "description": "A weekly ritual to help you understand and design trustworthy AI products for a messy world"
+  },
+  {
+    "title": "🎙️ This week on How I AI: How to build your own AI developer tools with Claude Code",
+    "link": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-how-to-build",
+    "source": "lenny",
+    "published": "2026-02-09",
+    "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network"
+  },
+  {
+    "title": "Ruby Newbie Is Joining the Ruby Users Forum",
+    "link": "https://www.rubyforum.org/tag/getting-started",
+    "source": "hackernews",
+    "published": "2026-02-09",
+    "description": "Comments"
+  },
+  {
+    "title": "How to build your own AI developer tools with Claude Code | CJ Hess (Tenex)",
+    "link": "https://www.lennysnewsletter.com/p/how-to-build-your-own-ai-developer",
+    "source": "lenny",
+    "published": "2026-02-09",
+    "description": "Learn how to build custom tools that transform AI-generated Markdown plans into interactive visual diagrams and UI mockups"
+  },
+  {
+    "title": "Particle Lenia",
+    "link": "https://znah.net/lenia/",
+    "source": "hackernews",
+    "published": "2026-02-08",
+    "description": "Comments"
+  },
+  {
+    "title": "Advanced Aerial Robotics Made Simple",
+    "link": "https://www.drehmflight.com",
+    "source": "hackernews",
+    "published": "2026-02-08",
+    "description": "Comments"
+  },
+  {
+    "title": "My Grandma Was a Fed – Lessons from Digitizing Hours of Childhood",
+    "link": "https://sampatt.com/blog/2025-12-13-my-grandma-was-a-fed-lessons-from-digitizing-hundreds-of-hours-of-childhood/",
+    "source": "hackernews",
+    "published": "2026-02-08",
+    "description": "Comments"
+  },
+  {
+    "title": "The rise of the professional vibe coder (a new AI-era job) | Lazar Jovanovic (Professional Vibe Coder)",
+    "link": "https://www.lennysnewsletter.com/p/getting-paid-to-vibe-code",
+    "source": "lenny",
+    "published": "2026-02-08",
+    "description": "Lovable&#8217;s first professional vibe coder on why non-technical people have an advantage with AI, and how he ships enterprise-grade products without writing code"
+  },
+  {
+    "title": "Cache Monet",
+    "link": "https://cachemonet.com",
+    "source": "hackernews",
+    "published": "2026-02-08",
+    "description": "Comments"
+  },
+  {
+    "title": "🧠 Community Wisdom: Common mistakes when hiring a growth PM, using AI to speed up bug reporting, launching a solo consulting practice, resume titles for engineers transitioning to PM, and more",
+    "link": "https://www.lennysnewsletter.com/p/community-wisdom-common-mistakes",
+    "source": "lenny",
+    "published": "2026-02-07",
+    "description": "Community Wisdom 172"
+  },
+  {
+    "title": "Japan's Dododo Land, the most irritating place on Earth",
+    "link": "https://soranews24.com/2026/02/07/take-a-trip-to-japans-dododo-land-the-most-irritating-place-on-earth/",
+    "source": "hackernews",
+    "published": "2026-02-07",
+    "description": "Comments"
+  },
+  {
+    "title": "We interfaced single-threaded C++ with multi-threaded Rust",
+    "link": "https://antithesis.com/blog/2026/rust_cpp/",
+    "source": "hackernews",
+    "published": "2026-02-07",
+    "description": "Comments"
+  },
+  {
+    "title": "Welcoming New Community Managers to OpenTelemetry",
+    "link": "https://opentelemetry.io/blog/2026/new-community-managers/",
+    "source": "opentelemetry",
+    "published": "2026-02-06",
+    "description": "Back in October 2022, I wrote about becoming OpenTelemetry&rsquo;s first community\nmanager. At the time, the project had just over 5000 contributors. Since\nthen, those numbers have grown considerably ..."
+  },
+  {
+    "title": "🎙️ This week on How I AI: Automate the tasks you hate + “Anyone can cook”: How v0 is bringing Git workflows to vibe coding",
+    "link": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-automate-the",
+    "source": "lenny",
+    "published": "2026-02-04",
+    "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network"
+  },
+  {
+    "title": "Guillermo Rauch: Vercel CEO on how v0 hit 3,200 PRs merged per day (and lets anyone ship)",
+    "link": "https://www.lennysnewsletter.com/p/anyone-can-cook-how-v0-is-bringing",
+    "source": "lenny",
+    "published": "2026-02-04",
+    "description": "Vercel&#8217;s CEO demonstrates how v0&#8217;s new Git workflow integration enables anyone to contribute production-ready code changes while maintaining engineering best practices"
+  },
+  {
+    "title": "How to build AI product sense",
+    "link": "https://www.lennysnewsletter.com/p/how-to-build-ai-product-sense",
+    "source": "lenny",
+    "published": "2026-02-03",
+    "description": "The secret is using Cursor for non-technical work (inside: 75 free days of Cursor Pro to try this out!)"
+  },
+  {
+    "title": "How this PM uses MCPs to automate his meeting prep, CRM updates, and customer feedback synthesis | Reid Robinson (Zapier)",
+    "link": "https://www.lennysnewsletter.com/p/how-this-pm-uses-mcps-to-automate",
+    "source": "lenny",
+    "published": "2026-02-02",
+    "description": "How to use Zapier's MCP server to connect Claude with 8,000+ apps: automating CRM updates, meeting preparation, and creating a virtuous cycle of customer feedback"
+  },
+  {
+    "title": "SRE Weekly Issue #508",
+    "link": "https://sreweekly.com/sre-weekly-issue-508/",
+    "source": "sreweekly",
+    "published": "2026-02-02",
+    "description": "View on sreweekly.com SRE Weekly will be going on hiatus for 6 weeks, while I&#8217;m on leave caring for my partner after her kidney transplant surgery this week. It&#8217;s incredible that the Natio..."
+  },
+  {
+    "title": "A child psychologist’s guide to working with difficult adults | Dr. Becky Kennedy",
+    "link": "https://www.lennysnewsletter.com/p/dr-becky-on-the-surprising-overlap",
+    "source": "lenny",
+    "published": "2026-02-01",
+    "description": "Clinical psychologist Dr. Becky Kennedy on why repair is more important than perfection, how to set boundaries that work, the power of \"I believe you\" and \"I believe in you,\" and more"
+  },
+  {
+    "title": "🧠 Community Wisdom: How you feel about your job right now, what to do while waiting for AI responses, making your product roadmap public, chasing big exits vs. sustainable bootstrapping, and more",
+    "link": "https://www.lennysnewsletter.com/p/community-wisdom-lennys-poll-driving",
+    "source": "lenny",
+    "published": "2026-01-31",
+    "description": "Community Wisdom 171"
+  },
+  {
+    "title": "Marc Andreessen: The real AI boom hasn’t even started yet",
+    "link": "https://www.lennysnewsletter.com/p/marc-andreessen-the-real-ai-boom",
+    "source": "lenny",
+    "published": "2026-01-29",
+    "description": "On raising kids, why job loss fears are overblown, the future of PM/eng/design careers, and the macro force you should pay attention to"
+  },
+  {
+    "title": "OpenTelemetry Collector Follow-up Survey",
+    "link": "https://opentelemetry.io/blog/2026/otel-collector-follow-up-survey-analysis/",
+    "source": "opentelemetry",
+    "published": "2026-01-28",
+    "description": "In 2024, the End User SIG conducted a\nCollector Survey to gather feedback on how\nthe OpenTelemetry Collector is used in practice and the user\nexperience. Insights from that survey informed several dev..."
+  },
+  {
+    "title": "🎙️ Today on How I AI: I gave Clawdbot (aka Moltbot) full access to my computer. It broke my family calendar and joined my podcast.",
+    "link": "https://www.lennysnewsletter.com/p/today-on-how-i-ai-i-gave-clawdbot",
+    "source": "lenny",
+    "published": "2026-01-28",
+    "description": "What happens when you give an autonomous AI agent full access to your computer?"
+  },
+  {
+    "title": "I gave Clawdbot (aka Moltbot) access to my computer, calendar, and emails: Here’s what happened",
+    "link": "https://www.lennysnewsletter.com/p/i-gave-clawdbot-now-moltbot-access",
+    "source": "lenny",
+    "published": "2026-01-28",
+    "description": "What happens when you invite an autonomous AI agent onto your podcast&#8212;and your computer?"
+  },
+  {
+    "title": "Product Pass drop: Canva, ElevenLabs, Manus, Factory, Amp, Railway, Framer—now free with your paid subscription",
+    "link": "https://www.lennysnewsletter.com/p/product-pass-drop-canva-elevenlabs",
+    "source": "lenny",
+    "published": "2026-01-27",
+    "description": "23 premium tools, over $25,000 in value. The most epic bundle in history just keeps getting better."
+  },
+  {
+    "title": "Product Pass drop: Canva, ElevenLabs, Manus, Factory, Amp, Railway, Framer—now free with your paid subscription",
+    "link": "https://www.lennysnewsletter.com/p/product-pass-drop-canva-elevenlabs-ef2",
+    "source": "lenny",
+    "published": "2026-01-27",
+    "description": "23 premium tools, over $25,000 in value. The most epic bundle in history just keeps getting better."
+  },
+  {
+    "title": "Reducing Log Volume with the OpenTelemetry Log Deduplication Processor",
+    "link": "https://opentelemetry.io/blog/2026/log-deduplication-processor/",
+    "source": "opentelemetry",
+    "published": "2026-01-26",
+    "description": "Your logs are probably at least 80% repetitive noise. Connection retries, health\nchecks, heartbeat messages: the same log line repeated thousands of times per\nminute. You pay storage costs for each on..."
+  },
+  {
+    "title": "🎙️ This week on How I AI: Advanced Claude Code and Cursor techniques for power users",
+    "link": "https://www.lennysnewsletter.com/p/this-week-on-how-i-ai-advanced-claude",
+    "source": "lenny",
+    "published": "2026-01-26",
+    "description": "Your weekly listens from How I AI, part of the Lenny's Podcast Network"
+  },
+  {
+    "title": "SRE Weekly Issue #507",
+    "link": "https://sreweekly.com/sre-weekly-issue-507/",
+    "source": "sreweekly",
+    "published": "2026-01-26",
+    "description": "View on sreweekly.com A message from our sponsor, incident.io: incident.io lives inside Slack and Microsoft Teams, breaking down emergencies into actionable steps to resolution. Alerts auto-create cha..."
+  },
+  {
+    "title": "OpenTelemetry eBPF Instrumentation 2026 Goals",
+    "link": "https://opentelemetry.io/blog/2026/obi-goals/",
+    "source": "opentelemetry",
+    "published": "2026-01-23",
+    "description": "As we kick off 2026, the\nOpenTelemetry eBPF Instrumentation SIG has come together\nto set an ambitious roadmap for the year. Our focus is on achieving production\nreadiness with a stable 1.0 release whi..."
+  },
+  {
+    "title": "Improving Async Workflow Observability in Dapr",
+    "link": "https://opentelemetry.io/blog/2026/dapr-workflow-observability/",
+    "source": "opentelemetry",
+    "published": "2026-01-21",
+    "description": "This post tells the story of how contributors from across the cloud native\ncommunity worked together to enhance Dapr&rsquo;s OpenTelemetry\nintegration, particularly around asynchronous workflows. It a..."
+  },
+  {
+    "title": "SRE Weekly Issue #506",
+    "link": "https://sreweekly.com/sre-weekly-issue-506/",
+    "source": "sreweekly",
+    "published": "2026-01-19",
+    "description": "View on sreweekly.com A message from our sponsor, Costory: You didn’t sign up to do FinOps.Costory automatically explains why your cloud costs change, and reports it straight to Slack.Built for SREs w..."
+  },
+  {
+    "title": "OpenTelemetry JS Statement on Node.js DOS Mitigation",
+    "link": "https://opentelemetry.io/blog/2026/oteljs-nodejs-dos-mitigation/",
+    "source": "opentelemetry",
+    "published": "2026-01-15",
+    "description": "You may have seen a recent Node.js security advisory and related coverage\ndiscussing a potential denial-of-service issue involving async_hooks.\nOpenTelemetry (and other APM tools) were mentioned becau..."
+  },
+  {
+    "title": "Calling New Contributors - Help Us Improve the OpenTelemetry Onboarding Experience",
+    "link": "https://opentelemetry.io/blog/2025/calling-new-contributors/",
+    "source": "opentelemetry",
+    "published": "2026-01-14",
+    "description": "Update as of 2025-12-08\n \n A giant thank you to those of you who have volunteered to participate! We have\nreceived more interest than expected, so sign-ups are closed for now. Stay\ntuned to the OpenTe..."
+  },
+  {
+    "title": "Announcing 2025 OpenTelemetry Community Awards Winners",
+    "link": "https://opentelemetry.io/blog/2025/community-awards-winners/",
+    "source": "opentelemetry",
+    "published": "2026-01-14",
+    "description": "We are excited to announce the winners of the second OpenTelemetry Community\nAwards! These awards recognize individuals who have made a notable impact to\nthe OpenTelemetry project over the past year, ..."
+  },
+  {
+    "title": "SRE Weekly Issue #505",
+    "link": "https://sreweekly.com/sre-weekly-issue-505/",
+    "source": "sreweekly",
+    "published": "2026-01-12",
+    "description": "View on sreweekly.com A message from our sponsor, Hopp: Paging at 2am? 🚨 Make incident triage feel like you’re at the same keyboard with Hopp. crisp, readable screen-sharing no more &#8220;can you zoo..."
+  },
+  {
+    "title": "What 10,000 Slack Messages Reveal About OpenTelemetry Adoption Challenges",
+    "link": "https://opentelemetry.io/blog/2026/slack-community-insights/",
+    "source": "opentelemetry",
+    "published": "2026-01-07",
+    "description": "The OpenTelemetry community has grown tremendously over the past few years, and\nwith that growth comes valuable insights hidden in our community conversations.\nWe analyzed nearly 10,000 messages from ..."
+  },
+  {
+    "title": "SRE Weekly Issue #504",
+    "link": "https://sreweekly.com/sre-weekly-issue-504/",
+    "source": "sreweekly",
+    "published": "2026-01-05",
+    "description": "View on sreweekly.com Finding the grain of sand in a heap of Salt Salt is Cloudflare&#8217;s configuration management tool. How do you find the root cause of a configuration management failure when yo..."
+  },
+  {
+    "title": "New Configuration Schema release candidate",
+    "link": "https://opentelemetry.io/blog/2025/declarative-config-rc3/",
+    "source": "opentelemetry",
+    "published": "2025-12-12",
+    "description": "The latest release of the OpenTelemetry Configuration Schema is\nout this week. It brings the Configuration working group one step closer to\ncompletion after 3 years of effort, and the schema one step ..."
+  },
+  {
+    "title": "How to use AI to analyze and visualize CAN data with Grafana Assistant",
+    "link": "https://grafana.com/blog/how-to-use-ai-to-analyze-and-visualize-can-data-with-grafana-assistant/",
+    "source": "grafana",
+    "published": "2025-12-12",
+    "description": "Note: A version of this post originally appeared on the CSS Electronics blog. \nMartin Falch, co-owner and head of sales and marketing at CSS Electronics, is an expert on CAN bus data. Martin works clo..."
+  },
+  {
+    "title": "‘Grafana’s Big Tent’ podcast: Welcome to season 3!",
+    "link": "https://grafana.com/blog/grafanas-big-tent-podcast-welcome-to-season-3/",
+    "source": "grafana",
+    "published": "2025-12-11",
+    "description": "Sometimes the simplest questions spark the most entertaining rabbit holes. Questions like: “Can you monitor a candle without starting a fire?” or “Should your robot boat have redundancy, or just a twi..."
+  },
+  {
+    "title": "Grafana Labs: Top 10 moments of 2025",
+    "link": "https://grafana.com/blog/grafana-labs-top-10-moments-of-2025/",
+    "source": "grafana",
+    "published": "2025-12-11",
+    "description": "For Grafana Labs, 2025 was a year defined by innovation, growth, and the power of our community.\nWe celebrated the release of Grafana 12 at our 10th annual GrafanaCON event, and marked major milestone..."
+  },
+  {
+    "title": "Removal of Drilldown Investigations in Grafana: What you need to know",
+    "link": "https://grafana.com/blog/removal-of-drilldown-investigations-in-grafana-what-you-need-to-know/",
+    "source": "grafana",
+    "published": "2025-12-04",
+    "description": "Back in May, we introduced the public preview of Grafana Drilldown Investigations, a new feature intended to help Grafana OSS and Grafana Cloud users accelerate their incident response.\nNow, as we hea..."
+  },
+  {
+    "title": "Send OpenTelemetry traces and logs from Cloudflare Workers to Grafana Cloud",
+    "link": "https://grafana.com/blog/send-opentelemetry-traces-and-logs-from-cloudflare-workers-to-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-12-04",
+    "description": "\nNote: This blog was co-authored by Nevika Shah, a senior product manager at Cloudflare.\nCloudflare Workers is a developer platform for deploying serverless functions, frontends, containers, and datab..."
+  },
+  {
+    "title": "What's new in the Grafana Image Renderer: higher-quality results, security enhancements, and more",
+    "link": "https://grafana.com/blog/whats-new-in-the-grafana-image-renderer-higher-quality-results-security-enhancements-and-more/",
+    "source": "grafana",
+    "published": "2025-12-03",
+    "description": "Whether it’s for an email or that upcoming presentation, many Grafana users like to share their favorite dashboards or panels outside of Grafana itself. The Grafana Image Renderer is a backend service..."
+  },
+  {
+    "title": "Contextual, in-product guidance for every Grafana user: A closer look at Interactive Learning",
+    "link": "https://grafana.com/blog/contextual-in-product-guidance-for-every-grafana-user-a-closer-look-at-interactive-learning/",
+    "source": "grafana",
+    "published": "2025-12-02",
+    "description": "As developer advocates at Grafana Labs, we’re always looking for new ways to help our users better understand and learn observability. You might remember our previous project that brought learning to ..."
+  },
+  {
+    "title": "Deprecating Zipkin Exporter",
+    "link": "https://opentelemetry.io/blog/2025/deprecating-zipkin-exporters/",
+    "source": "opentelemetry",
+    "published": "2025-12-01",
+    "description": "The OpenTelemetry project is deprecating the Zipkin exporter specification in\nfavor of\nZipkin&rsquo;s OTLP ingestion support.\nThank you to all Zipkin contributors for helping OpenTelemetry reach this\n..."
+  },
+  {
+    "title": "Improve service reliability and ops culture with Grafana Cloud Service Center",
+    "link": "https://grafana.com/blog/improve-service-reliability-and-ops-culture-with-grafana-cloud-service-center/",
+    "source": "grafana",
+    "published": "2025-12-01",
+    "description": "Today’s engineering organizations are built around service ownership. Service owners are accountable for keeping their services reliable, performant, and ready to scale. But no service operates in iso..."
+  },
+  {
+    "title": "How to monitor Amazon Bedrock AgentCore AI agent infrastructure in Grafana Cloud",
+    "link": "https://grafana.com/blog/how-to-monitor-amazon-bedrock-agentcore-ai-agent-infrastructure-in-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-11-28",
+    "description": "Modern AI agents are now highly advanced, frequently becoming essential components of engineering workflows and deployment pipelines.\nHowever, operating these systems often feels like trying to naviga..."
+  },
+  {
+    "title": "How to monitor AI agent applications on Amazon Bedrock AgentCore with Grafana Cloud",
+    "link": "https://grafana.com/blog/how-to-monitor-ai-agent-applications-on-amazon-bedrock-agentcore-with-grafana-cloud/",
+    "source": "grafana",
+    "published": "2025-11-26",
+    "description": "Today&rsquo;s AI agents have grown increasingly sophisticated, moving into production environments and becoming integral parts of engineering workflows. But these agents can also be black boxes for en..."
+  },
+  {
+    "title": "Introducing advanced tool use on the Claude Developer Platform",
+    "link": "https://www.anthropic.com/engineering/advanced-tool-use",
+    "source": "anthropic",
+    "published": "2025-11-24",
+    "description": "Introducing advanced tool use on the Claude Developer Platform"
+  },
+  {
+    "title": "Contributing the Unroll Processor to the OpenTelemetry Collector Contrib",
+    "link": "https://opentelemetry.io/blog/2025/contrib-unroll-processor/",
+    "source": "opentelemetry",
+    "published": "2025-11-07",
+    "description": "The idea for unrolling bundled logs inside the OpenTelemetry Collector didn&rsquo;t\nstart with a processor.\nBy &ldquo;unrolling,&rdquo; I mean taking a single log record that contains multiple logical..."
+  },
+  {
+    "title": "Code execution with MCP: Building more efficient agents",
+    "link": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+    "source": "anthropic",
+    "published": "2025-11-04",
+    "description": "Code execution with MCP: Building more efficient agents"
+  },
+  {
+    "title": "Announcing the 2025 Governance Committee Election Results",
+    "link": "https://opentelemetry.io/blog/2025/gc-elections-results/",
+    "source": "opentelemetry",
+    "published": "2025-10-30",
+    "description": "We are delighted to announce the results of the\n2025 OpenTelemetry Governance Committee Election!\nThe OpenTelemetry project continues to bring together an exceptionally vibrant\ncommunity, who are shap..."
+  },
+  {
+    "title": "Beyond permission prompts: making Claude Code more secure and autonomous",
+    "link": "https://www.anthropic.com/engineering/claude-code-sandboxing",
+    "source": "anthropic",
+    "published": "2025-10-20",
+    "description": "Beyond permission prompts: making Claude Code more secure and autonomous"
+  },
+  {
+    "title": "Equipping agents for the real world with Agent Skills",
+    "link": "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills",
+    "source": "anthropic",
+    "published": "2025-10-16",
+    "description": "Equipping agents for the real world with Agent Skills"
+  },
+  {
+    "title": "Effective context engineering for AI agents",
+    "link": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "source": "anthropic",
+    "published": "2025-09-29",
+    "description": "Effective context engineering for AI agents"
+  },
+  {
+    "title": "Building agents with the Claude Agent SDK",
+    "link": "https://www.anthropic.com/engineering/building-agents-with-the-claude-agent-sdk",
+    "source": "anthropic",
+    "published": "2025-09-29",
+    "description": "Building agents with the Claude Agent SDK"
+  },
+  {
+    "title": "A postmortem of three recent issues",
+    "link": "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues",
+    "source": "anthropic",
+    "published": "2025-09-17",
+    "description": "A postmortem of three recent issues"
+  },
+  {
+    "title": "Writing effective tools for agents — with agents",
+    "link": "https://www.anthropic.com/engineering/writing-tools-for-agents",
+    "source": "anthropic",
+    "published": "2025-09-11",
+    "description": "Writing effective tools for agents — with agents"
+  },
+  {
+    "title": "Desktop Extensions: One-click MCP server installation for Claude Desktop",
+    "link": "https://www.anthropic.com/engineering/desktop-extensions",
+    "source": "anthropic",
+    "published": "2025-06-26",
+    "description": "Desktop Extensions: One-click MCP server installation for Claude Desktop"
+  },
+  {
+    "title": "How we built our multi-agent research system",
+    "link": "https://www.anthropic.com/engineering/multi-agent-research-system",
+    "source": "anthropic",
+    "published": "2025-06-13",
+    "description": "How we built our multi-agent research system"
+  },
+  {
+    "title": "Claude Code: Best practices for agentic coding",
+    "link": "https://www.anthropic.com/engineering/claude-code-best-practices",
+    "source": "anthropic",
+    "published": "2025-04-18",
+    "description": "Claude Code: Best practices for agentic coding"
+  },
+  {
+    "title": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations",
+    "link": "https://www.anthropic.com/engineering/claude-think-tool",
+    "source": "anthropic",
+    "published": "2025-03-20",
+    "description": "The \"think\" tool: Enabling Claude to stop and think in complex tool use situations"
+  },
+  {
+    "title": "Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet",
+    "link": "https://www.anthropic.com/engineering/swe-bench-sonnet",
+    "source": "anthropic",
+    "published": "2025-01-06",
+    "description": "Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet"
+  },
+  {
+    "title": "Building effective agents",
+    "link": "https://www.anthropic.com/engineering/building-effective-agents",
+    "source": "anthropic",
+    "published": "2024-12-19",
+    "description": "Building effective agents"
+  },
+  {
+    "title": "Introducing Contextual Retrieval",
+    "link": "https://www.anthropic.com/engineering/contextual-retrieval",
+    "source": "anthropic",
+    "published": "2024-09-19",
+    "description": "Introducing Contextual Retrieval"
+  }
+]
