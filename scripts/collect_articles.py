@@ -185,7 +185,7 @@ class ArticleCollector:
 
         print(f"\n🤖 Using OpenAI to analyze {len(articles)} articles...")
 
-        # Prepare articles list for Claude
+        # Prepare articles list for OpenAI
         articles_text = "\n\n".join([
             f"Article {i+1}:\nTitle: {article['title']}\nSource: {article['source']}\nDate: {article['published']}\nDescription: {article['description']}\nURL: {article['link']}"
             for i, article in enumerate(articles[:30])  # Limit to 30 to avoid token limits
@@ -238,7 +238,7 @@ Order articles by importance (most important first)."""
             print("   📡 Sending request to OpenAI API...")
             response = self.openai_client.chat.completions.create(
                 model="gpt-5.2",
-                max_tokens=2000,
+                max_completion_tokens=2000,
                 messages=[
                     {"role": "user", "content": prompt}
                 ],
@@ -333,13 +333,13 @@ Respond in JSON format:
         try:
             print(f"   📝 Generating bilingual summary for: {article['title'][:50]}...")
             response = self.openai_client.chat.completions.create(
-                model="gpt-5.2",
-                max_tokens=800,  # Increased for bilingual content
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                response_format={"type": "json_object"}
-            )
+                    model="gpt-5.2",
+                    max_completion_tokens=800,  # Increased for bilingual content
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ],
+                    response_format={"type": "json_object"}
+                )
 
             response_text = response.choices[0].message.content
             # Strip markdown formatting and parse JSON

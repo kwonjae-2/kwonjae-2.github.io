@@ -30,7 +30,7 @@ Articles are automatically collected, AI-curated, and published every Saturday a
 ## 🤖 Automation
 
 - **Collection**: Python script fetches articles from multiple RSS feeds
-- **Curation**: Claude AI selects 3-10 high-quality articles based on developer value
+- **Curation**: OpenAI GPT-5.2 selects 3-10 high-quality articles based on developer value
 - **Publishing**: GitHub Actions workflow runs every Friday at 9 PM KST
 - **Bilingual**: Each article includes both Korean and English summaries
 
@@ -38,8 +38,8 @@ Articles are automatically collected, AI-curated, and published every Saturday a
 
 - **Site**: Jekyll + GitHub Pages
 - **Automation**: Python + GitHub Actions
-- **AI**: Anthropic Claude (claude-sonnet-4-20250514)
-- **Sources**: SRE Weekly, GeekNews, OpenTelemetry, Grafana, Honeycomb
+- **AI**: OpenAI GPT-5.2
+- **Sources**: SRE Weekly, GeekNews, OpenTelemetry, Grafana, Honeycomb, Anthropic Engineering, Hacker News, Lenny's Newsletter
 
 ## ⚙️ Configuration
 
