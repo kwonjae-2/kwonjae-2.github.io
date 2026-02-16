@@ -28,6 +28,7 @@ Articles are automatically collected, AI-curated, and published every Saturday a
 - **Adaptive Theme**: Automatically follows the visitor's light/dark preference
 - **Readable Typography**: Increased font sizes for comfortable reading across all pages
 - **Article Highlights**: Each weekly post displays article titles as compact tags for quick scanning
+- **Streamlined Weekly List**: Clean header with week number and article count, no redundant date repetition
 - **Client-Side Pagination**: Smooth page navigation for the weekly archive
 
 ## 🤖 Automation
