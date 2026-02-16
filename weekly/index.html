@@ -2,34 +2,95 @@
 layout: page
 title: Weekly
 ---
-<section class="list">
+<section class="list weekly-list">
     <h1 class="title">Weekly</h1>
     <p class="description">Curated tech articles for developers - covering AI, development practices, SRE, team culture, and more. Published every Saturday.</p>
 
-    {% if site.posts.size == 0 %}
+    {% assign weekly_posts = site.posts | where: "category", "weekly" %}
+
+    {% if weekly_posts.size == 0 %}
         <p class="description">No posts yet. Stay tuned for the first edition!</p>
     {% else %}
-        {% assign weekly_posts = site.posts | where: "category", "weekly" %}
         {% assign post_count = weekly_posts.size %}
-        {% for post in weekly_posts %}
-            <div class="item {% if post.star %}star{% endif %}" style="margin-bottom: 2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 1.5rem;">
-                <a class="url" href="{{ site.url }}{{ post.url }}" style="text-decoration: none; color: inherit;">
-                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-                        <h3 class="title" style="margin: 0; font-size: 1.3rem; color: #333;">
-                            Week #{{ post_count | minus: forloop.index0 }} - {{ post.date | date: "%b %d, %Y" }}
-                        </h3>
-                        <aside class="date" style="color: #999; font-size: 0.9rem;">
-                            <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%b %d" }}</time>
-                        </aside>
-                    </div>
+        <div class="weekly-list__posts" data-weekly-post-list data-posts-per-page="10">
+            {% for post in weekly_posts %}
+                <article class="item weekly-list__item {% if post.star %}star{% endif %}" data-weekly-post>
+                    <a class="url weekly-list__link" href="{{ post.url | relative_url }}">
+                        <div class="weekly-list__header">
+                            <h3 class="title weekly-list__title">
+                                Week #{{ post_count | minus: forloop.index0 }} - {{ post.date | date: "%b %d, %Y" }}
+                            </h3>
+                            <aside class="date weekly-list__date">
+                                <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%b %d" }}</time>
+                            </aside>
+                        </div>
 
-                    <div style="margin-top: 1rem; font-size: 0.9rem; color: #888;">
-                        <span style="background: #f5f5f5; padding: 0.2rem 0.6rem; border-radius: 3px;">
-                            📚 {{ post.article_count }} articles
-                        </span>
-                    </div>
-                </a>
-            </div>
-        {% endfor %}
+                        <p class="weekly-list__summary">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+
+                        <div class="weekly-list__meta">
+                            <span class="weekly-list__badge">📚 {{ post.article_count }} articles</span>
+                        </div>
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+
+        <nav class="weekly-pagination" aria-label="Weekly post pagination" data-weekly-pagination>
+            <button type="button" class="weekly-pagination__button" data-page-action="prev">← Previous</button>
+            <span class="weekly-pagination__status" data-page-status></span>
+            <button type="button" class="weekly-pagination__button" data-page-action="next">Next →</button>
+        </nav>
+
+        <script>
+            (() => {
+                const postList = document.querySelector('[data-weekly-post-list]');
+                const pagination = document.querySelector('[data-weekly-pagination]');
+                if (!postList || !pagination) return;
+
+                const posts = Array.from(postList.querySelectorAll('[data-weekly-post]'));
+                const perPage = Number(postList.dataset.postsPerPage || 10);
+                const prevButton = pagination.querySelector('[data-page-action="prev"]');
+                const nextButton = pagination.querySelector('[data-page-action="next"]');
+                const status = pagination.querySelector('[data-page-status]');
+
+                if (!posts.length || !prevButton || !nextButton || !status) return;
+
+                let currentPage = 1;
+                const totalPages = Math.max(1, Math.ceil(posts.length / perPage));
+
+                if (totalPages === 1) {
+                    pagination.hidden = true;
+                }
+
+                const updatePage = () => {
+                    const start = (currentPage - 1) * perPage;
+                    const end = start + perPage;
+
+                    posts.forEach((post, index) => {
+                        post.hidden = !(index >= start && index < end);
+                    });
+
+                    status.textContent = `Page ${currentPage} of ${totalPages}`;
+                    prevButton.disabled = currentPage === 1;
+                    nextButton.disabled = currentPage === totalPages;
+                };
+
+                prevButton.addEventListener('click', () => {
+                    if (currentPage > 1) {
+                        currentPage -= 1;
+                        updatePage();
+                    }
+                });
+
+                nextButton.addEventListener('click', () => {
+                    if (currentPage < totalPages) {
+                        currentPage += 1;
+                        updatePage();
+                    }
+                });
+
+                updatePage();
+            })();
+        </script>
     {% endif %}
 </section>
