@@ -25,7 +25,23 @@ title: Weekly
                             </aside>
                         </div>
 
-                        <p class="weekly-list__summary">{{ post.description | default: post.excerpt | strip_html | truncate: 180 }}</p>
+                        {% assign desc_parts = post.description | split: " | " %}
+                        <div class="weekly-list__summary">
+                            {% if desc_parts.size > 1 %}
+                                <span class="weekly-list__summary-ko">{{ desc_parts[0] }}</span>
+                                <span class="weekly-list__summary-en">{{ desc_parts[1] }}</span>
+                            {% else %}
+                                <span class="weekly-list__summary-ko">{{ post.description }}</span>
+                            {% endif %}
+                        </div>
+
+                        {% if post.article_highlights.size > 0 %}
+                            <ul class="weekly-list__articles">
+                            {% for highlight in post.article_highlights %}
+                                <li class="weekly-list__article-item">{{ highlight }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
 
                         <div class="weekly-list__meta">
                             <span class="weekly-list__badge">📚 {{ post.article_count }} articles</span>
@@ -36,9 +52,15 @@ title: Weekly
         </div>
 
         <nav class="weekly-pagination" aria-label="Weekly post pagination" data-weekly-pagination>
-            <button type="button" class="weekly-pagination__button" data-page-action="prev">← Previous</button>
+            <button type="button" class="weekly-pagination__btn" data-page-action="prev" aria-label="Previous page">
+                <span class="weekly-pagination__btn-icon">&larr;</span>
+                <span class="weekly-pagination__btn-label">Prev</span>
+            </button>
             <span class="weekly-pagination__status" data-page-status></span>
-            <button type="button" class="weekly-pagination__button" data-page-action="next">Next →</button>
+            <button type="button" class="weekly-pagination__btn" data-page-action="next" aria-label="Next page">
+                <span class="weekly-pagination__btn-label">Next</span>
+                <span class="weekly-pagination__btn-icon">&rarr;</span>
+            </button>
         </nav>
 
         <script>
@@ -70,9 +92,11 @@ title: Weekly
                         post.hidden = !(index >= start && index < end);
                     });
 
-                    status.textContent = `Page ${currentPage} of ${totalPages}`;
+                    status.textContent = currentPage + ' / ' + totalPages;
                     prevButton.disabled = currentPage === 1;
                     nextButton.disabled = currentPage === totalPages;
+
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 };
 
                 prevButton.addEventListener('click', () => {

@@ -11,6 +11,10 @@
         margin: 0 auto
         display: block
 
+// ──────────────────────────────────────────────
+// Weekly list page
+// ──────────────────────────────────────────────
+
 .weekly-list
     > .description
         max-width: 760px
@@ -19,14 +23,17 @@
     margin-top: 2rem
 
 .weekly-list__item
-    margin-bottom: 2rem
-    border-bottom: 1px solid #e0e0e0
-    padding-bottom: 1.5rem
+    margin-bottom: 0
+    border-bottom: 1px solid $epsilon
+    padding: 1.6rem 0
 
 .weekly-list__link
     text-decoration: none
     color: inherit
     display: block
+
+    &:hover .weekly-list__title
+        color: $delta
 
 .weekly-list__header
     display: flex
@@ -36,55 +43,136 @@
 
 .weekly-list__title
     margin: 0
-    font-size: 1.3rem
+    font-size: 1.4rem
+    font-weight: 600
+    color: $beta
+    transition: color 0.2s ease
 
 .weekly-list__date
-    color: #999
-    font-size: 0.9rem
+    color: $gama
+    font-size: 0.85rem
     flex-shrink: 0
 
+// Summary: Korean & English on separate lines
 .weekly-list__summary
-    margin-top: 0.8rem
-    margin-bottom: 0
-    color: #555
-    line-height: 1.55
+    margin-top: 0.6rem
+    line-height: 1.6
 
+.weekly-list__summary-ko
+    display: block
+    color: $alpha
+    font-size: 0.95rem
+    font-weight: 400
+
+.weekly-list__summary-en
+    display: block
+    color: $gama
+    font-size: 0.85rem
+    font-weight: 300
+    margin-top: 0.2rem
+
+// Article title list
+.weekly-list__articles
+    margin: 0.7rem 0 0 0
+    padding: 0
+    list-style: none
+    display: flex
+    flex-wrap: wrap
+    gap: 0.35rem
+
+.weekly-list__article-item
+    font-size: 0.78rem
+    font-weight: 300
+    color: $gama
+    background: $epsilon
+    padding: 0.18rem 0.55rem
+    border-radius: 3px
+    line-height: 1.5
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    max-width: 280px
+
+// Meta & badge
 .weekly-list__meta
-    margin-top: 1rem
-    font-size: 0.9rem
+    margin-top: 0.7rem
 
 .weekly-list__badge
-    background: #f5f5f5
+    font-size: 0.8rem
+    font-weight: 400
+    color: $gama
+    background: $epsilon
     padding: 0.2rem 0.6rem
     border-radius: 3px
 
+// ──────────────────────────────────────────────
+// Pagination
+// ──────────────────────────────────────────────
+
 .weekly-pagination
-    margin-top: 2rem
+    margin: 2.5rem 0 1rem
     display: flex
     align-items: center
     justify-content: center
-    gap: 1rem
+    gap: 1.2rem
+    user-select: none
 
-.weekly-pagination__button
-    border: 1px solid #ddd
-    background: #fff
-    color: #444
-    border-radius: 999px
-    padding: 0.4rem 0.9rem
+.weekly-pagination__btn
+    display: inline-flex
+    align-items: center
+    gap: 0.35rem
+    border: 1px solid $epsilon
+    background: transparent
+    color: $alpha
+    border-radius: 6px
+    padding: 0.5rem 1rem
+    font-size: 0.85rem
+    font-weight: 400
+    font-family: $fontSans
     cursor: pointer
+    transition: all 0.2s ease
+
+    &:hover:not(:disabled)
+        color: $beta
+        border-color: $gama
 
     &:disabled
-        opacity: 0.4
+        opacity: 0.3
         cursor: not-allowed
 
-.weekly-pagination__status
+.weekly-pagination__btn-icon
     font-size: 0.9rem
-    color: #777
+    line-height: 1
+
+.weekly-pagination__btn-label
+    line-height: 1
+
+.weekly-pagination__status
+    font-size: 0.85rem
+    font-weight: 400
+    color: $gama
+    min-width: 3rem
+    text-align: center
+
+// ──────────────────────────────────────────────
+// Responsive
+// ──────────────────────────────────────────────
 
 @media (max-width: 720px)
     .weekly-list__header
         flex-direction: column
         align-items: flex-start
 
+    .weekly-list__articles
+        gap: 0.25rem
+
+    .weekly-list__article-item
+        max-width: 220px
+        font-size: 0.74rem
+
     .weekly-pagination
-        flex-wrap: wrap
+        gap: 0.8rem
+
+    .weekly-pagination__btn
+        padding: 0.4rem 0.8rem
+        font-size: 0.8rem

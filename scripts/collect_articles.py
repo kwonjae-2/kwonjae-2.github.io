@@ -632,6 +632,12 @@ Respond in JSON:
 
         weekly_description = self.generate_weekly_description_with_ai(selected)
 
+        # Build article_highlights YAML
+        highlights_yaml = '\n'.join(
+            f"  - '{article['title'].replace(chr(39), chr(39)+chr(39))}'"
+            for article in selected
+        )
+
         markdown = f"""---
 title: "Weekly - {today.strftime('%B %d, %Y')}"
 layout: post
@@ -641,6 +647,8 @@ tags: [Development, Tech, Weekly]
 author: kwonjaelee
 description: "{weekly_description}"
 article_count: {len(selected)}
+article_highlights:
+{highlights_yaml}
 ---
 
 ### 📚 이번 주 추천 아티클
