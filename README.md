@@ -43,7 +43,7 @@ Articles are automatically collected, AI-curated, and published every Saturday a
 - **Site**: Jekyll + GitHub Pages
 - **Automation**: Python + GitHub Actions
 - **AI**: OpenAI GPT-5.2
-- **Sources (13)**: Hacker News, GeekNews, Lobsters, TLDR Tech, SRE Weekly, Changelog, Pragmatic Engineer, Lenny's Newsletter, OpenTelemetry, Grafana, GitHub Blog, Meta Engineering, Martin Fowler
+- **Sources (15)**: Hacker News, GeekNews, Lobsters, TLDR Tech, SRE Weekly, Changelog, Pragmatic Engineer, Lenny's Newsletter, OpenTelemetry, Grafana, GitHub Blog, Meta Engineering, Anthropic Engineering, Anthropic News, Martin Fowler
 
 ## ⚙️ Configuration
 

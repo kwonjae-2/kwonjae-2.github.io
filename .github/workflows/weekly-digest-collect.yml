@@ -56,7 +56,7 @@ jobs:
           - TLDR Tech, SRE Weekly, Changelog
           - Pragmatic Engineer, Lenny's Newsletter
           - OpenTelemetry, Grafana
-          - GitHub Blog, Meta Engineering
+          - GitHub Blog, Meta Engineering, Anthropic
           - Martin Fowler"
             git push
             echo "✅ Weekly post committed and ready for Saturday publication!"

@@ -39,6 +39,8 @@ class ArticleCollector:
             # Big Tech Engineering Blogs
             'github_blog': 'https://github.blog/feed/',
             'meta_eng': 'https://engineering.fb.com/feed/',
+            'anthropic_eng': 'https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_engineering.xml',
+            'anthropic_news': 'https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_anthropic_news.xml',
             # Thought Leadership
             'martin_fowler': 'https://martinfowler.com/feed.atom',
         }
@@ -515,7 +517,7 @@ article_highlights:
 
 ## 🔗 Sources
 
-Articles curated from Hacker News, GeekNews, Lobsters, TLDR Tech, Pragmatic Engineer, GitHub Blog, Meta Engineering, Martin Fowler, and more.
+Articles curated from Hacker News, GeekNews, Lobsters, TLDR Tech, Pragmatic Engineer, GitHub Blog, Meta Engineering, Anthropic, Martin Fowler, and more.
 
 ---
 
