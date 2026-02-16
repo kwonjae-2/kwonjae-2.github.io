@@ -26,8 +26,9 @@ Articles are automatically collected, AI-curated, and published every Saturday a
 - **Social Links**: Connect through LinkedIn, GitHub, and Email
 - **Insight Hub**: Lightbulb icon links directly to current Scribbles issues
 - **Adaptive Theme**: Automatically follows the visitor's light/dark preference
-- **Rich Weekly Summary**: Article highlights, bilingual description (KO/EN), and client-side pagination
+- **Readable Typography**: Increased font sizes for comfortable reading across all pages
 - **Article Highlights**: Each weekly post displays article titles as compact tags for quick scanning
+- **Client-Side Pagination**: Smooth page navigation for the weekly archive
 
 ## 🤖 Automation
 

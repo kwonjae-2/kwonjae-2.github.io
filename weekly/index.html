@@ -25,16 +25,6 @@ title: Weekly
                             </aside>
                         </div>
 
-                        {% assign desc_parts = post.description | split: " | " %}
-                        <div class="weekly-list__summary">
-                            {% if desc_parts.size > 1 %}
-                                <span class="weekly-list__summary-ko">{{ desc_parts[0] }}</span>
-                                <span class="weekly-list__summary-en">{{ desc_parts[1] }}</span>
-                            {% else %}
-                                <span class="weekly-list__summary-ko">{{ post.description }}</span>
-                            {% endif %}
-                        </div>
-
                         {% if post.article_highlights.size > 0 %}
                             <ul class="weekly-list__articles">
                             {% for highlight in post.article_highlights %}
