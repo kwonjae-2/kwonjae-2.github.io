@@ -138,12 +138,10 @@ class ArticleCollector:
             return []
 
     def _clean_description(self, html_text: str) -> str:
-        """Clean HTML from description"""
-        # Remove HTML tags
+        """Clean HTML from description and return full text for AI processing"""
         clean = re.compile('<.*?>')
-        text = re.sub(clean, '', html_text)
-        # Limit to first 200 characters
-        return text[:200] + '...' if len(text) > 200 else text
+        text = re.sub(clean, '', html_text).strip()
+        return text
 
     def collect_all(self, days_back: int = 7) -> List[Dict]:
         """Collect articles from all sources"""
