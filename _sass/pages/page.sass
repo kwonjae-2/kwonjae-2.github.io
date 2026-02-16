@@ -38,7 +38,7 @@
 .weekly-list__header
     display: flex
     justify-content: space-between
-    align-items: baseline
+    align-items: center
     gap: 1rem
 
 .weekly-list__title
@@ -48,10 +48,12 @@
     color: $beta
     transition: color 0.2s ease
 
-.weekly-list__date
+.weekly-list__badge
+    font-size: 1.2rem
+    font-weight: 400
     color: $gama
-    font-size: 1.5rem
     flex-shrink: 0
+    white-space: nowrap
 
 // Article title list
 .weekly-list__articles
@@ -70,18 +72,6 @@
     padding: 0.3rem 0.7rem
     border-radius: 3px
     line-height: 1.5
-
-// Meta & badge
-.weekly-list__meta
-    margin-top: 0.8rem
-
-.weekly-list__badge
-    font-size: 1.35rem
-    font-weight: 400
-    color: $gama
-    background: $epsilon
-    padding: 0.3rem 0.75rem
-    border-radius: 3px
 
 // ──────────────────────────────────────────────
 // Pagination
@@ -138,10 +128,6 @@
 // ──────────────────────────────────────────────
 
 @media (max-width: 720px)
-    .weekly-list__header
-        flex-direction: column
-        align-items: flex-start
-
     .weekly-list__articles
         gap: 0.25rem
 

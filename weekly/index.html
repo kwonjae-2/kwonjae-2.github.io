@@ -18,11 +18,9 @@ title: Weekly
                     <a class="url weekly-list__link" href="{{ post.url | relative_url }}">
                         <div class="weekly-list__header">
                             <h3 class="title weekly-list__title">
-                                Week #{{ post_count | minus: forloop.index0 }} - {{ post.date | date: "%b %d, %Y" }}
+                                Week #{{ post_count | minus: forloop.index0 }}
                             </h3>
-                            <aside class="date weekly-list__date">
-                                <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date: "%b %d" }}</time>
-                            </aside>
+                            <span class="weekly-list__badge">{{ post.article_count }} articles</span>
                         </div>
 
                         {% if post.article_highlights.size > 0 %}
@@ -32,10 +30,6 @@ title: Weekly
                             {% endfor %}
                             </ul>
                         {% endif %}
-
-                        <div class="weekly-list__meta">
-                            <span class="weekly-list__badge">📚 {{ post.article_count }} articles</span>
-                        </div>
                     </a>
                 </article>
             {% endfor %}
