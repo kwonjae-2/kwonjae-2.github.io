@@ -4,7 +4,6 @@ Weekly Digest Article Collector
 Collects articles from various sources for SRE and Observability topics
 """
 
-import argparse
 import feedparser
 import json
 import requests
@@ -23,16 +22,25 @@ class ArticleCollector:
     def __init__(self, openai_api_key: Optional[str] = None):
         self.articles = []
         self.sources = {
-            'sreweekly': 'https://sreweekly.com/feed/',
-            'geeknews': 'https://news.hada.io/rss/news',
-            'opentelemetry': 'https://opentelemetry.io/blog/index.xml',
-            # Vendor blogs
-            'grafana': 'https://grafana.com/blog/index.xml',
-            'honeycomb': 'https://www.honeycomb.io/feed',
-            # AI & Engineering
-            'anthropic': 'https://raw.githubusercontent.com/conoro/anthropic-engineering-rss-feed/main/anthropic_engineering_rss.xml',
+            # Community & Aggregators
             'hackernews': 'https://news.ycombinator.com/rss',
+            'geeknews': 'https://news.hada.io/rss/news',
+            'lobsters': 'https://lobste.rs/rss',
+            # Daily / Weekly Newsletters
+            'tldr_tech': 'https://tldr.tech/api/rss/tech',
+            'sreweekly': 'https://sreweekly.com/feed/',
+            'changelog': 'https://changelog.com/feed',
+            # Engineering Newsletters
+            'pragmatic_eng': 'https://newsletter.pragmaticengineer.com/feed',
             'lenny': 'https://www.lennysnewsletter.com/feed',
+            # Observability & Infrastructure
+            'opentelemetry': 'https://opentelemetry.io/blog/index.xml',
+            'grafana': 'https://grafana.com/blog/index.xml',
+            # Big Tech Engineering Blogs
+            'github_blog': 'https://github.blog/feed/',
+            'meta_eng': 'https://engineering.fb.com/feed/',
+            # Thought Leadership
+            'martin_fowler': 'https://martinfowler.com/feed.atom',
         }
 
         # Initialize OpenAI client if API key is provided
@@ -79,24 +87,32 @@ class ArticleCollector:
         """Collect articles from an RSS feed, expanding to older articles if needed"""
         try:
             feed = feedparser.parse(url)
+
+            # Check HTTP status
+            status = getattr(feed, 'status', None)
+            if status and status >= 400:
+                print(f"  ⚠️  {name}: HTTP {status} - skipping")
+                return []
+
+            # Check if feed has entries
+            if not feed.entries:
+                print(f"  ⚠️  {name}: no entries found (bozo={feed.bozo})")
+                return []
+
             cutoff_date = datetime.now() - timedelta(days=days_back)
-            articles = []
             recent_articles = []
             older_articles = []
 
-            # Process more entries to have a larger pool
             for entry in feed.entries[:max_entries]:
                 link = entry.get('link', '')
 
-                # Skip if already published
                 if link in self.published_urls:
                     continue
 
-                # Parse the published date
                 pub_date = None
-                if hasattr(entry, 'published_parsed'):
+                if hasattr(entry, 'published_parsed') and entry.published_parsed:
                     pub_date = datetime(*entry.published_parsed[:6])
-                elif hasattr(entry, 'updated_parsed'):
+                elif hasattr(entry, 'updated_parsed') and entry.updated_parsed:
                     pub_date = datetime(*entry.updated_parsed[:6])
 
                 if pub_date:
@@ -106,21 +122,17 @@ class ArticleCollector:
                         'source': name,
                         'published': pub_date.strftime('%Y-%m-%d'),
                         'description': self._clean_description(entry.get('summary', '')),
-                        'pub_date_obj': pub_date,  # Keep for sorting
+                        'pub_date_obj': pub_date,
                     }
 
-                    # Separate recent and older articles
                     if pub_date >= cutoff_date:
                         recent_articles.append(article)
                     else:
                         older_articles.append(article)
 
-            # Combine: prefer recent articles, but include older ones if needed
-            articles = recent_articles + older_articles
-
-            return articles
+            return recent_articles + older_articles
         except Exception as e:
-            print(f"Error collecting from {name}: {str(e)}")
+            print(f"  ❌ Error collecting from {name}: {str(e)}")
             return []
 
     def _clean_description(self, html_text: str) -> str:
@@ -503,7 +515,7 @@ article_highlights:
 
 ## 🔗 Sources
 
-Articles curated from various tech blogs and communities including SRE Weekly, GeekNews, OpenTelemetry, Grafana, and more.
+Articles curated from Hacker News, GeekNews, Lobsters, TLDR Tech, Pragmatic Engineer, GitHub Blog, Meta Engineering, Martin Fowler, and more.
 
 ---
 
@@ -529,14 +541,6 @@ Articles curated from various tech blogs and communities including SRE Weekly, G
 
 def main():
     """Main function"""
-    parser = argparse.ArgumentParser(description='Weekly Article Collector with OpenAI')
-    parser.add_argument(
-        '--refresh-existing-descriptions',
-        action='store_true',
-        help='Refresh description frontmatter for existing weekly posts'
-    )
-    args = parser.parse_args()
-
     print("=" * 60)
     print("Weekly Article Collector with OpenAI")
     print("=" * 60)
@@ -553,12 +557,6 @@ def main():
         print("   AI features will be disabled. Set OPENAI_API_KEY to enable.")
 
     collector = ArticleCollector(openai_api_key=api_key)
-
-    if args.refresh_existing_descriptions:
-        print("\n🛠 Refreshing existing weekly descriptions...")
-        updated = collector.refresh_existing_weekly_descriptions()
-        print(f"\n✅ Updated {updated} existing weekly post descriptions")
-        return
 
     # Collect articles from the last 7 days (but include older if needed)
     print("\n📡 Collecting articles from RSS feeds...")

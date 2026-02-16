@@ -52,14 +52,12 @@ jobs:
           🤖 Auto-generated with OpenAI
 
           Articles collected and analyzed automatically from:
-          - SRE Weekly
-          - GeekNews
-          - OpenTelemetry Blog
-          - Grafana Blog
-          - Honeycomb Blog
-          - Anthropic Engineering
-          - Hacker News
-          - Lenny's Newsletter"
+          - Hacker News, GeekNews, Lobsters
+          - TLDR Tech, SRE Weekly, Changelog
+          - Pragmatic Engineer, Lenny's Newsletter
+          - OpenTelemetry, Grafana
+          - GitHub Blog, Meta Engineering
+          - Martin Fowler"
             git push
             echo "✅ Weekly post committed and ready for Saturday publication!"
           fi
