@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>링크 문지기 (가칭) | 컨셉 샘플</title>
-<meta name="description" content="사칭 링크를 눌러도 진짜 공식 앱으로 데려다주는 서비스의 컨셉 샘플 페이지입니다.">
+<title>Link Gatekeeper (가칭) | 컨셉 샘플</title>
+<meta name="description" content="사칭 링크를 눌러도 진짜 공식 앱으로 데려다주는 서비스, Link Gatekeeper의 컨셉 샘플 페이지입니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&family=Hahmlet:wght@500;700;800&display=swap" rel="stylesheet">
@@ -22,9 +22,12 @@
     --pass-wash: #E3F3EC;
     --display: "Hahmlet", "Noto Serif KR", serif;
     --body: "Gothic A1", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, Consolas, monospace;
+    --ease: cubic-bezier(.2, .8, .2, 1);
+    interpolate-size: allow-keywords;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
   body {
     margin: 0;
     background: var(--paper);
@@ -36,278 +39,298 @@
     -webkit-font-smoothing: antialiased;
   }
   a { color: inherit; }
-  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; border-radius: 4px; }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
-  .notice {
-    background: var(--ink);
-    color: #fff;
-    font-size: 15px;
-    text-align: center;
-    padding: 10px 16px;
-  }
+  .notice { background: var(--ink); color: #fff; font-size: 15px; text-align: center; padding: 10px 16px; }
 
-  header.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 28px;
-    padding-bottom: 28px;
+  /* Sticky glass navigation with scroll progress */
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--paper) 72%, transparent);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    backdrop-filter: saturate(1.4) blur(14px);
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
   }
-  .brand {
-    font-family: var(--display);
-    font-weight: 800;
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .brand small { font-family: var(--body); font-weight: 500; font-size: 14px; color: var(--ink-soft); }
+  .nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 68px; }
+  .brand { font-family: var(--display); font-weight: 800; font-size: 21px; display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand small { font-family: var(--body); font-weight: 500; font-size: 13px; color: var(--ink-soft); }
   .stamp {
-    width: 34px; height: 34px;
-    border: 2.5px solid var(--seal);
-    border-radius: 50%;
-    color: var(--seal);
-    display: grid; place-items: center;
-    font-family: var(--display);
-    font-weight: 800;
-    font-size: 17px;
+    width: 32px; height: 32px; border: 2.5px solid var(--seal); border-radius: 50%; color: var(--seal);
+    display: grid; place-items: center; font-family: var(--display); font-weight: 800; font-size: 14px;
     transform: rotate(-8deg);
   }
-  header.top a.jump { font-size: 16px; font-weight: 500; }
+  .nav nav { display: flex; gap: 28px; font-size: 15px; font-weight: 500; }
+  .nav nav a { text-decoration: none; padding: 6px 0; background: linear-gradient(var(--ink), var(--ink)) no-repeat 0 100% / 0 2px; transition: background-size .25s var(--ease); }
+  .nav nav a:hover, .nav nav a:focus-visible { background-size: 100% 2px; }
+  .progress { position: absolute; left: 0; bottom: -1px; height: 2px; width: 100%; background: var(--seal); transform-origin: 0 50%; transform: scaleX(0); }
+  @supports (animation-timeline: scroll()) {
+    .progress { animation: grow linear both; animation-timeline: scroll(root); }
+    @keyframes grow { to { transform: scaleX(1); } }
+  }
 
   /* Hero */
-  .hero {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 56px;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 96px;
-  }
-  .hero h1 {
-    font-family: var(--display);
-    font-weight: 800;
-    font-size: clamp(38px, 5.4vw, 64px);
-    line-height: 1.22;
-    letter-spacing: -0.02em;
-    margin: 0 0 28px;
-  }
+  .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; padding-top: 72px; padding-bottom: 104px; }
+  .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(38px, 5.4vw, 64px); line-height: 1.22; letter-spacing: -0.02em; margin: 0 0 28px; }
+  .hero h1 .ln { display: block; overflow: hidden; }
+  .hero h1 .ln > span { display: block; }
   .hero p.lead { font-size: 20px; color: var(--ink-soft); max-width: 30em; margin: 0 0 36px; }
   .btn {
-    display: inline-block;
-    font: inherit;
-    font-weight: 700;
-    font-size: 18px;
-    padding: 16px 28px;
-    border-radius: 6px;
-    border: 2px solid var(--ink);
-    background: var(--ink);
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+    display: inline-block; font: inherit; font-weight: 700; font-size: 18px; padding: 16px 28px;
+    border-radius: 8px; border: 2px solid var(--ink); background: var(--ink); color: #fff;
+    text-decoration: none; cursor: pointer; transition: transform .15s var(--ease), box-shadow .15s var(--ease);
   }
+  .btn:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--line); }
+  .btn:active { transform: none; box-shadow: none; }
   .btn.ghost { background: transparent; color: var(--ink); }
   .hero .hint { margin-top: 18px; font-size: 15px; color: var(--ink-soft); }
 
+  /* One orchestrated page-load sequence */
+  .js .hero h1 .ln > span { transform: translateY(105%); animation: rise .8s var(--ease) forwards; }
+  .js .hero h1 .ln:nth-child(2) > span { animation-delay: .09s; }
+  .js .hero h1 .ln:nth-child(3) > span { animation-delay: .18s; }
+  .js .hero .after { opacity: 0; animation: fade .6s ease .5s forwards; }
+  .js .phone { opacity: 0; transform: translateY(24px); animation: settle .8s var(--ease) .25s forwards; }
+  .js .bubble { opacity: 0; transform: translateY(10px) scale(.97); transform-origin: 0 0; animation: pop .45s var(--ease) forwards; }
+  .js .bubble:nth-child(1) { animation-delay: 1s; }
+  .js .bubble:nth-child(2) { animation-delay: 1.5s; }
+  @keyframes rise { to { transform: none; } }
+  @keyframes fade { to { opacity: 1; } }
+  @keyframes settle { to { opacity: 1; transform: none; } }
+  @keyframes pop { to { opacity: 1; transform: none; } }
+
   /* Phone demo */
-  .phone {
-    width: 100%;
-    max-width: 360px;
-    margin: 0 auto;
-    background: var(--sheet);
-    border: 2px solid var(--ink);
-    border-radius: 34px;
-    padding: 14px;
-    box-shadow: 14px 14px 0 var(--line);
-  }
-  .screen {
-    position: relative;
-    height: 560px;
-    border-radius: 22px;
-    background: #F7F9FB;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .screen .bar {
-    padding: 14px 18px 12px;
-    border-bottom: 1px solid var(--line);
-    font-size: 15px;
-    font-weight: 700;
-    background: var(--sheet);
-  }
+  .phone { width: 100%; max-width: 360px; margin: 0 auto; background: var(--sheet); border: 2px solid var(--ink); border-radius: 36px; padding: 14px; box-shadow: 14px 14px 0 var(--line); }
+  .screen { position: relative; height: 560px; border-radius: 24px; background: #F7F9FB; overflow: hidden; display: flex; flex-direction: column; }
+  .screen .bar { padding: 14px 18px 12px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 700; background: var(--sheet); }
   .screen .bar span { display: block; font-weight: 400; font-size: 13px; color: var(--ink-soft); }
-  .thread { padding: 16px 14px; display: flex; flex-direction: column; gap: 14px; overflow: auto; }
-  .bubble {
-    background: var(--sheet);
-    border: 1px solid var(--line);
-    border-radius: 4px 18px 18px 18px;
-    padding: 12px 14px;
-    font-size: 15px;
-    line-height: 1.55;
-    max-width: 92%;
+  .thread { padding: 16px 14px; display: flex; flex-direction: column; gap: 14px; }
+  .bubble { background: var(--sheet); border: 1px solid var(--line); border-radius: 4px 18px 18px 18px; padding: 12px 14px; font-size: 15px; line-height: 1.55; max-width: 92%; }
+  .bubble button.link { position: relative; display: inline-block; margin-top: 8px; padding: 0; border: 0; background: none; font: inherit; color: #1456C8; text-decoration: underline; cursor: pointer; text-align: left; word-break: break-all; }
+  .bubble button.link.cue::after {
+    content: ""; position: absolute; left: calc(100% + 10px); top: 50%; width: 12px; height: 12px; margin-top: -6px;
+    border-radius: 50%; background: var(--seal);
+    animation: ping 1.8s ease-out 2.4s infinite;
   }
-  .bubble button.link {
-    display: block;
-    margin-top: 8px;
-    padding: 0;
-    border: 0;
-    background: none;
-    font: inherit;
-    color: #1456C8;
-    text-decoration: underline;
-    cursor: pointer;
-    text-align: left;
-    word-break: break-all;
-  }
+  .screen.touched .bubble button.link.cue::after { display: none; }
+  @keyframes ping { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--seal) 55%, transparent); } 80%, 100% { box-shadow: 0 0 0 12px transparent; } }
   .tap-cue { font-size: 13px; color: var(--ink-soft); text-align: center; margin-top: auto; padding: 12px; }
 
   .gate, .arrived {
-    position: absolute; inset: 0;
-    display: flex; flex-direction: column;
-    padding: 28px 22px 22px;
-    background: var(--sheet);
-    transform: translateY(100%);
-    visibility: hidden;
-    transition: transform .32s cubic-bezier(.2,.8,.2,1), visibility 0s .32s;
+    position: absolute; inset: 0; display: flex; flex-direction: column; padding: 28px 22px 22px; background: var(--sheet);
+    transform: translateY(100%); visibility: hidden;
+    transition: transform .36s var(--ease), visibility 0s .36s;
   }
-  .gate.on, .arrived.on { transform: translateY(0); visibility: visible; transition: transform .32s cubic-bezier(.2,.8,.2,1), visibility 0s; }
+  .gate.on, .arrived.on { transform: none; visibility: visible; transition: transform .36s var(--ease), visibility 0s; }
   .gate { border-top: 8px solid var(--seal); }
-  .gate h3 {
-    font-family: var(--display); font-weight: 800;
-    font-size: 26px; line-height: 1.3; margin: 18px 0 16px;
-  }
-  .gate .bigstamp {
-    align-self: flex-start;
-    border: 3px solid var(--seal); color: var(--seal);
-    font-family: var(--display); font-weight: 800; font-size: 18px;
-    padding: 4px 12px; border-radius: 4px; transform: rotate(-4deg);
-  }
+  .gate h3 { font-family: var(--display); font-weight: 800; font-size: 26px; line-height: 1.3; margin: 18px 0 16px; }
+  .sealmark { align-self: flex-start; border: 3px solid var(--seal); color: var(--seal); font-family: var(--display); font-weight: 800; font-size: 18px; padding: 4px 12px; border-radius: 4px; transform: rotate(-4deg); }
+  .gate.on .sealmark { animation: slam .45s cubic-bezier(.3, 1.6, .5, 1) .22s both; }
+  @keyframes slam { from { opacity: 0; transform: rotate(-14deg) scale(2.4); } to { opacity: 1; transform: rotate(-4deg) scale(1); } }
   .gate dl { margin: 0 0 20px; font-size: 15px; }
   .gate dt { color: var(--ink-soft); margin-top: 10px; }
-  .gate dd { margin: 2px 0 0; font-weight: 700; word-break: break-all; }
+  .gate dd { margin: 2px 0 0; font-weight: 700; word-break: break-all; font-family: var(--mono); font-size: 14px; }
   .gate dd.bad { color: var(--seal); text-decoration: line-through; text-decoration-thickness: 2px; }
   .gate .btn { width: 100%; text-align: center; background: var(--pass); border-color: var(--pass); margin-top: auto; }
-  .gate .anyway {
-    margin-top: 12px; border: 0; background: none; font: inherit; font-size: 14px;
-    color: var(--ink-soft); text-decoration: underline; cursor: pointer;
-  }
+  .gate .anyway { margin-top: 12px; border: 0; background: none; font: inherit; font-size: 14px; color: var(--ink-soft); text-decoration: underline; cursor: pointer; }
   .arrived { border-top: 8px solid var(--pass); justify-content: center; text-align: center; }
-  .arrived .ok {
-    width: 72px; height: 72px; margin: 0 auto 18px; border-radius: 50%;
-    background: var(--pass-wash); color: var(--pass);
-    display: grid; place-items: center; font-size: 34px; font-weight: 700;
-  }
+  .arrived .ok { width: 76px; height: 76px; margin: 0 auto 18px; }
+  .arrived .ok circle { fill: var(--pass-wash); }
+  .arrived .ok path { fill: none; stroke: var(--pass); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 48; stroke-dashoffset: 48; }
+  .arrived.on .ok path { animation: draw .5s ease .25s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
   .arrived h3 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0 0 8px; }
   .arrived p { font-size: 15px; color: var(--ink-soft); margin: 0 0 24px; }
   .arrived .btn { align-self: center; font-size: 15px; padding: 10px 18px; }
 
   /* Sections */
-  section.block { padding: 88px 0; border-top: 2px solid var(--ink); }
-  section.block h2 {
-    font-family: var(--display); font-weight: 800;
-    font-size: clamp(28px, 3.6vw, 40px); line-height: 1.3; letter-spacing: -0.01em;
-    margin: 0 0 20px; max-width: 18em;
-  }
-  section.block > .wrap > p { max-width: 34em; color: var(--ink-soft); margin: 0 0 20px; }
+  .block { padding: 96px 0; border-top: 2px solid var(--ink); }
+  .block h2 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.3; letter-spacing: -0.01em; margin: 0 0 20px; max-width: 18em; }
+  .block .wrap > p { max-width: 34em; color: var(--ink-soft); margin: 0 0 20px; }
 
-  .figure {
-    display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: baseline;
-    margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line);
-  }
-  .figure strong { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 8vw, 88px); line-height: 1; color: var(--seal); }
+  .figure { display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: baseline; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line); }
+  .figure strong { font-family: var(--display); font-weight: 800; font-size: clamp(48px, 8vw, 88px); line-height: 1; color: var(--seal); font-variant-numeric: tabular-nums; min-width: 4.2ch; }
   .figure p { margin: 0; max-width: 26em; }
   .figure cite { display: block; font-style: normal; font-size: 14px; color: var(--ink-soft); margin-top: 8px; }
 
-  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 40px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  /* Address trace: the animated explanation */
+  .trace { margin-top: 44px; background: var(--ink); color: #fff; border-radius: 20px; padding: 40px 36px 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; position: relative; overflow: hidden; }
+  .trace h3 { font-size: 15px; font-weight: 500; color: #AEB9CE; margin: 0 0 18px; }
+  .hops { list-style: none; margin: 0; padding: 0; position: relative; }
+  .hops::before, .hops::after { content: ""; position: absolute; left: 9px; top: 12px; width: 2px; height: calc(100% - 60px); }
+  .hops::before { background: #33415F; }
+  .hops::after { background: #fff; transform-origin: 50% 0; transform: scaleY(var(--rail, 0)); transition: transform .5s var(--ease); }
+  .hop { position: relative; z-index: 1; padding: 0 0 26px 36px; opacity: .28; transition: opacity .35s ease; }
+  .hop:last-child { padding-bottom: 0; }
+  .hop::before { content: ""; position: absolute; left: 0; top: 4px; width: 20px; height: 20px; border-radius: 50%; background: var(--ink); border: 2px solid #5A6885; transition: border-color .3s, background .3s; }
+  .hop.on { opacity: 1; }
+  .hop.on::before { border-color: #fff; background: #fff; }
+  .hop.final.on::before { border-color: var(--seal); background: var(--seal); }
+  .hop span { display: block; font-size: 14px; color: #AEB9CE; }
+  .hop code { font-family: var(--mono); font-size: 15px; word-break: break-all; }
+  .hop.final.on code { color: #FF8C9C; }
+
+  .ledger { background: #1C2B4D; border-radius: 12px; padding: 6px 0; position: relative; overflow: hidden; }
+  .ledger .row { display: flex; justify-content: space-between; gap: 16px; padding: 11px 18px; font-size: 14px; border-bottom: 1px solid #2A3A5E; transition: background .3s; }
+  .ledger .row:last-of-type { border-bottom: 0; }
+  .ledger .row code { font-family: var(--mono); color: #AEB9CE; }
+  .ledger .row.hit { background: #2B3F6B; }
+  .ledger .row.hit code { color: #fff; }
+  .ledger .scan { position: absolute; left: 0; right: 0; top: 0; height: 44px; background: linear-gradient(180deg, transparent, rgba(255,255,255,.14), transparent); transform: translateY(-100%); pointer-events: none; }
+  .ledger.scanning .scan { animation: scan 1.1s ease-in-out forwards; }
+  @keyframes scan { to { transform: translateY(420%); } }
+  .verdict { margin-top: 18px; display: flex; align-items: center; gap: 14px; min-height: 52px; font-size: 15px; opacity: 0; transition: opacity .3s; }
+  .verdict.on { opacity: 1; }
+  .verdict .sealmark { background: #fff; flex: none; font-size: 16px; }
+  .verdict.on .sealmark { animation: slam .45s cubic-bezier(.3, 1.6, .5, 1) both; }
+  .replay { position: absolute; right: 18px; top: 14px; border: 1px solid #5A6885; background: none; color: #fff; font: inherit; font-size: 13px; padding: 4px 12px; border-radius: 99px; cursor: pointer; }
+  .replay:hover { background: #2A3A5E; }
+  .replay:focus-visible { outline-color: #fff; }
+
+  ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 48px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); }
   ol.steps li { counter-increment: s; padding: 28px 28px 28px 0; border-top: 1px solid var(--line); }
   ol.steps li + li { padding-left: 28px; border-left: 1px solid var(--line); }
-  ol.steps li::before {
-    content: counter(s); display: block;
-    font-family: var(--display); font-weight: 800; font-size: 40px; line-height: 1; margin-bottom: 14px;
-  }
+  ol.steps li::before { content: counter(s); display: block; font-family: var(--display); font-weight: 800; font-size: 40px; line-height: 1; margin-bottom: 14px; }
   ol.steps h3 { font-size: 20px; margin: 0 0 8px; }
   ol.steps p { margin: 0; font-size: 16px; color: var(--ink-soft); }
 
-  .versus { display: grid; grid-template-columns: 1fr 1fr; margin-top: 40px; border: 2px solid var(--ink); background: var(--sheet); }
+  .versus { display: grid; grid-template-columns: 1fr 1fr; margin-top: 48px; border: 2px solid var(--ink); border-radius: 16px; overflow: hidden; background: var(--sheet); }
   .versus > div { padding: 32px; }
   .versus > div + div { border-left: 2px solid var(--ink); background: var(--pass-wash); }
   .versus h3 { font-size: 18px; margin: 0 0 14px; }
   .versus ul { margin: 0; padding-left: 20px; font-size: 16px; }
   .versus li + li { margin-top: 8px; }
 
-  .family { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
-  .alert {
-    background: var(--sheet); border: 2px solid var(--ink); border-radius: 14px;
-    padding: 20px 22px; box-shadow: 10px 10px 0 var(--line); font-size: 16px;
-  }
-  .alert b { display: block; margin-bottom: 4px; }
-  .alert time { display: block; font-size: 13px; color: var(--ink-soft); margin-bottom: 10px; }
+  /* Family */
+  .family { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .relay { position: relative; display: grid; gap: 56px; }
+  .relay .mini { position: relative; z-index: 1; background: var(--sheet); border: 2px solid var(--ink); border-radius: 16px; padding: 16px 20px; font-size: 15px; box-shadow: 8px 8px 0 var(--line); }
+  .relay .mini b { display: block; }
+  .relay .mini time { display: block; font-size: 13px; color: var(--ink-soft); margin-bottom: 4px; }
+  .relay .mini.parent { width: 78%; }
+  .relay .mini.child { width: 86%; justify-self: end; }
+  .relay svg { position: absolute; left: 30%; top: 50%; width: 30%; height: 56px; margin-top: -28px; overflow: visible; pointer-events: none; }
+  .relay svg path { fill: none; stroke: var(--seal); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 6 8; vector-effect: non-scaling-stroke; }
+  .js .relay .mini.child { opacity: 0; transform: translateY(18px) scale(.97); transition: opacity .5s ease .7s, transform .6s var(--ease) .7s; }
+  .js .relay svg path { opacity: 0; transition: opacity .3s ease .3s; }
+  .js .relay.in .mini.child { opacity: 1; transform: none; }
+  .js .relay.in svg path { opacity: 1; animation: march 1.2s linear infinite; }
+  @keyframes march { to { stroke-dashoffset: -28; } }
 
-  table.plat { width: 100%; border-collapse: collapse; margin-top: 36px; font-size: 16px; background: var(--sheet); }
-  table.plat th, table.plat td { text-align: left; padding: 16px 18px; border: 1px solid var(--line); vertical-align: top; }
-  table.plat th { background: var(--ink); color: #fff; font-weight: 700; border-color: var(--ink); }
+  /* Platform tabs */
+  .tabs { margin-top: 36px; }
+  .tablist { position: relative; display: inline-flex; background: var(--sheet); border: 2px solid var(--ink); border-radius: 99px; padding: 4px; }
+  .tablist button { position: relative; z-index: 1; border: 0; background: none; font: inherit; font-weight: 700; font-size: 16px; padding: 10px 22px; border-radius: 99px; color: var(--ink); cursor: pointer; transition: color .25s; }
+  .tablist button[aria-selected="true"] { color: #fff; }
+  .tablist .pill { position: absolute; z-index: 0; top: 4px; left: 0; height: calc(100% - 8px); width: 0; background: var(--ink); border-radius: 99px; transition: transform .35s var(--ease), width .35s var(--ease); }
+  .panel { margin-top: 24px; background: var(--sheet); border: 2px solid var(--ink); border-radius: 16px; padding: 32px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; }
+  .panel[hidden] { display: none; }
+  .panel h3 { font-family: var(--display); font-weight: 800; font-size: 24px; margin: 0 0 10px; }
+  .panel p { margin: 0; color: var(--ink-soft); font-size: 17px; }
+  .panel dl { margin: 0; font-size: 15px; border-left: 1px solid var(--line); padding-left: 28px; }
+  .panel dt { color: var(--ink-soft); }
+  .panel dd { margin: 0 0 14px; font-weight: 700; }
+  .panel dd:last-child { margin-bottom: 0; }
+  .panel.swap { animation: swap .35s var(--ease); }
+  @keyframes swap { from { opacity: 0; transform: translateY(8px); } }
 
-  ul.limits { margin: 32px 0 0; padding: 0; list-style: none; max-width: 40em; }
-  ul.limits li { padding: 18px 0; border-top: 1px solid var(--line); font-size: 16px; color: var(--ink-soft); }
-  ul.limits b { color: var(--ink); display: block; }
+  /* Limits accordion */
+  .limits { margin-top: 32px; max-width: 44em; border-bottom: 1px solid var(--line); }
+  .limits details { border-top: 1px solid var(--line); }
+  .limits summary { list-style: none; cursor: pointer; padding: 20px 44px 20px 0; font-weight: 700; position: relative; }
+  .limits summary::-webkit-details-marker { display: none; }
+  .limits summary::after { content: ""; position: absolute; right: 6px; top: 50%; width: 12px; height: 12px; margin-top: -9px; border-right: 2.5px solid var(--ink); border-bottom: 2.5px solid var(--ink); transform: rotate(45deg); transition: transform .3s var(--ease); }
+  .limits details[open] summary::after { transform: translateY(5px) rotate(-135deg); }
+  .limits details p { margin: 0; padding: 0 44px 22px 0; color: var(--ink-soft); font-size: 16px; }
+  .limits details::details-content { block-size: 0; overflow: clip; transition: block-size .35s var(--ease), content-visibility .35s allow-discrete; }
+  .limits details[open]::details-content { block-size: auto; }
 
   footer { border-top: 2px solid var(--ink); padding: 36px 0 56px; font-size: 14px; color: var(--ink-soft); }
 
+  /* Scroll-driven reveal for the step sequence only */
+  @supports (animation-timeline: view()) {
+    .js ol.steps li { animation: stepin linear both; animation-timeline: view(); animation-range: entry 0% entry 60%; }
+    @keyframes stepin { from { opacity: 0; transform: translateY(28px); } }
+  }
+
   @media (max-width: 820px) {
     body { font-size: 17px; }
-    .hero, .family { grid-template-columns: 1fr; gap: 48px; }
-    .hero { padding-bottom: 72px; }
+    .nav nav { display: none; }
+    .hero, .family, .trace, .panel { grid-template-columns: 1fr; }
+    .hero { gap: 48px; padding-top: 48px; padding-bottom: 72px; }
+    .trace { padding: 56px 22px 26px; gap: 28px; }
     ol.steps { grid-template-columns: 1fr; }
     ol.steps li + li { padding-left: 0; border-left: 0; }
     .versus { grid-template-columns: 1fr; }
     .versus > div + div { border-left: 0; border-top: 2px solid var(--ink); }
     .figure { grid-template-columns: 1fr; gap: 12px; }
-    section.block { padding: 64px 0; }
-    header.top a.jump { display: none; }
+    .block { padding: 64px 0; }
+    .panel { padding: 24px; }
+    .panel dl { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 20px; }
+    .tablist button { padding: 10px 14px; font-size: 15px; }
+    .ledger .row { flex-direction: column; gap: 0; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .gate, .arrived { transition: none; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .js .hero h1 .ln > span, .js .phone, .js .bubble, .js .relay .mini.child { opacity: 1; transform: none; }
+    .js .hero .after, .js .relay svg path { opacity: 1; }
+    .arrived .ok path { stroke-dashoffset: 0; }
   }
 </style>
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
 <div class="notice">컨셉 샘플 페이지입니다. 아직 출시된 서비스가 아니며, 화면 속 은행과 주소는 모두 가상입니다.</div>
 
-<header class="top wrap">
-  <div class="brand"><span class="stamp" aria-hidden="true">문</span>링크 문지기 <small>가칭</small></div>
-  <a class="jump" href="#how">어떻게 작동하나요</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="stamp" aria-hidden="true">LG</span>Link Gatekeeper <small>가칭</small></a>
+    <nav aria-label="페이지 내 이동">
+      <a href="#how">작동 방식</a>
+      <a href="#family">부모님 폰</a>
+      <a href="#where">지원 환경</a>
+      <a href="#limits">한계</a>
+    </nav>
+  </div>
+  <span class="progress" aria-hidden="true"></span>
 </header>
 
-<main>
+<main id="top">
   <div class="hero wrap">
     <div>
-      <h1>속아서 눌러도,<br>진짜 은행으로<br>갑니다.</h1>
-      <p class="lead">링크 문지기는 문자 속 링크를 누르는 순간 주소를 확인합니다. 은행이나 관공서를 사칭한 주소면 막고, 진짜 공식 앱을 대신 열어 드립니다.</p>
-      <a class="btn" href="#demo">문자 속 링크 직접 눌러보기</a>
-      <p class="hint">의심할 필요도, 복사해서 붙여 넣을 필요도 없습니다.</p>
+      <h1>
+        <span class="ln"><span>속아서 눌러도,</span></span>
+        <span class="ln"><span>진짜 은행으로</span></span>
+        <span class="ln"><span>갑니다.</span></span>
+      </h1>
+      <div class="after">
+        <p class="lead">Link Gatekeeper는 문자 속 링크를 누르는 순간 주소를 확인합니다. 은행이나 관공서를 사칭한 주소면 막고, 진짜 공식 앱을 대신 열어 드립니다.</p>
+        <a class="btn" href="#demo">문자 속 링크 직접 눌러보기</a>
+        <p class="hint">의심할 필요도, 복사해서 붙여 넣을 필요도 없습니다.</p>
+      </div>
     </div>
 
     <div class="phone" id="demo" aria-label="작동 방식 체험">
-      <div class="screen">
+      <div class="screen" id="screen">
         <div class="bar">가람은행 <span>문자 메시지</span></div>
         <div class="thread">
           <div class="bubble">
-            [Web발신] 가람은행입니다. 고객님 계정에서 해외 로그인이 감지되었습니다. 아래 주소에서 즉시 비밀번호를 변경해 주세요.
-            <button class="link" type="button" data-kind="fake">garambank-secure.example/pw</button>
+            [Web발신] 가람은행입니다. 고객님 계정에서 해외 로그인이 감지되었습니다. 아래 주소에서 즉시 비밀번호를 변경해 주세요.<br>
+            <button class="link cue" type="button" data-kind="fake">garambank-secure.example/pw</button>
           </div>
           <div class="bubble">
-            [Web발신] 가람은행 11월 이용 명세서가 도착했습니다.
+            [Web발신] 가람은행 11월 이용 명세서가 도착했습니다.<br>
             <button class="link" type="button" data-kind="real">garambank.example/statement</button>
           </div>
         </div>
-        <p class="tap-cue" id="cue">두 링크를 각각 눌러 보세요</p>
+        <p class="tap-cue">두 링크를 각각 눌러 보세요</p>
 
         <div class="gate" id="gate" role="alertdialog" aria-labelledby="gate-title" aria-hidden="true">
-          <span class="bigstamp">사칭</span>
+          <span class="sealmark">사칭</span>
           <h3 id="gate-title">가람은행 주소가 아닙니다</h3>
           <dl>
             <dt>방금 누른 링크</dt>
@@ -320,7 +343,7 @@
         </div>
 
         <div class="arrived" id="arrived" aria-live="polite" aria-hidden="true">
-          <div class="ok" aria-hidden="true">✓</div>
+          <svg class="ok" viewBox="0 0 76 76" aria-hidden="true"><circle cx="38" cy="38" r="38"/><path d="M23 39.5 34 50 54 28"/></svg>
           <h3 id="arrived-title">공식 주소 확인됨</h3>
           <p id="arrived-text">가람은행 공식 앱의 비밀번호 변경 화면으로 이동했습니다.</p>
           <button class="btn ghost" type="button" id="reset">문자로 돌아가기</button>
@@ -335,7 +358,7 @@
       <p>지금도 의심스러운 문자를 확인해 주는 서비스는 있습니다. 하지만 문자를 복사해 붙여 넣어야 하고, 그건 이미 의심한 사람만 하는 일입니다.</p>
       <p>기관을 사칭한 문자는 급하게 만들고, 진짜처럼 보이고, 누르는 데 1초면 충분합니다.</p>
       <div class="figure">
-        <strong>53.4%</strong>
+        <strong id="stat" data-to="53.4">53.4%</strong>
         <p>최근 3년간 탐지된 스미싱 문자 388만여 건 가운데 공공기관을 사칭한 비율입니다.
           <cite>과학기술정보통신부 집계, <a href="https://www.imaeil.com/page/view/2026092115165949797">매일신문 2026년 9월 보도</a></cite>
         </p>
@@ -347,8 +370,35 @@
     <div class="wrap">
       <h2>나쁜 주소를 쫓지 않고, 진짜 주소를 기억합니다.</h2>
       <p>가짜 주소는 매일 새로 만들어지지만 은행의 진짜 주소는 거의 바뀌지 않습니다. 그래서 차단 목록 대신 공식 주소 목록으로 판단합니다.</p>
+
+      <div class="trace" id="trace" aria-label="링크 하나를 확인하는 과정">
+        <button class="replay" type="button" id="replay">다시 보기</button>
+        <div>
+          <h3>누른 링크를 끝까지 따라갑니다</h3>
+          <ol class="hops" id="hops">
+            <li class="hop"><span>문자 속 단축 주소</span><code>me2.example/x7Kq</code></li>
+            <li class="hop"><span>경유지</span><code>go.redirect.example/r?u=9f2</code></li>
+            <li class="hop final"><span>최종 도착지</span><code>garambank-secure.example/pw</code></li>
+          </ol>
+        </div>
+        <div>
+          <h3>기기 안의 공식 주소 목록과 대조합니다</h3>
+          <div class="ledger" id="ledger">
+            <div class="row"><span>나루택배</span><code>naruexpress.example</code></div>
+            <div class="row" id="hitrow"><span>가람은행</span><code>garambank.example</code></div>
+            <div class="row"><span>가람카드</span><code>garamcard.example</code></div>
+            <div class="row"><span>새봄구청</span><code>saebom.example</code></div>
+            <span class="scan" aria-hidden="true"></span>
+          </div>
+          <div class="verdict" id="verdict">
+            <span class="sealmark">사칭</span>
+            <span>가람은행을 내세웠지만 공식 주소와 다릅니다. 진짜 앱으로 안내합니다.</span>
+          </div>
+        </div>
+      </div>
+
       <ol class="steps">
-        <li><h3>평소처럼 누릅니다</h3><p>문자, 메일 어디서든 링크를 누르면 문지기가 먼저 받습니다.</p></li>
+        <li><h3>평소처럼 누릅니다</h3><p>문자, 메일 어디서든 링크를 누르면 Link Gatekeeper가 먼저 받습니다.</p></li>
         <li><h3>주소를 끝까지 확인합니다</h3><p>단축 주소를 풀어 최종 도착지를 찾고, 기기 안에서 공식 목록과 대조합니다.</p></li>
         <li><h3>공식이면 통과, 사칭이면 안내</h3><p>공식 주소는 아무 화면 없이 열립니다. 사칭이면 진짜 앱을 여는 버튼을 드립니다.</p></li>
       </ol>
@@ -363,7 +413,7 @@
           </ul>
         </div>
         <div>
-          <h3>링크 문지기</h3>
+          <h3>Link Gatekeeper</h3>
           <ul>
             <li>누르는 순간 자동으로 확인</li>
             <li>"가람은행 주소가 아닙니다"처럼 누구를 사칭했는지 설명</li>
@@ -374,86 +424,179 @@
     </div>
   </section>
 
-  <section class="block">
+  <section class="block" id="family">
     <div class="wrap family">
       <div>
         <h2>부모님 폰에 깔아 드리세요.</h2>
         <p>가장 필요한 분들은 스스로 설치하지 않습니다. 자녀가 한 번 설치하고 설정해 드리면, 그다음부터 부모님은 아무것도 달리 하실 필요가 없습니다.</p>
         <p>부모님이 사칭 링크를 누르면 자녀에게도 알림이 갑니다. 전화 한 통 드릴 수 있도록요.</p>
       </div>
-      <div class="alert" aria-label="자녀에게 가는 알림 예시">
-        <time>오후 2:14</time>
-        <b>어머니 폰에서 사칭 링크를 막았습니다</b>
-        가람은행을 사칭한 문자였고, 공식 앱으로 안내해 드렸습니다. 개인정보는 입력되지 않았습니다.
+      <div class="relay" id="relay" aria-label="부모님 폰에서 자녀 폰으로 가는 알림 예시">
+        <div class="mini parent"><time>어머니 폰, 오후 2:14</time><b>가람은행 주소가 아닙니다</b>진짜 가람은행 앱을 열었습니다.</div>
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M10 0 C 10 60, 90 40, 90 100"/></svg>
+        <div class="mini child"><time>내 폰, 오후 2:14</time><b>어머니 폰에서 사칭 링크를 막았습니다</b>가람은행을 사칭한 문자였고, 개인정보는 입력되지 않았습니다.</div>
       </div>
     </div>
   </section>
 
-  <section class="block">
+  <section class="block" id="where">
     <div class="wrap">
       <h2>어디서 쓸 수 있나요</h2>
       <p>Android 앱부터 준비하고 있습니다. 아래는 계획이며 확정된 일정이 아닙니다.</p>
-      <table class="plat">
-        <thead><tr><th scope="col">채널</th><th scope="col">작동 방식</th><th scope="col">해야 할 일</th></tr></thead>
-        <tbody>
-          <tr><td>Android 앱</td><td>모든 링크를 자동 확인하고, 문자로 온 앱 설치 파일도 막습니다</td><td>설치할 때 설정 한 번</td></tr>
-          <tr><td>iPhone 앱</td><td>Safari 확장과 공유 메뉴로 확인합니다</td><td>설정 한 번, 일부는 직접 공유</td></tr>
-          <tr><td>카카오톡 채널</td><td>받은 문자를 붙여 넣으면 확인해 드립니다</td><td>설치 없이 써 보는 용도</td></tr>
-        </tbody>
-      </table>
+      <div class="tabs">
+        <div class="tablist" role="tablist" aria-label="지원 환경" id="tablist">
+          <span class="pill" aria-hidden="true"></span>
+          <button role="tab" id="t-android" aria-controls="p-android" aria-selected="true">Android</button>
+          <button role="tab" id="t-ios" aria-controls="p-ios" aria-selected="false" tabindex="-1">iPhone</button>
+          <button role="tab" id="t-kakao" aria-controls="p-kakao" aria-selected="false" tabindex="-1">카카오톡</button>
+        </div>
+        <div class="panel" role="tabpanel" id="p-android" aria-labelledby="t-android">
+          <div><h3>모든 링크를 자동으로 확인합니다</h3><p>링크를 여는 기본 앱으로 지정하면, 어떤 앱에서 누른 링크든 먼저 확인한 뒤 원래 브라우저나 공식 앱으로 넘깁니다. 문자로 온 앱 설치 파일도 막습니다.</p></div>
+          <dl><dt>해야 할 일</dt><dd>설치할 때 설정 한 번</dd><dt>준비 순서</dt><dd>가장 먼저</dd></dl>
+        </div>
+        <div class="panel" role="tabpanel" id="p-ios" aria-labelledby="t-ios" hidden>
+          <div><h3>Safari 확장과 공유 메뉴로 확인합니다</h3><p>Safari에서 열리는 링크는 확장이 확인합니다. 다른 앱 안에서 받은 링크는 공유 메뉴에서 Link Gatekeeper를 골라 확인합니다.</p></div>
+          <dl><dt>해야 할 일</dt><dd>설정 한 번, 일부는 직접 공유</dd><dt>준비 순서</dt><dd>Android 다음</dd></dl>
+        </div>
+        <div class="panel" role="tabpanel" id="p-kakao" aria-labelledby="t-kakao" hidden>
+          <div><h3>설치 없이 먼저 써 볼 수 있습니다</h3><p>채널을 추가하고 받은 문자를 붙여 넣으면, 누구를 사칭했는지와 진짜 공식 주소를 답해 드립니다.</p></div>
+          <dl><dt>해야 할 일</dt><dd>확인할 때마다 붙여 넣기</dd><dt>준비 순서</dt><dd>앱과 함께</dd></dl>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="block">
+  <section class="block" id="limits">
     <div class="wrap">
       <h2>아직 못 하는 것도 말씀드립니다.</h2>
-      <ul class="limits">
-        <li><b>"안전하다"고 보증하지 않습니다</b>공식 주소로 확인됐는지, 사칭인지, 확인할 수 없는지만 알려 드립니다.</li>
-        <li><b>카카오톡 안에서 열리는 링크</b>메신저가 자체 브라우저로 여는 링크는 문지기를 거치지 않을 수 있어 별도 대응을 준비하고 있습니다.</li>
-        <li><b>청첩장, 부고 같은 지인 사칭</b>데려다 드릴 공식 주소가 없는 유형이라, 위험 신호만 알려 드립니다.</li>
-        <li><b>누른 링크는 서버로 보내지 않습니다</b>공식 목록 대조는 기기 안에서 끝내는 것을 원칙으로 설계합니다.</li>
-      </ul>
+      <div class="limits">
+        <details open><summary>"안전하다"고 보증하지 않습니다</summary><p>공식 주소로 확인됐는지, 사칭인지, 확인할 수 없는지만 알려 드립니다.</p></details>
+        <details><summary>카카오톡 안에서 열리는 링크</summary><p>메신저가 자체 브라우저로 여는 링크는 Link Gatekeeper를 거치지 않을 수 있어 별도 대응을 준비하고 있습니다.</p></details>
+        <details><summary>청첩장, 부고 같은 지인 사칭</summary><p>데려다 드릴 공식 주소가 없는 유형이라, 위험 신호만 알려 드립니다.</p></details>
+        <details><summary>누른 링크는 서버로 보내지 않습니다</summary><p>공식 목록 대조는 기기 안에서 끝내는 것을 원칙으로 설계합니다.</p></details>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    링크 문지기는 가칭이며, 이 페이지는 서비스 구상을 설명하기 위한 샘플입니다. 가람은행은 실재하지 않는 가상의 은행이고, 화면의 주소와 알림은 모두 예시입니다.
+    Link Gatekeeper는 가칭이며, 이 페이지는 서비스 구상을 설명하기 위한 샘플입니다. 가람은행을 비롯한 화면 속 기관은 실재하지 않는 가상의 이름이고, 주소와 알림은 모두 예시입니다.
   </div>
 </footer>
 
 <script>
-  (function () {
-    var gate = document.getElementById('gate');
-    var arrived = document.getElementById('arrived');
-    var title = document.getElementById('arrived-title');
-    var text = document.getElementById('arrived-text');
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (id) { return document.getElementById(id); };
 
-    function show(el) { el.classList.add('on'); el.setAttribute('aria-hidden', 'false'); }
-    function hide(el) { el.classList.remove('on'); el.setAttribute('aria-hidden', 'true'); }
+  /* Phone demo */
+  var gate = $('gate'), arrived = $('arrived'), screen = $('screen');
+  function show(el) { el.classList.add('on'); el.setAttribute('aria-hidden', 'false'); }
+  function hide(el) { el.classList.remove('on'); el.setAttribute('aria-hidden', 'true'); }
+  document.querySelectorAll('.bubble .link').forEach(function (b) {
+    b.addEventListener('click', function () {
+      screen.classList.add('touched');
+      if (b.dataset.kind === 'fake') {
+        show(gate);
+        $('go-real').focus({ preventScroll: true });
+      } else {
+        $('arrived-title').textContent = '공식 주소 확인됨';
+        $('arrived-text').textContent = '경고 화면 없이 가람은행 명세서 페이지가 바로 열렸습니다.';
+        show(arrived);
+      }
+    });
+  });
+  $('go-real').addEventListener('click', function () {
+    hide(gate);
+    $('arrived-title').textContent = '진짜 가람은행 앱을 열었습니다';
+    $('arrived-text').textContent = '공식 앱의 비밀번호 변경 화면으로 이동했습니다.';
+    show(arrived);
+  });
+  $('close-gate').addEventListener('click', function () { hide(gate); });
+  $('reset').addEventListener('click', function () { hide(arrived); });
 
-    document.querySelectorAll('.bubble .link').forEach(function (b) {
-      b.addEventListener('click', function () {
-        if (b.dataset.kind === 'fake') {
-          show(gate);
-          document.getElementById('go-real').focus({ preventScroll: true });
-        } else {
-          title.textContent = '공식 주소 확인됨';
-          text.textContent = '경고 화면 없이 가람은행 명세서 페이지가 바로 열렸습니다.';
-          show(arrived);
-        }
-      });
+  /* Run something once when an element scrolls into view */
+  function onView(el, fn, threshold) {
+    if (!('IntersectionObserver' in window)) { fn(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); fn(); } });
+    }, { threshold: threshold || 0.4 });
+    io.observe(el);
+  }
+
+  /* Stat count-up */
+  var stat = $('stat');
+  onView(stat, function () {
+    if (reduce) return;
+    var to = parseFloat(stat.dataset.to), t0 = null;
+    function tick(t) {
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / 1300, 1), eased = 1 - Math.pow(1 - p, 3);
+      stat.textContent = (to * eased).toFixed(1) + '%';
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    stat.textContent = '0.0%';
+    requestAnimationFrame(tick);
+  }, 0.8);
+
+  /* Address trace */
+  var hopList = $('hops');
+  var hops = Array.prototype.slice.call(hopList.querySelectorAll('.hop'));
+  var ledger = $('ledger'), hitrow = $('hitrow'), verdict = $('verdict');
+  var timers = [];
+  function later(fn, ms) { timers.push(setTimeout(fn, ms)); }
+  function rail(v) { hopList.style.setProperty('--rail', v); }
+  function playTrace() {
+    timers.forEach(clearTimeout); timers = [];
+    hops.forEach(function (h) { h.classList.remove('on'); });
+    rail(0);
+    ledger.classList.remove('scanning'); hitrow.classList.remove('hit'); verdict.classList.remove('on');
+    if (reduce) {
+      hops.forEach(function (h) { h.classList.add('on'); });
+      rail(1); hitrow.classList.add('hit'); verdict.classList.add('on');
+      return;
+    }
+    later(function () { hops[0].classList.add('on'); }, 200);
+    later(function () { rail(0.5); }, 600);
+    later(function () { hops[1].classList.add('on'); }, 1000);
+    later(function () { rail(1); }, 1400);
+    later(function () { hops[2].classList.add('on'); }, 1800);
+    later(function () { ledger.classList.add('scanning'); }, 2400);
+    later(function () { hitrow.classList.add('hit'); }, 3200);
+    later(function () { verdict.classList.add('on'); }, 3700);
+  }
+  onView($('trace'), playTrace, 0.45);
+  $('replay').addEventListener('click', playTrace);
+
+  /* Family relay */
+  onView($('relay'), function () { $('relay').classList.add('in'); }, 0.5);
+
+  /* Tabs with a sliding pill */
+  var list = $('tablist'), tabs = Array.prototype.slice.call(list.querySelectorAll('[role=tab]')), pill = list.querySelector('.pill');
+  function movePill(tab) { pill.style.width = tab.offsetWidth + 'px'; pill.style.transform = 'translateX(' + tab.offsetLeft + 'px)'; }
+  function select(tab, focus) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      var p = $(t.getAttribute('aria-controls'));
+      p.hidden = !on; p.classList.toggle('swap', on);
     });
-    document.getElementById('go-real').addEventListener('click', function () {
-      hide(gate);
-      title.textContent = '진짜 가람은행 앱을 열었습니다';
-      text.textContent = '공식 앱의 비밀번호 변경 화면으로 이동했습니다.';
-      show(arrived);
+    movePill(tab);
+    if (focus) tab.focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') select(tabs[(i + 1) % tabs.length], true);
+      if (e.key === 'ArrowLeft') select(tabs[(i - 1 + tabs.length) % tabs.length], true);
     });
-    document.getElementById('close-gate').addEventListener('click', function () { hide(gate); });
-    document.getElementById('reset').addEventListener('click', function () { hide(arrived); });
-  })();
+  });
+  function initPill() { var cur = list.querySelector('[aria-selected=true]'); pill.style.transition = 'none'; movePill(cur); pill.offsetWidth; pill.style.transition = ''; }
+  initPill();
+  window.addEventListener('resize', initPill);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(initPill);
+})();
 </script>
 </body>
 </html>
